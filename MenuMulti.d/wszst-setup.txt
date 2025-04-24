@@ -1,0 +1,1962 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF, BREFT, LTA or LFL):
+archive-format = U8
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = YAZ0
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 1
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0x69d1f2
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./bg/timg/ht_squareWhite_00.tpl.d
+./bg/timg/tt_block_16x16.tpl.d
+./bg/timg/tt_go_obi_top_waku.tpl.d
+./bg/timg/tt_obi_bottom_curve_000.tpl.d
+./bg/timg/tt_obi_bottom_left_000.tpl.d
+./bg/timg/tt_obi_bottom_right_000.tpl.d
+./bg/timg/tt_obi_check_000.tpl.d
+./bg/timg/tt_obi_top_curve_000.tpl.d
+./bg/timg/tt_obi_top_left_000.tpl.d
+./bg/timg/tt_obi_top_right_000.tpl.d
+./bg/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./bg/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./button/timg/fm_icon_hosi01.tpl.d
+./button/timg/fm_team_color_flag_blue_00.tpl.d
+./button/timg/fm_team_color_flag_red_00.tpl.d
+./button/timg/st_battle_icon_balloon.tpl.d
+./button/timg/st_battle_icon_coin.tpl.d
+./button/timg/st_battle_icon_flag.tpl.d
+./button/timg/tt_baby_daisy_64x64.tpl.d
+./button/timg/tt_baby_luigi_64x64.tpl.d
+./button/timg/tt_baby_mario_64x64.tpl.d
+./button/timg/tt_baby_peach_64x64.tpl.d
+./button/timg/tt_boss_packun_64x64.tpl.d
+./button/timg/tt_catherine_64x64.tpl.d
+./button/timg/tt_class_kinoko_1.tpl.d
+./button/timg/tt_class_kinoko_2.tpl.d
+./button/timg/tt_class_kinoko_3.tpl.d
+./button/timg/tt_class_kinoko_m.tpl.d
+./button/timg/tt_classic_icon_sphere_128.tpl.d
+./button/timg/tt_cup_icon_banana_00.tpl.d
+./button/timg/tt_cup_icon_flower_00.tpl.d
+./button/timg/tt_cup_icon_kinoko_00.tpl.d
+./button/timg/tt_cup_icon_konoha_00.tpl.d
+./button/timg/tt_cup_icon_koura_00.tpl.d
+./button/timg/tt_cup_icon_mirror_00.tpl.d
+./button/timg/tt_cup_icon_oukan_00.tpl.d
+./button/timg/tt_cup_icon_star_00.tpl.d
+./button/timg/tt_cup_icon_thunder_00.tpl.d
+./button/timg/tt_daisy_64x64.tpl.d
+./button/timg/tt_didy_64x64.tpl.d
+./button/timg/tt_donky_64x64.tpl.d
+./button/timg/tt_funky_64x64.tpl.d
+./button/timg/tt_glass_sphere_sono3.tpl.d
+./button/timg/tt_glass_sphere_waku_sono1.tpl.d
+./button/timg/tt_glass_waku_180.tpl.d
+./button/timg/tt_gr_maru_normal_00.tpl.d
+./button/timg/tt_hammer_64x64.tpl.d
+./button/timg/tt_hatena_64x64.tpl.d
+./button/timg/tt_hone_koopa_64x64.tpl.d
+./button/timg/tt_karon_64x64.tpl.d
+./button/timg/tt_kinopico_64x64.tpl.d
+./button/timg/tt_kinopio_64x64.tpl.d
+./button/timg/tt_koopa_64x64.tpl.d
+./button/timg/tt_koopa_jr_64x64.tpl.d
+./button/timg/tt_ldf_bike_blue.tpl.d
+./button/timg/tt_ldf_bike_red.tpl.d
+./button/timg/tt_ldf_kart_blue.tpl.d
+./button/timg/tt_ldf_kart_red.tpl.d
+./button/timg/tt_luigi_64x64.tpl.d
+./button/timg/tt_ma_kart.tpl.d
+./button/timg/tt_mario_64x64.tpl.d
+./button/timg/tt_mdf_bike_blue.tpl.d
+./button/timg/tt_mdf_bike_red.tpl.d
+./button/timg/tt_mdf_kart_blue.tpl.d
+./button/timg/tt_mdf_kart_red.tpl.d
+./button/timg/tt_mii_suit_a_64x64.tpl.d
+./button/timg/tt_mii_suit_b_64x64.tpl.d
+./button/timg/tt_mii_suit_c_64x64.tpl.d
+./button/timg/tt_noko_64x64.tpl.d
+./button/timg/tt_ok_button.tpl.d
+./button/timg/tt_ok_button_mini.tpl.d
+./button/timg/tt_open_icon_rule_000.tpl.d
+./button/timg/tt_pata_64x64.tpl.d
+./button/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./button/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./button/timg/tt_peach_64x64.tpl.d
+./button/timg/tt_roseta_64x64.tpl.d
+./button/timg/tt_sdf_bike_blue.tpl.d
+./button/timg/tt_sdf_bike_red.tpl.d
+./button/timg/tt_sdf_kart_blue.tpl.d
+./button/timg/tt_sdf_kart_red.tpl.d
+./button/timg/tt_teresa_64x64.tpl.d
+./button/timg/tt_waluigi_64x64.tpl.d
+./button/timg/tt_wario_64x64.tpl.d
+./button/timg/tt_wii_icon_128.tpl.d
+./button/timg/tt_window_vol3sono2.tpl.d
+./button/timg/tt_yajirushi_type1.tpl.d
+./button/timg/tt_yoshi_64x64.tpl.d
+./control/timg/fm_handle_new_1.tpl.d
+./control/timg/fm_handle_new_2.tpl.d
+./control/timg/ht_squareWhite_00.tpl.d
+./control/timg/st_battle_icon_balloon.tpl.d
+./control/timg/st_battle_icon_coin.tpl.d
+./control/timg/st_battle_icon_flag.tpl.d
+./control/timg/tt_ability_graph_00.tpl.d
+./control/timg/tt_baby_daisy_64x64.tpl.d
+./control/timg/tt_baby_luigi_64x64.tpl.d
+./control/timg/tt_baby_mario_64x64.tpl.d
+./control/timg/tt_baby_peach_64x64.tpl.d
+./control/timg/tt_boss_packun_64x64.tpl.d
+./control/timg/tt_catherine_64x64.tpl.d
+./control/timg/tt_classic_icon_sphere_128.tpl.d
+./control/timg/tt_cup_icon_banana_00.tpl.d
+./control/timg/tt_cup_icon_flower_00.tpl.d
+./control/timg/tt_cup_icon_kinoko_00.tpl.d
+./control/timg/tt_cup_icon_konoha_00.tpl.d
+./control/timg/tt_cup_icon_koura_00.tpl.d
+./control/timg/tt_cup_icon_mirror_00.tpl.d
+./control/timg/tt_cup_icon_oukan_00.tpl.d
+./control/timg/tt_cup_icon_star_00.tpl.d
+./control/timg/tt_cup_icon_thunder_00.tpl.d
+./control/timg/tt_d_number_3d_00.tpl.d
+./control/timg/tt_d_number_3d_01.tpl.d
+./control/timg/tt_d_number_3d_02.tpl.d
+./control/timg/tt_d_number_3d_03.tpl.d
+./control/timg/tt_d_number_3d_04.tpl.d
+./control/timg/tt_d_number_3d_05.tpl.d
+./control/timg/tt_d_number_3d_06.tpl.d
+./control/timg/tt_d_number_3d_07.tpl.d
+./control/timg/tt_d_number_3d_08.tpl.d
+./control/timg/tt_d_number_3d_09.tpl.d
+./control/timg/tt_d_number_3d_coron.tpl.d
+./control/timg/tt_daisy_64x64.tpl.d
+./control/timg/tt_didy_64x64.tpl.d
+./control/timg/tt_donky_64x64.tpl.d
+./control/timg/tt_fukidashi_window_kado_common.tpl.d
+./control/timg/tt_funky_64x64.tpl.d
+./control/timg/tt_gccon_waku.tpl.d
+./control/timg/tt_hammer_64x64.tpl.d
+./control/timg/tt_hatena_64x64.tpl.d
+./control/timg/tt_hone_koopa_64x64.tpl.d
+./control/timg/tt_karon_64x64.tpl.d
+./control/timg/tt_kinopico_64x64.tpl.d
+./control/timg/tt_kinopio_64x64.tpl.d
+./control/timg/tt_koopa_64x64.tpl.d
+./control/timg/tt_koopa_jr_64x64.tpl.d
+./control/timg/tt_luigi_64x64.tpl.d
+./control/timg/tt_mario_64x64.tpl.d
+./control/timg/tt_mii_suit_a_64x64.tpl.d
+./control/timg/tt_mii_suit_b_64x64.tpl.d
+./control/timg/tt_mii_suit_c_64x64.tpl.d
+./control/timg/tt_noko_64x64.tpl.d
+./control/timg/tt_pata_64x64.tpl.d
+./control/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./control/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./control/timg/tt_peach_64x64.tpl.d
+./control/timg/tt_remocon_body.tpl.d
+./control/timg/tt_roseta_64x64.tpl.d
+./control/timg/tt_teresa_64x64.tpl.d
+./control/timg/tt_waluigi_64x64.tpl.d
+./control/timg/tt_wario_64x64.tpl.d
+./control/timg/tt_wii_icon_128.tpl.d
+./control/timg/tt_window_vol1.tpl.d
+./control/timg/tt_window_vol4_32.tpl.d
+./control/timg/tt_yajirushi_type1.tpl.d
+./control/timg/tt_yoshi_64x64.tpl.d
+./course.kcl.d
+./course.kcl.flag
+./course.kcl.mtl
+./course.kcl.obj
+./course.kmp.d
+./course.kmp.txt
+./course.lex.txt
+./dpd_pointer/timg/cursor0.tpl.d
+./dpd_pointer/timg/tt_i_cursor_nakami_ver0.tpl.d
+./dpd_pointer/timg/tt_i_cursor_shikaku.tpl.d
+./dpd_pointer/timg/tt_i_cursor_tongari.tpl.d
+./effect/RKMenu.breff.d
+./effect/RKMenu.breft.d
+./message_window/timg/loading1.tpl.d
+./message_window/timg/loading2.tpl.d
+./message_window/timg/loading3.tpl.d
+./message_window/timg/loading4.tpl.d
+./message_window/timg/loading5.tpl.d
+./message_window/timg/loading6.tpl.d
+./message_window/timg/loading7.tpl.d
+./message_window/timg/loading8.tpl.d
+./message_window/timg/tt_fukidashi_window_kado_common.tpl.d
+./message_window/timg/tt_glass_waku_180.tpl.d
+./message_window/timg/tt_pattern_chek_32x32.tpl.d
+./message_window/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./message_window/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./model/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./pad_recognize/timg/tt_a_body.tpl.d
+./pad_recognize/timg/tt_a_light.tpl.d
+./pad_recognize/timg/tt_clacon_body.tpl.d
+./pad_recognize/timg/tt_clacon_light.tpl.d
+./pad_recognize/timg/tt_fukidashi_window_kado_common.tpl.d
+./pad_recognize/timg/tt_gccon_body.tpl.d
+./pad_recognize/timg/tt_gccon_light.tpl.d
+./pad_recognize/timg/tt_gccon_waku.tpl.d
+./pad_recognize/timg/tt_hatena_body.tpl.d
+./pad_recognize/timg/tt_hatena_light.tpl.d
+./pad_recognize/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./pad_recognize/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./pad_recognize/timg/tt_remocon_han_body.tpl.d
+./pad_recognize/timg/tt_remocon_han_light.tpl.d
+./pad_recognize/timg/tt_remocon_nun_body.tpl.d
+./pad_recognize/timg/tt_remocon_nun_light.tpl.d
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+TPL,RGB565,1	= ./bg/timg/ht_squareWhite_00.tpl
+TPL,IA4,1	= ./bg/timg/tt_block_16x16.tpl
+TPL,CMPR,1	= ./bg/timg/tt_go_obi_top_waku.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_bottom_curve_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_bottom_left_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_bottom_right_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_check_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_top_curve_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_top_left_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_obi_top_right_000.tpl
+TPL,CMPR,1	= ./bg/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,CMPR,1	= ./bg/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./button/timg/fm_icon_hosi01.tpl
+TPL,RGB5A3,1	= ./button/timg/fm_team_color_flag_blue_00.tpl
+TPL,RGB5A3,1	= ./button/timg/fm_team_color_flag_red_00.tpl
+TPL,RGB5A3,1	= ./button/timg/st_battle_icon_balloon.tpl
+TPL,RGB5A3,1	= ./button/timg/st_battle_icon_coin.tpl
+TPL,RGB5A3,1	= ./button/timg/st_battle_icon_flag.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_baby_daisy_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_baby_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_baby_mario_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_baby_peach_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_boss_packun_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_catherine_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_class_kinoko_1.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_class_kinoko_2.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_class_kinoko_3.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_class_kinoko_m.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_classic_icon_sphere_128.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_banana_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_flower_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_kinoko_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_konoha_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_koura_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_mirror_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_oukan_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_star_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_thunder_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_daisy_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_didy_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_donky_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_funky_64x64.tpl
+TPL,IA8,1	= ./button/timg/tt_glass_sphere_sono3.tpl
+TPL,IA8,1	= ./button/timg/tt_glass_sphere_waku_sono1.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_glass_waku_180.tpl
+TPL,IA8,1	= ./button/timg/tt_gr_maru_normal_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_hammer_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_hatena_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_hone_koopa_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_karon_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_kinopico_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_kinopio_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_koopa_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_koopa_jr_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_ldf_bike_blue.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_ldf_bike_red.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_ldf_kart_blue.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_ldf_kart_red.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_ma_kart.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mario_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mdf_bike_blue.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mdf_bike_red.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mdf_kart_blue.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mdf_kart_red.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mii_suit_a_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mii_suit_b_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mii_suit_c_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_noko_64x64.tpl
+TPL,IA8,1	= ./button/timg/tt_ok_button.tpl
+TPL,IA4,1	= ./button/timg/tt_ok_button_mini.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_open_icon_rule_000.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_pata_64x64.tpl
+TPL,IA4,1	= ./button/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_peach_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_roseta_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_sdf_bike_blue.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_sdf_bike_red.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_sdf_kart_blue.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_sdf_kart_red.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_teresa_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_waluigi_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_wario_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_wii_icon_128.tpl
+TPL,IA4,1	= ./button/timg/tt_window_vol3sono2.tpl
+TPL,IA4,1	= ./button/timg/tt_yajirushi_type1.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_yoshi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/fm_handle_new_1.tpl
+TPL,RGB5A3,1	= ./control/timg/fm_handle_new_2.tpl
+TPL,I4,1	= ./control/timg/ht_squareWhite_00.tpl
+TPL,RGB5A3,1	= ./control/timg/st_battle_icon_balloon.tpl
+TPL,RGB5A3,1	= ./control/timg/st_battle_icon_coin.tpl
+TPL,RGB5A3,1	= ./control/timg/st_battle_icon_flag.tpl
+TPL,IA4,1	= ./control/timg/tt_ability_graph_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_daisy_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_mario_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_peach_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_boss_packun_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_catherine_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_classic_icon_sphere_128.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_banana_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_flower_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_kinoko_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_konoha_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_koura_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_mirror_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_oukan_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_star_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_thunder_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_01.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_02.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_03.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_04.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_05.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_06.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_07.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_08.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_09.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_d_number_3d_coron.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_daisy_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_didy_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_donky_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_fukidashi_window_kado_common.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_funky_64x64.tpl
+TPL,IA8,1	= ./control/timg/tt_gccon_waku.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_hammer_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_hatena_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_hone_koopa_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_karon_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_kinopico_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_kinopio_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_koopa_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_koopa_jr_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mario_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_suit_a_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_suit_b_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_suit_c_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_noko_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_pata_64x64.tpl
+TPL,IA4,1	= ./control/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_peach_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_remocon_body.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_roseta_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_teresa_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_waluigi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_wario_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_wii_icon_128.tpl
+TPL,IA4,1	= ./control/timg/tt_window_vol1.tpl
+TPL,IA4,1	= ./control/timg/tt_window_vol4_32.tpl
+TPL,IA4,1	= ./control/timg/tt_yajirushi_type1.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_yoshi_64x64.tpl
+KCL		= ./course.kcl
+KMP		= ./course.kmp
+LEX		= ./course.lex
+TPL,I8,1	= ./dpd_pointer/timg/cursor0.tpl
+TPL,IA4,1	= ./dpd_pointer/timg/tt_i_cursor_nakami_ver0.tpl
+TPL,IA4,1	= ./dpd_pointer/timg/tt_i_cursor_shikaku.tpl
+TPL,IA8,1	= ./dpd_pointer/timg/tt_i_cursor_tongari.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading1.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading2.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading3.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading4.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading5.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading6.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading7.tpl
+TPL,RGB5A3,1	= ./message_window/timg/loading8.tpl
+TPL,RGB5A3,1	= ./message_window/timg/tt_fukidashi_window_kado_common.tpl
+TPL,IA8,1	= ./message_window/timg/tt_glass_waku_180.tpl
+TPL,RGB565,1	= ./message_window/timg/tt_pattern_chek_32x32.tpl
+TPL,IA4,1	= ./message_window/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./message_window/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,IA4,1	= ./model/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_a_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_a_light.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_clacon_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_clacon_light.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_fukidashi_window_kado_common.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_gccon_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_gccon_light.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_gccon_waku.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_hatena_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_hatena_light.tpl
+TPL,IA4,1	= ./pad_recognize/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_remocon_han_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_remocon_han_light.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_remocon_nun_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_remocon_nun_light.tpl
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+./effect/RKMenu.breff
+./effect/RKMenu.breft
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but neither U8 nor LTA) this list will be used to sort
+# the found files. For archives with directory support (all except PACK) it is
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./
+		= ./bg/
+		= ./bg/anim/
+   0x10c80	= ./bg/anim/bg_Loop.brlan
+   0x10d20	= ./bg/anim/obi_bottom_go_fuchi_check_loop.brlan
+   0x10de0	= ./bg/anim/obi_top_go_fuchi_check_loop.brlan
+		= ./bg/blyt/
+   0x10ea0	= ./bg/blyt/bg.brlyt
+   0x112a0	= ./bg/blyt/obi_bottom.brlyt
+   0x11900	= ./bg/blyt/obi_bottom_go.brlyt
+   0x11f00	= ./bg/blyt/obi_bottom_message.brlyt
+   0x12b80	= ./bg/blyt/obi_top.brlyt
+   0x131e0	= ./bg/blyt/obi_top_go.brlyt
+   0x13780	= ./bg/blyt/obi_top_text.brlyt
+		= ./bg/ctrl/
+   0x139a0	= ./bg/ctrl/MenuBG.brctr
+   0x13a40	= ./bg/ctrl/MenuObiBottom.brctr
+   0x13b20	= ./bg/ctrl/MenuObiBottomRaceConfirm.brctr
+   0x13c60	= ./bg/ctrl/MenuObiInstructionText.brctr
+   0x13d00	= ./bg/ctrl/MenuObiTitleText.brctr
+   0x13de0	= ./bg/ctrl/MenuObiTop.brctr
+   0x13ec0	= ./bg/ctrl/MenuObiTopRaceConfirm.brctr
+		= ./bg/timg/
+   0x13fe0	= ./bg/timg/ht_squareWhite_00.tpl
+   0xb6040	= ./bg/timg/tt_block_16x16.tpl
+   0xb6480	= ./bg/timg/tt_go_obi_top_waku.tpl
+   0xb6500	= ./bg/timg/tt_obi_bottom_curve_000.tpl
+   0xb6580	= ./bg/timg/tt_obi_bottom_left_000.tpl
+   0xb6600	= ./bg/timg/tt_obi_bottom_right_000.tpl
+   0xb6680	= ./bg/timg/tt_obi_check_000.tpl
+   0xb6700	= ./bg/timg/tt_obi_top_curve_000.tpl
+   0xb6780	= ./bg/timg/tt_obi_top_left_000.tpl
+   0xb6800	= ./bg/timg/tt_obi_top_right_000.tpl
+   0xb6880	= ./bg/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+   0xb6900	= ./bg/timg/tt_pattern_chek_bokashi_32x32.tpl
+		= ./button/
+		= ./button/anim/
+   0xb6980	= ./button/anim/common_w004_menu_fade_in.brlan
+   0xb6b60	= ./button/anim/common_w004_menu_fade_in_after.brlan
+   0xb6d40	= ./button/anim/common_w004_menu_fade_in_before.brlan
+   0xb6f20	= ./button/anim/common_w004_menu_fade_out.brlan
+   0xb7100	= ./button/anim/common_w004_menu_free.brlan
+   0xb72e0	= ./button/anim/common_w004_menu_free_to_select.brlan
+   0xb7540	= ./button/anim/common_w004_menu_fuchi_check_loop.brlan
+   0xb7800	= ./button/anim/common_w004_menu_select.brlan
+   0xb7a20	= ./button/anim/common_w004_menu_select_to_free.brlan
+   0xb7c20	= ./button/anim/common_w004_menu_text_light_01_ok.brlan
+   0xb7ea0	= ./button/anim/common_w004_menu_text_light_01_stop.brlan
+   0xb8080	= ./button/anim/common_w004_menu_text_light_02_select.brlan
+   0xb8340	= ./button/anim/common_w004_menu_text_light_02_stop.brlan
+   0xb85c0	= ./button/anim/common_w006_chara_chara_light_01_ok.brlan
+   0xb8c00	= ./button/anim/common_w006_chara_chara_light_01_stop.brlan
+   0xb9160	= ./button/anim/common_w006_chara_chara_light_02_select.brlan
+   0xb97a0	= ./button/anim/common_w006_chara_chara_light_02_stop.brlan
+   0xb9d00	= ./button/anim/common_w006_chara_fade_in.brlan
+   0xba000	= ./button/anim/common_w006_chara_fade_in_after.brlan
+   0xba2e0	= ./button/anim/common_w006_chara_fade_in_before.brlan
+   0xba5c0	= ./button/anim/common_w006_chara_fade_out.brlan
+   0xba8c0	= ./button/anim/common_w006_chara_free.brlan
+   0xbaf00	= ./button/anim/common_w006_chara_free_to_select.brlan
+   0xbb4c0	= ./button/anim/common_w006_chara_fuchi_check_loop.brlan
+   0xbb5c0	= ./button/anim/common_w006_chara_select.brlan
+   0xbbb60	= ./button/anim/common_w006_chara_select_to_free.brlan
+   0xbc0e0	= ./button/anim/common_w006_chara_text_light_01_ok.brlan
+   0xbc3c0	= ./button/anim/common_w006_chara_text_light_01_stop.brlan
+   0xbc6c0	= ./button/anim/common_w006_chara_text_light_02_select.brlan
+   0xbc9a0	= ./button/anim/common_w006_chara_text_light_02_stop.brlan
+   0xbcca0	= ./button/anim/common_w008_back_fade_in.brlan
+   0xbcf60	= ./button/anim/common_w008_back_fade_in_after.brlan
+   0xbd200	= ./button/anim/common_w008_back_fade_in_before.brlan
+   0xbd4a0	= ./button/anim/common_w008_back_fade_out.brlan
+   0xbd760	= ./button/anim/common_w008_back_free.brlan
+   0xbdce0	= ./button/anim/common_w008_back_free_to_select.brlan
+   0xbe1e0	= ./button/anim/common_w008_back_fuchi_check_loop.brlan
+   0xbe520	= ./button/anim/common_w008_back_select.brlan
+   0xbe9a0	= ./button/anim/common_w008_back_select_to_free.brlan
+   0xbee20	= ./button/anim/common_w008_back_text_light_01_ok.brlan
+   0xbf160	= ./button/anim/common_w008_back_text_light_01_stop.brlan
+   0xbf420	= ./button/anim/common_w008_back_text_light_02_select.brlan
+   0xbf760	= ./button/anim/common_w008_back_text_light_02_stop.brlan
+   0xbfa20	= ./button/anim/common_w010_cup_fade_in.brlan
+   0xbfec0	= ./button/anim/common_w010_cup_fade_in_after.brlan
+   0xc0340	= ./button/anim/common_w010_cup_fade_in_before.brlan
+   0xc07c0	= ./button/anim/common_w010_cup_fade_out.brlan
+   0xc0c60	= ./button/anim/common_w010_cup_free.brlan
+   0xc1360	= ./button/anim/common_w010_cup_free_to_select.brlan
+   0xc1a20	= ./button/anim/common_w010_cup_fuchi_check_loop.brlan
+   0xc1ae0	= ./button/anim/common_w010_cup_fuchi_off.brlan
+   0xc2040	= ./button/anim/common_w010_cup_fuchi_on_to_off.brlan
+   0xc25e0	= ./button/anim/common_w010_cup_select.brlan
+   0xc2be0	= ./button/anim/common_w010_cup_select_to_free.brlan
+   0xc31a0	= ./button/anim/common_w010_cup_text_light_01_ok.brlan
+   0xc3760	= ./button/anim/common_w010_cup_text_light_01_stop.brlan
+   0xc3c00	= ./button/anim/common_w010_cup_text_light_02_select.brlan
+   0xc41c0	= ./button/anim/common_w010_cup_text_light_02_stop.brlan
+   0xc4660	= ./button/anim/common_w012_class_fade_in.brlan
+   0xc4920	= ./button/anim/common_w012_class_fade_in_after.brlan
+   0xc4bc0	= ./button/anim/common_w012_class_fade_in_before.brlan
+   0xc4e60	= ./button/anim/common_w012_class_fade_out.brlan
+   0xc5120	= ./button/anim/common_w012_class_free.brlan
+   0xc5740	= ./button/anim/common_w012_class_free_to_select.brlan
+   0xc5d60	= ./button/anim/common_w012_class_fuchi_check_loop.brlan
+   0xc5e60	= ./button/anim/common_w012_class_select.brlan
+   0xc6380	= ./button/anim/common_w012_class_select_to_free.brlan
+   0xc6900	= ./button/anim/common_w012_class_text_light_01_ok.brlan
+   0xc6c40	= ./button/anim/common_w012_class_text_light_01_stop.brlan
+   0xc6f00	= ./button/anim/common_w012_class_text_light_02_select.brlan
+   0xc7240	= ./button/anim/common_w012_class_text_light_02_stop.brlan
+   0xc7500	= ./button/anim/common_w016_yajirushi_left_chara_light_01_ok.brlan
+   0xc78a0	= ./button/anim/common_w016_yajirushi_left_chara_light_01_stop.brlan
+   0xc7b80	= ./button/anim/common_w016_yajirushi_left_chara_light_02_select.brlan
+   0xc7f20	= ./button/anim/common_w016_yajirushi_left_chara_light_02_stop.brlan
+   0xc8200	= ./button/anim/common_w016_yajirushi_left_fade_in.brlan
+   0xc84e0	= ./button/anim/common_w016_yajirushi_left_fade_in_after.brlan
+   0xc87a0	= ./button/anim/common_w016_yajirushi_left_fade_in_before.brlan
+   0xc8a60	= ./button/anim/common_w016_yajirushi_left_fade_out.brlan
+   0xc8d20	= ./button/anim/common_w016_yajirushi_left_free.brlan
+   0xc90e0	= ./button/anim/common_w016_yajirushi_left_free_to_select.brlan
+   0xc9460	= ./button/anim/common_w016_yajirushi_left_fuchi_check_loop.brlan
+   0xc9520	= ./button/anim/common_w016_yajirushi_left_select.brlan
+   0xc9840	= ./button/anim/common_w016_yajirushi_left_select_to_free.brlan
+   0xc9b20	= ./button/anim/common_w019_mii_chara_light_01_ok.brlan
+   0xc9e80	= ./button/anim/common_w019_mii_chara_light_01_stop.brlan
+   0xca160	= ./button/anim/common_w019_mii_chara_light_02_select.brlan
+   0xca4c0	= ./button/anim/common_w019_mii_chara_light_02_stop.brlan
+   0xca7a0	= ./button/anim/common_w019_mii_fade_in.brlan
+   0xcaa60	= ./button/anim/common_w019_mii_fade_in_after.brlan
+   0xcad20	= ./button/anim/common_w019_mii_fade_in_before.brlan
+   0xcafe0	= ./button/anim/common_w019_mii_fade_out.brlan
+   0xcb2a0	= ./button/anim/common_w019_mii_free.brlan
+   0xcb760	= ./button/anim/common_w019_mii_free_to_select.brlan
+   0xcbc00	= ./button/anim/common_w019_mii_fuchi_check_loop.brlan
+   0xcbcc0	= ./button/anim/common_w019_mii_select.brlan
+   0xcc140	= ./button/anim/common_w019_mii_select_to_free.brlan
+   0xcc5a0	= ./button/anim/common_w021_yajirushi_right_chara_light_01_ok.brlan
+   0xcc940	= ./button/anim/common_w021_yajirushi_right_chara_light_01_stop.brlan
+   0xccc20	= ./button/anim/common_w021_yajirushi_right_chara_light_02_select.brlan
+   0xccfc0	= ./button/anim/common_w021_yajirushi_right_chara_light_02_stop.brlan
+   0xcd2a0	= ./button/anim/common_w021_yajirushi_right_fade_in.brlan
+   0xcd580	= ./button/anim/common_w021_yajirushi_right_fade_in_after.brlan
+   0xcd840	= ./button/anim/common_w021_yajirushi_right_fade_in_before.brlan
+   0xcdb00	= ./button/anim/common_w021_yajirushi_right_fade_out.brlan
+   0xcddc0	= ./button/anim/common_w021_yajirushi_right_free.brlan
+   0xce180	= ./button/anim/common_w021_yajirushi_right_free_to_select.brlan
+   0xce500	= ./button/anim/common_w021_yajirushi_right_fuchi_check_loop.brlan
+   0xce5c0	= ./button/anim/common_w021_yajirushi_right_select.brlan
+   0xce8e0	= ./button/anim/common_w021_yajirushi_right_select_to_free.brlan
+   0xcebc0	= ./button/anim/common_w025_chara_middle_chara_light_01_ok.brlan
+   0xcf200	= ./button/anim/common_w025_chara_middle_chara_light_01_stop.brlan
+   0xcf760	= ./button/anim/common_w025_chara_middle_chara_light_02_select.brlan
+   0xcfda0	= ./button/anim/common_w025_chara_middle_chara_light_02_stop.brlan
+   0xd0300	= ./button/anim/common_w025_chara_middle_fade_in.brlan
+   0xd0600	= ./button/anim/common_w025_chara_middle_fade_in_after.brlan
+   0xd08e0	= ./button/anim/common_w025_chara_middle_fade_in_before.brlan
+   0xd0bc0	= ./button/anim/common_w025_chara_middle_fade_out.brlan
+   0xd0ec0	= ./button/anim/common_w025_chara_middle_free.brlan
+   0xd1500	= ./button/anim/common_w025_chara_middle_free_to_select.brlan
+   0xd1ac0	= ./button/anim/common_w025_chara_middle_fuchi_check_loop.brlan
+   0xd1bc0	= ./button/anim/common_w025_chara_middle_select.brlan
+   0xd2160	= ./button/anim/common_w025_chara_middle_select_to_free.brlan
+   0xd26e0	= ./button/anim/common_w025_chara_middle_text_light_01_ok.brlan
+   0xd29c0	= ./button/anim/common_w025_chara_middle_text_light_01_stop.brlan
+   0xd2cc0	= ./button/anim/common_w025_chara_middle_text_light_02_select.brlan
+   0xd2fa0	= ./button/anim/common_w025_chara_middle_text_light_02_stop.brlan
+   0xd32a0	= ./button/anim/common_w026_chara_large_chara_light_01_ok.brlan
+   0xd3880	= ./button/anim/common_w026_chara_large_chara_light_01_stop.brlan
+   0xd3d80	= ./button/anim/common_w026_chara_large_chara_light_02_select.brlan
+   0xd4360	= ./button/anim/common_w026_chara_large_chara_light_02_stop.brlan
+   0xd4860	= ./button/anim/common_w026_chara_large_fade_in.brlan
+   0xd4ba0	= ./button/anim/common_w026_chara_large_fade_in_after.brlan
+   0xd4ec0	= ./button/anim/common_w026_chara_large_fade_in_before.brlan
+   0xd51e0	= ./button/anim/common_w026_chara_large_fade_out.brlan
+   0xd5520	= ./button/anim/common_w026_chara_large_free.brlan
+   0xd5ac0	= ./button/anim/common_w026_chara_large_free_to_select.brlan
+   0xd6000	= ./button/anim/common_w026_chara_large_fuchi_check_loop.brlan
+   0xd6100	= ./button/anim/common_w026_chara_large_select.brlan
+   0xd6620	= ./button/anim/common_w026_chara_large_select_to_free.brlan
+   0xd6b20	= ./button/anim/common_w026_chara_large_text_light_01_ok.brlan
+   0xd6e40	= ./button/anim/common_w026_chara_large_text_light_01_stop.brlan
+   0xd7180	= ./button/anim/common_w026_chara_large_text_light_02_select.brlan
+   0xd74a0	= ./button/anim/common_w026_chara_large_text_light_02_stop.brlan
+   0xd77e0	= ./button/anim/common_w030_machine_12_chara_light_01_ok.brlan
+   0xd7d60	= ./button/anim/common_w030_machine_12_chara_light_01_stop.brlan
+   0xd81c0	= ./button/anim/common_w030_machine_12_chara_light_02_select.brlan
+   0xd8740	= ./button/anim/common_w030_machine_12_chara_light_02_stop.brlan
+   0xd8ba0	= ./button/anim/common_w030_machine_12_fade_in.brlan
+   0xd8ea0	= ./button/anim/common_w030_machine_12_fade_in_after.brlan
+   0xd9180	= ./button/anim/common_w030_machine_12_fade_in_before.brlan
+   0xd9460	= ./button/anim/common_w030_machine_12_fade_out.brlan
+   0xd9760	= ./button/anim/common_w030_machine_12_free.brlan
+   0xd9cc0	= ./button/anim/common_w030_machine_12_free_to_select.brlan
+   0xda1e0	= ./button/anim/common_w030_machine_12_fuchi_check_loop.brlan
+   0xda2a0	= ./button/anim/common_w030_machine_12_select.brlan
+   0xda760	= ./button/anim/common_w030_machine_12_select_to_free.brlan
+   0xdac20	= ./button/anim/common_w031_machine_6_yoko_chara_light_01_ok.brlan
+   0xdb1a0	= ./button/anim/common_w031_machine_6_yoko_chara_light_01_stop.brlan
+   0xdb600	= ./button/anim/common_w031_machine_6_yoko_chara_light_02_select.brlan
+   0xdbb80	= ./button/anim/common_w031_machine_6_yoko_chara_light_02_stop.brlan
+   0xdbfe0	= ./button/anim/common_w031_machine_6_yoko_fade_in.brlan
+   0xdc2e0	= ./button/anim/common_w031_machine_6_yoko_fade_in_after.brlan
+   0xdc5c0	= ./button/anim/common_w031_machine_6_yoko_fade_in_before.brlan
+   0xdc8a0	= ./button/anim/common_w031_machine_6_yoko_fade_out.brlan
+   0xdcba0	= ./button/anim/common_w031_machine_6_yoko_free.brlan
+   0xdd100	= ./button/anim/common_w031_machine_6_yoko_free_to_select.brlan
+   0xdd620	= ./button/anim/common_w031_machine_6_yoko_fuchi_check_loop.brlan
+   0xdd6e0	= ./button/anim/common_w031_machine_6_yoko_select.brlan
+   0xddba0	= ./button/anim/common_w031_machine_6_yoko_select_to_free.brlan
+   0xde060	= ./button/anim/common_w032_machine_6_tate_battle_chara_light_01_ok.brlan
+   0xde680	= ./button/anim/common_w032_machine_6_tate_battle_chara_light_01_stop.brlan
+   0xdeba0	= ./button/anim/common_w032_machine_6_tate_battle_chara_light_02_select.brlan
+   0xdf1c0	= ./button/anim/common_w032_machine_6_tate_battle_chara_light_02_stop.brlan
+   0xdf6e0	= ./button/anim/common_w032_machine_6_tate_battle_fade_in.brlan
+   0xdf9e0	= ./button/anim/common_w032_machine_6_tate_battle_fade_in_after.brlan
+   0xdfcc0	= ./button/anim/common_w032_machine_6_tate_battle_fade_in_before.brlan
+   0xdffa0	= ./button/anim/common_w032_machine_6_tate_battle_fade_out.brlan
+   0xe02a0	= ./button/anim/common_w032_machine_6_tate_battle_free.brlan
+   0xe08c0	= ./button/anim/common_w032_machine_6_tate_battle_free_to_select.brlan
+   0xe0ea0	= ./button/anim/common_w032_machine_6_tate_battle_fuchi_check_loop.brlan
+   0xe0f60	= ./button/anim/common_w032_machine_6_tate_battle_select.brlan
+   0xe1500	= ./button/anim/common_w032_machine_6_tate_battle_select_to_free.brlan
+   0xe1a80	= ./button/anim/common_w032_machine_6_tate_chara_light_01_ok.brlan
+   0xe20a0	= ./button/anim/common_w032_machine_6_tate_chara_light_01_stop.brlan
+   0xe25c0	= ./button/anim/common_w032_machine_6_tate_chara_light_02_select.brlan
+   0xe2be0	= ./button/anim/common_w032_machine_6_tate_chara_light_02_stop.brlan
+   0xe3100	= ./button/anim/common_w032_machine_6_tate_fade_in.brlan
+   0xe3400	= ./button/anim/common_w032_machine_6_tate_fade_in_after.brlan
+   0xe36e0	= ./button/anim/common_w032_machine_6_tate_fade_in_before.brlan
+   0xe39c0	= ./button/anim/common_w032_machine_6_tate_fade_out.brlan
+   0xe3cc0	= ./button/anim/common_w032_machine_6_tate_free.brlan
+   0xe42e0	= ./button/anim/common_w032_machine_6_tate_free_to_select.brlan
+   0xe48c0	= ./button/anim/common_w032_machine_6_tate_fuchi_check_loop.brlan
+   0xe4980	= ./button/anim/common_w032_machine_6_tate_select.brlan
+   0xe4f20	= ./button/anim/common_w032_machine_6_tate_select_to_free.brlan
+   0xe54a0	= ./button/anim/common_w033_machine_5_chara_light_01_ok.brlan
+   0xe5b60	= ./button/anim/common_w033_machine_5_chara_light_01_stop.brlan
+   0xe60c0	= ./button/anim/common_w033_machine_5_chara_light_02_select.brlan
+   0xe6780	= ./button/anim/common_w033_machine_5_chara_light_02_stop.brlan
+   0xe6ce0	= ./button/anim/common_w033_machine_5_fade_in.brlan
+   0xe7020	= ./button/anim/common_w033_machine_5_fade_in_after.brlan
+   0xe7340	= ./button/anim/common_w033_machine_5_fade_in_before.brlan
+   0xe7660	= ./button/anim/common_w033_machine_5_fade_out.brlan
+   0xe79a0	= ./button/anim/common_w033_machine_5_free.brlan
+   0xe8000	= ./button/anim/common_w033_machine_5_free_to_select.brlan
+   0xe8680	= ./button/anim/common_w033_machine_5_fuchi_check_loop.brlan
+   0xe8740	= ./button/anim/common_w033_machine_5_select.brlan
+   0xe8d60	= ./button/anim/common_w033_machine_5_select_to_free.brlan
+   0xe9320	= ./button/anim/common_w034_machine_4_chara_light_01_ok.brlan
+   0xe9940	= ./button/anim/common_w034_machine_4_chara_light_01_stop.brlan
+   0xe9e60	= ./button/anim/common_w034_machine_4_chara_light_02_select.brlan
+   0xea480	= ./button/anim/common_w034_machine_4_chara_light_02_stop.brlan
+   0xea9a0	= ./button/anim/common_w034_machine_4_fade_in.brlan
+   0xeaca0	= ./button/anim/common_w034_machine_4_fade_in_after.brlan
+   0xeaf80	= ./button/anim/common_w034_machine_4_fade_in_before.brlan
+   0xeb260	= ./button/anim/common_w034_machine_4_fade_out.brlan
+   0xeb560	= ./button/anim/common_w034_machine_4_free.brlan
+   0xebb80	= ./button/anim/common_w034_machine_4_free_to_select.brlan
+   0xec160	= ./button/anim/common_w034_machine_4_fuchi_check_loop.brlan
+   0xec220	= ./button/anim/common_w034_machine_4_select.brlan
+   0xec7c0	= ./button/anim/common_w034_machine_4_select_to_free.brlan
+   0xecd40	= ./button/anim/common_w035_machine_3_chara_light_01_ok.brlan
+   0xed360	= ./button/anim/common_w035_machine_3_chara_light_01_stop.brlan
+   0xed880	= ./button/anim/common_w035_machine_3_chara_light_02_select.brlan
+   0xedea0	= ./button/anim/common_w035_machine_3_chara_light_02_stop.brlan
+   0xee3c0	= ./button/anim/common_w035_machine_3_fade_in.brlan
+   0xee6c0	= ./button/anim/common_w035_machine_3_fade_in_after.brlan
+   0xee9a0	= ./button/anim/common_w035_machine_3_fade_in_before.brlan
+   0xeec80	= ./button/anim/common_w035_machine_3_fade_out.brlan
+   0xeef80	= ./button/anim/common_w035_machine_3_free.brlan
+   0xef5a0	= ./button/anim/common_w035_machine_3_free_to_select.brlan
+   0xefb80	= ./button/anim/common_w035_machine_3_fuchi_check_loop.brlan
+   0xefc40	= ./button/anim/common_w035_machine_3_select.brlan
+   0xf01e0	= ./button/anim/common_w035_machine_3_select_to_free.brlan
+   0xf0760	= ./button/anim/common_w036_machine_8_chara_light_01_ok.brlan
+   0xf0d80	= ./button/anim/common_w036_machine_8_chara_light_01_stop.brlan
+   0xf12a0	= ./button/anim/common_w036_machine_8_chara_light_02_select.brlan
+   0xf18c0	= ./button/anim/common_w036_machine_8_chara_light_02_stop.brlan
+   0xf1de0	= ./button/anim/common_w036_machine_8_fade_in.brlan
+   0xf20e0	= ./button/anim/common_w036_machine_8_fade_in_after.brlan
+   0xf23c0	= ./button/anim/common_w036_machine_8_fade_in_before.brlan
+   0xf26a0	= ./button/anim/common_w036_machine_8_fade_out.brlan
+   0xf29a0	= ./button/anim/common_w036_machine_8_free.brlan
+   0xf2fc0	= ./button/anim/common_w036_machine_8_free_to_select.brlan
+   0xf35a0	= ./button/anim/common_w036_machine_8_fuchi_check_loop.brlan
+   0xf3660	= ./button/anim/common_w036_machine_8_select.brlan
+   0xf3c00	= ./button/anim/common_w036_machine_8_select_to_free.brlan
+   0xf4180	= ./button/anim/common_w083_earth_chat_message_fade_in.brlan
+   0xf4440	= ./button/anim/common_w083_earth_chat_message_fade_in_after.brlan
+   0xf46e0	= ./button/anim/common_w083_earth_chat_message_fade_in_before.brlan
+   0xf4980	= ./button/anim/common_w083_earth_chat_message_fade_out.brlan
+   0xf4c40	= ./button/anim/common_w083_earth_chat_message_free.brlan
+   0xf5140	= ./button/anim/common_w083_earth_chat_message_free_to_select.brlan
+   0xf55e0	= ./button/anim/common_w083_earth_chat_message_fuchi_check_loop.brlan
+   0xf56a0	= ./button/anim/common_w083_earth_chat_message_select.brlan
+   0xf5aa0	= ./button/anim/common_w083_earth_chat_message_select_to_free.brlan
+   0xf5ec0	= ./button/anim/common_w083_earth_chat_message_text_light_01_ok.brlan
+   0xf6200	= ./button/anim/common_w083_earth_chat_message_text_light_01_stop.brlan
+   0xf64c0	= ./button/anim/common_w083_earth_chat_message_text_light_02_select.brlan
+   0xf6800	= ./button/anim/common_w083_earth_chat_message_text_light_02_stop.brlan
+   0xf6ac0	= ./button/anim/common_w084_earth_delete_access_off.brlan
+   0xf6e40	= ./button/anim/common_w084_earth_delete_free.brlan
+   0xf7200	= ./button/anim/common_w084_earth_delete_free_to_select.brlan
+   0xf7660	= ./button/anim/common_w084_earth_delete_fuchi_check_loop.brlan
+   0xf7720	= ./button/anim/common_w084_earth_delete_select.brlan
+   0xf7ae0	= ./button/anim/common_w084_earth_delete_select_to_free.brlan
+   0xf7ec0	= ./button/anim/common_w084_earth_delete_text_light_01_ok.brlan
+   0xf81c0	= ./button/anim/common_w084_earth_delete_text_light_01_stop.brlan
+   0xf8420	= ./button/anim/common_w084_earth_delete_text_light_02_select.brlan
+   0xf8720	= ./button/anim/common_w084_earth_delete_text_light_02_stop.brlan
+   0xf8980	= ./button/anim/common_w087_course_movie_fade_in.brlan
+   0xf8c80	= ./button/anim/common_w087_course_movie_fade_in_after.brlan
+   0xf8fa0	= ./button/anim/common_w087_course_movie_fade_in_before.brlan
+   0xf92c0	= ./button/anim/common_w087_course_movie_fade_out.brlan
+   0xf95e0	= ./button/anim/common_w087_course_movie_free.brlan
+   0xf9a20	= ./button/anim/common_w087_course_movie_free_to_select.brlan
+   0xf9f00	= ./button/anim/common_w087_course_movie_fuchi_check_loop.brlan
+   0xf9fc0	= ./button/anim/common_w087_course_movie_fuchi_off.brlan
+   0xfa3a0	= ./button/anim/common_w087_course_movie_fuchi_on.brlan
+   0xfa780	= ./button/anim/common_w087_course_movie_fuchi_on_to_off.brlan
+   0xfab80	= ./button/anim/common_w087_course_movie_select.brlan
+   0xfafc0	= ./button/anim/common_w087_course_movie_select_to_free.brlan
+   0xfb420	= ./button/anim/common_w087_course_movie_text_light_01_ok.brlan
+   0xfb800	= ./button/anim/common_w087_course_movie_text_light_01_stop.brlan
+   0xfbb20	= ./button/anim/common_w087_course_movie_text_light_02_select.brlan
+   0xfbf00	= ./button/anim/common_w087_course_movie_text_light_02_stop.brlan
+   0xfc220	= ./button/anim/common_w087_course_movie_waku_off.brlan
+   0xfc460	= ./button/anim/common_w087_course_movie_waku_on.brlan
+   0xfc6a0	= ./button/anim/common_w087_course_movie_waku_on_to_off.brlan
+   0xfc8e0	= ./button/anim/common_w088_mission_movie_fade_in.brlan
+   0xfcc60	= ./button/anim/common_w088_mission_movie_fade_in_after.brlan
+   0xfcfc0	= ./button/anim/common_w088_mission_movie_fade_in_before.brlan
+   0xfd320	= ./button/anim/common_w088_mission_movie_fade_out.brlan
+   0xfd6a0	= ./button/anim/common_w088_mission_movie_free.brlan
+   0xfdc20	= ./button/anim/common_w088_mission_movie_free_to_select.brlan
+   0xfe160	= ./button/anim/common_w088_mission_movie_fuchi_check_loop.brlan
+   0xfe260	= ./button/anim/common_w088_mission_movie_fuchi_off.brlan
+   0xfe680	= ./button/anim/common_w088_mission_movie_fuchi_on.brlan
+   0xfeaa0	= ./button/anim/common_w088_mission_movie_fuchi_on_to_off.brlan
+   0xfeee0	= ./button/anim/common_w088_mission_movie_select.brlan
+   0xff360	= ./button/anim/common_w088_mission_movie_select_to_free.brlan
+   0xff800	= ./button/anim/common_w088_mission_movie_text_light_01_ok.brlan
+   0xffc20	= ./button/anim/common_w088_mission_movie_text_light_01_stop.brlan
+   0xfffa0	= ./button/anim/common_w088_mission_movie_text_light_02_select.brlan
+  0x1003c0	= ./button/anim/common_w088_mission_movie_text_light_02_stop.brlan
+  0x100740	= ./button/anim/common_w092_mission_level_label_color_level_1.brlan
+  0x100c20	= ./button/anim/common_w092_mission_level_label_color_level_2.brlan
+  0x101100	= ./button/anim/common_w092_mission_level_label_color_level_3.brlan
+  0x1015e0	= ./button/anim/common_w092_mission_level_label_color_level_4.brlan
+  0x101ac0	= ./button/anim/common_w092_mission_level_label_color_level_5.brlan
+  0x101fa0	= ./button/anim/common_w092_mission_level_label_color_level_6.brlan
+  0x102480	= ./button/anim/common_w092_mission_level_label_color_level_7.brlan
+  0x102960	= ./button/anim/common_w092_mission_level_label_color_level_8.brlan
+  0x102e40	= ./button/anim/common_w092_mission_level_label_fade_in.brlan
+  0x103280	= ./button/anim/common_w092_mission_level_label_fade_in_after.brlan
+  0x1036a0	= ./button/anim/common_w092_mission_level_label_fade_in_before.brlan
+  0x103ac0	= ./button/anim/common_w092_mission_level_label_fade_out.brlan
+  0x103f00	= ./button/anim/common_w092_mission_level_label_free.brlan
+  0x104600	= ./button/anim/common_w092_mission_level_label_free_to_select.brlan
+  0x104c60	= ./button/anim/common_w092_mission_level_label_fuchi_check_loop.brlan
+  0x104d60	= ./button/anim/common_w092_mission_level_label_fuchi_off.brlan
+  0x105240	= ./button/anim/common_w092_mission_level_label_fuchi_on.brlan
+  0x105720	= ./button/anim/common_w092_mission_level_label_fuchi_on_to_off.brlan
+  0x105c20	= ./button/anim/common_w092_mission_level_label_select.brlan
+  0x106160	= ./button/anim/common_w092_mission_level_label_select_to_free.brlan
+  0x1066c0	= ./button/anim/common_w092_mission_level_label_text_light_01_ok.brlan
+  0x106c00	= ./button/anim/common_w092_mission_level_label_text_light_01_stop.brlan
+  0x107040	= ./button/anim/common_w092_mission_level_label_text_light_02_select.brlan
+  0x107580	= ./button/anim/common_w092_mission_level_label_text_light_02_stop.brlan
+  0x1079c0	= ./button/anim/common_w092_mission_level_label_waku_off.brlan
+  0x107d20	= ./button/anim/common_w092_mission_level_label_waku_on.brlan
+  0x108080	= ./button/anim/common_w092_mission_level_label_waku_on_to_off.brlan
+  0x108400	= ./button/anim/common_w094_battle_menu_fade_in.brlan
+  0x1086c0	= ./button/anim/common_w094_battle_menu_fade_in_after.brlan
+  0x108960	= ./button/anim/common_w094_battle_menu_fade_in_before.brlan
+  0x108c00	= ./button/anim/common_w094_battle_menu_fade_out.brlan
+  0x108ec0	= ./button/anim/common_w094_battle_menu_free.brlan
+  0x109480	= ./button/anim/common_w094_battle_menu_free_to_select.brlan
+  0x109a00	= ./button/anim/common_w094_battle_menu_fuchi_check_loop.brlan
+  0x109b00	= ./button/anim/common_w094_battle_menu_select.brlan
+  0x109fa0	= ./button/anim/common_w094_battle_menu_select_to_free.brlan
+  0x10a480	= ./button/anim/common_w094_battle_menu_text_light_01_ok.brlan
+  0x10a7c0	= ./button/anim/common_w094_battle_menu_text_light_01_stop.brlan
+  0x10aa80	= ./button/anim/common_w094_battle_menu_text_light_02_select.brlan
+  0x10adc0	= ./button/anim/common_w094_battle_menu_text_light_02_stop.brlan
+  0x10b080	= ./button/anim/common_w102_option_menu_fade_in.brlan
+  0x10b280	= ./button/anim/common_w102_option_menu_fade_in_after.brlan
+  0x10b4a0	= ./button/anim/common_w102_option_menu_fade_in_before.brlan
+  0x10b6c0	= ./button/anim/common_w102_option_menu_fade_out.brlan
+  0x10b8c0	= ./button/anim/common_w102_option_menu_free.brlan
+  0x10bc00	= ./button/anim/common_w102_option_menu_free_to_select.brlan
+  0x10bfe0	= ./button/anim/common_w102_option_menu_fuchi_check_loop.brlan
+  0x10c2e0	= ./button/anim/common_w102_option_menu_select.brlan
+  0x10c600	= ./button/anim/common_w102_option_menu_select_to_free.brlan
+  0x10c940	= ./button/anim/common_w102_option_menu_text_light_01_ok.brlan
+  0x10cc20	= ./button/anim/common_w102_option_menu_text_light_01_stop.brlan
+  0x10ce40	= ./button/anim/common_w102_option_menu_text_light_02_select.brlan
+  0x10d120	= ./button/anim/common_w102_option_menu_text_light_02_stop.brlan
+  0x10d340	= ./button/anim/common_w103_wifi_menu_normal_fade_in.brlan
+  0x10d540	= ./button/anim/common_w103_wifi_menu_normal_fade_in_after.brlan
+  0x10d760	= ./button/anim/common_w103_wifi_menu_normal_fade_in_before.brlan
+  0x10d980	= ./button/anim/common_w103_wifi_menu_normal_fade_out.brlan
+  0x10db80	= ./button/anim/common_w103_wifi_menu_normal_free.brlan
+  0x10dde0	= ./button/anim/common_w103_wifi_menu_normal_free_to_select.brlan
+  0x10e0a0	= ./button/anim/common_w103_wifi_menu_normal_fuchi_check_loop.brlan
+  0x10e3a0	= ./button/anim/common_w103_wifi_menu_normal_select.brlan
+  0x10e600	= ./button/anim/common_w103_wifi_menu_normal_select_to_free.brlan
+  0x10e840	= ./button/anim/common_w103_wifi_menu_normal_text_light_01_ok.brlan
+  0x10e9a0	= ./button/anim/common_w103_wifi_menu_normal_text_light_01_stop.brlan
+  0x10eac0	= ./button/anim/common_w103_wifi_menu_normal_text_light_02_select.brlan
+  0x10eda0	= ./button/anim/common_w103_wifi_menu_normal_text_light_02_stop.brlan
+  0x10efc0	= ./button/anim/common_w109_go_button_free.brlan
+  0x10f380	= ./button/anim/common_w109_go_button_free_to_select.brlan
+  0x10f6e0	= ./button/anim/common_w109_go_button_fuchi_check_loop.brlan
+  0x10fa60	= ./button/anim/common_w109_go_button_select.brlan
+  0x10fde0	= ./button/anim/common_w109_go_button_select_to_free.brlan
+  0x110140	= ./button/anim/common_w109_go_button_text_light_01_ok.brlan
+  0x110540	= ./button/anim/common_w109_go_button_text_light_01_stop.brlan
+  0x1108a0	= ./button/anim/common_w109_go_button_text_light_02_select.brlan
+  0x110cc0	= ./button/anim/common_w109_go_button_text_light_02_stop.brlan
+  0x111020	= ./button/anim/common_w110_drift_menu_fade_in.brlan
+  0x1112e0	= ./button/anim/common_w110_drift_menu_fade_in_after.brlan
+  0x111580	= ./button/anim/common_w110_drift_menu_fade_in_before.brlan
+  0x111820	= ./button/anim/common_w110_drift_menu_fade_out.brlan
+  0x111ae0	= ./button/anim/common_w110_drift_menu_free.brlan
+  0x1120a0	= ./button/anim/common_w110_drift_menu_free_to_select.brlan
+  0x112620	= ./button/anim/common_w110_drift_menu_fuchi_check_loop.brlan
+  0x112720	= ./button/anim/common_w110_drift_menu_select.brlan
+  0x112bc0	= ./button/anim/common_w110_drift_menu_select_to_free.brlan
+  0x1130a0	= ./button/anim/common_w110_drift_menu_text_light_01_ok.brlan
+  0x1133e0	= ./button/anim/common_w110_drift_menu_text_light_01_stop.brlan
+  0x1136a0	= ./button/anim/common_w110_drift_menu_text_light_02_select.brlan
+  0x1139e0	= ./button/anim/common_w110_drift_menu_text_light_02_stop.brlan
+  0x113ca0	= ./button/anim/common_w111_team_select_multi_2P_fade_in.brlan
+  0x113f60	= ./button/anim/common_w111_team_select_multi_2P_fade_in_after.brlan
+  0x114200	= ./button/anim/common_w111_team_select_multi_2P_fade_in_before.brlan
+  0x1144a0	= ./button/anim/common_w111_team_select_multi_2P_fade_out.brlan
+  0x114760	= ./button/anim/common_w111_team_select_multi_2P_free.brlan
+  0x114c60	= ./button/anim/common_w111_team_select_multi_2P_free_to_select.brlan
+  0x115100	= ./button/anim/common_w111_team_select_multi_2P_fuchi_check_loop.brlan
+  0x1151c0	= ./button/anim/common_w111_team_select_multi_2P_select.brlan
+  0x1155c0	= ./button/anim/common_w111_team_select_multi_2P_select_to_free.brlan
+  0x1159e0	= ./button/anim/common_w111_team_select_multi_2P_text_light_01_ok.brlan
+  0x115d20	= ./button/anim/common_w111_team_select_multi_2P_text_light_01_stop.brlan
+  0x115fe0	= ./button/anim/common_w111_team_select_multi_2P_text_light_02_select.brlan
+  0x116320	= ./button/anim/common_w111_team_select_multi_2P_text_light_02_stop.brlan
+  0x1165e0	= ./button/anim/common_w112_team_select_multi_4P_fade_in.brlan
+  0x1168a0	= ./button/anim/common_w112_team_select_multi_4P_fade_in_after.brlan
+  0x116b40	= ./button/anim/common_w112_team_select_multi_4P_fade_in_before.brlan
+  0x116de0	= ./button/anim/common_w112_team_select_multi_4P_fade_out.brlan
+  0x1170a0	= ./button/anim/common_w112_team_select_multi_4P_free.brlan
+  0x1175a0	= ./button/anim/common_w112_team_select_multi_4P_free_to_select.brlan
+  0x117a40	= ./button/anim/common_w112_team_select_multi_4P_fuchi_check_loop.brlan
+  0x117b00	= ./button/anim/common_w112_team_select_multi_4P_select.brlan
+  0x117f00	= ./button/anim/common_w112_team_select_multi_4P_select_to_free.brlan
+  0x118320	= ./button/anim/common_w112_team_select_multi_4P_text_light_01_ok.brlan
+  0x118660	= ./button/anim/common_w112_team_select_multi_4P_text_light_01_stop.brlan
+  0x118920	= ./button/anim/common_w112_team_select_multi_4P_text_light_02_select.brlan
+  0x118c60	= ./button/anim/common_w112_team_select_multi_4P_text_light_02_stop.brlan
+  0x118f20	= ./button/anim/common_w113_drift_select_multi_2P_fade_in.brlan
+  0x1191e0	= ./button/anim/common_w113_drift_select_multi_2P_fade_in_after.brlan
+  0x119480	= ./button/anim/common_w113_drift_select_multi_2P_fade_in_before.brlan
+  0x119720	= ./button/anim/common_w113_drift_select_multi_2P_fade_out.brlan
+  0x1199e0	= ./button/anim/common_w113_drift_select_multi_2P_free.brlan
+  0x119ee0	= ./button/anim/common_w113_drift_select_multi_2P_free_to_select.brlan
+  0x11a380	= ./button/anim/common_w113_drift_select_multi_2P_fuchi_check_loop.brlan
+  0x11a440	= ./button/anim/common_w113_drift_select_multi_2P_select.brlan
+  0x11a840	= ./button/anim/common_w113_drift_select_multi_2P_select_to_free.brlan
+  0x11ac60	= ./button/anim/common_w113_drift_select_multi_2P_text_light_01_ok.brlan
+  0x11afa0	= ./button/anim/common_w113_drift_select_multi_2P_text_light_01_stop.brlan
+  0x11b260	= ./button/anim/common_w113_drift_select_multi_2P_text_light_02_select.brlan
+  0x11b5a0	= ./button/anim/common_w113_drift_select_multi_2P_text_light_02_stop.brlan
+  0x11b860	= ./button/anim/common_w114_drift_select_multi_4P_fade_in.brlan
+  0x11bb20	= ./button/anim/common_w114_drift_select_multi_4P_fade_in_after.brlan
+  0x11bdc0	= ./button/anim/common_w114_drift_select_multi_4P_fade_in_before.brlan
+  0x11c060	= ./button/anim/common_w114_drift_select_multi_4P_fade_out.brlan
+  0x11c320	= ./button/anim/common_w114_drift_select_multi_4P_free.brlan
+  0x11c820	= ./button/anim/common_w114_drift_select_multi_4P_free_to_select.brlan
+  0x11ccc0	= ./button/anim/common_w114_drift_select_multi_4P_fuchi_check_loop.brlan
+  0x11cd80	= ./button/anim/common_w114_drift_select_multi_4P_select.brlan
+  0x11d180	= ./button/anim/common_w114_drift_select_multi_4P_select_to_free.brlan
+  0x11d5a0	= ./button/anim/common_w114_drift_select_multi_4P_text_light_01_ok.brlan
+  0x11d8e0	= ./button/anim/common_w114_drift_select_multi_4P_text_light_01_stop.brlan
+  0x11dba0	= ./button/anim/common_w114_drift_select_multi_4P_text_light_02_select.brlan
+  0x11dee0	= ./button/anim/common_w114_drift_select_multi_4P_text_light_02_stop.brlan
+  0x11e1a0	= ./button/anim/common_w115_individual_or_team_movie_fade_in.brlan
+  0x11e460	= ./button/anim/common_w115_individual_or_team_movie_fade_in_after.brlan
+  0x11e700	= ./button/anim/common_w115_individual_or_team_movie_fade_in_before.brlan
+  0x11e9a0	= ./button/anim/common_w115_individual_or_team_movie_fade_out.brlan
+  0x11ec60	= ./button/anim/common_w115_individual_or_team_movie_free.brlan
+  0x11f220	= ./button/anim/common_w115_individual_or_team_movie_free_to_select.brlan
+  0x11f7a0	= ./button/anim/common_w115_individual_or_team_movie_fuchi_check_loop.brlan
+  0x11f8a0	= ./button/anim/common_w115_individual_or_team_movie_select.brlan
+  0x11fd40	= ./button/anim/common_w115_individual_or_team_movie_select_to_free.brlan
+  0x120220	= ./button/anim/common_w115_individual_or_team_movie_text_light_01_ok.brlan
+  0x120560	= ./button/anim/common_w115_individual_or_team_movie_text_light_01_stop.brlan
+  0x120820	= ./button/anim/common_w115_individual_or_team_movie_text_light_02_select.brlan
+  0x120b60	= ./button/anim/common_w115_individual_or_team_movie_text_light_02_stop.brlan
+  0x120e20	= ./button/anim/common_w117_mii_suit_chara_light_01_ok.brlan
+  0x1215a0	= ./button/anim/common_w117_mii_suit_chara_light_01_stop.brlan
+  0x121c40	= ./button/anim/common_w117_mii_suit_chara_light_02_select.brlan
+  0x1223c0	= ./button/anim/common_w117_mii_suit_chara_light_02_stop.brlan
+  0x122a60	= ./button/anim/common_w117_mii_suit_fade_in.brlan
+  0x122d60	= ./button/anim/common_w117_mii_suit_fade_in_after.brlan
+  0x123040	= ./button/anim/common_w117_mii_suit_fade_in_before.brlan
+  0x123320	= ./button/anim/common_w117_mii_suit_fade_out.brlan
+  0x123620	= ./button/anim/common_w117_mii_suit_free.brlan
+  0x123c60	= ./button/anim/common_w117_mii_suit_free_to_select.brlan
+  0x124220	= ./button/anim/common_w117_mii_suit_fuchi_check_loop.brlan
+  0x124460	= ./button/anim/common_w117_mii_suit_select.brlan
+  0x124a00	= ./button/anim/common_w117_mii_suit_select_to_free.brlan
+  0x124f80	= ./button/anim/common_w117_mii_suit_text_light_01_ok.brlan
+  0x125260	= ./button/anim/common_w117_mii_suit_text_light_01_stop.brlan
+  0x125560	= ./button/anim/common_w117_mii_suit_text_light_02_select.brlan
+  0x125840	= ./button/anim/common_w117_mii_suit_text_light_02_stop.brlan
+  0x125b40	= ./button/anim/common_w118_mii_suit_middle_chara_light_01_ok.brlan
+  0x126280	= ./button/anim/common_w118_mii_suit_middle_chara_light_01_stop.brlan
+  0x1268e0	= ./button/anim/common_w118_mii_suit_middle_chara_light_02_select.brlan
+  0x127020	= ./button/anim/common_w118_mii_suit_middle_chara_light_02_stop.brlan
+  0x127680	= ./button/anim/common_w118_mii_suit_middle_fade_in.brlan
+  0x127980	= ./button/anim/common_w118_mii_suit_middle_fade_in_after.brlan
+  0x127c60	= ./button/anim/common_w118_mii_suit_middle_fade_in_before.brlan
+  0x127f40	= ./button/anim/common_w118_mii_suit_middle_fade_out.brlan
+  0x128240	= ./button/anim/common_w118_mii_suit_middle_free.brlan
+  0x128880	= ./button/anim/common_w118_mii_suit_middle_free_to_select.brlan
+  0x128e40	= ./button/anim/common_w118_mii_suit_middle_fuchi_check_loop.brlan
+  0x129040	= ./button/anim/common_w118_mii_suit_middle_select.brlan
+  0x1295e0	= ./button/anim/common_w118_mii_suit_middle_select_to_free.brlan
+  0x129b60	= ./button/anim/common_w118_mii_suit_middle_text_light_01_ok.brlan
+  0x129e40	= ./button/anim/common_w118_mii_suit_middle_text_light_01_stop.brlan
+  0x12a140	= ./button/anim/common_w118_mii_suit_middle_text_light_02_select.brlan
+  0x12a420	= ./button/anim/common_w118_mii_suit_middle_text_light_02_stop.brlan
+  0x12a720	= ./button/anim/common_w119_mii_suit_large_chara_light_01_ok.brlan
+  0x12ada0	= ./button/anim/common_w119_mii_suit_large_chara_light_01_stop.brlan
+  0x12b340	= ./button/anim/common_w119_mii_suit_large_chara_light_02_select.brlan
+  0x12b9c0	= ./button/anim/common_w119_mii_suit_large_chara_light_02_stop.brlan
+  0x12bf60	= ./button/anim/common_w119_mii_suit_large_fade_in.brlan
+  0x12c260	= ./button/anim/common_w119_mii_suit_large_fade_in_after.brlan
+  0x12c540	= ./button/anim/common_w119_mii_suit_large_fade_in_before.brlan
+  0x12c820	= ./button/anim/common_w119_mii_suit_large_fade_out.brlan
+  0x12cb20	= ./button/anim/common_w119_mii_suit_large_free.brlan
+  0x12d080	= ./button/anim/common_w119_mii_suit_large_free_to_select.brlan
+  0x12d560	= ./button/anim/common_w119_mii_suit_large_fuchi_check_loop.brlan
+  0x12d760	= ./button/anim/common_w119_mii_suit_large_select.brlan
+  0x12dc20	= ./button/anim/common_w119_mii_suit_large_select_to_free.brlan
+  0x12e0e0	= ./button/anim/common_w119_mii_suit_large_text_light_01_ok.brlan
+  0x12e3c0	= ./button/anim/common_w119_mii_suit_large_text_light_01_stop.brlan
+  0x12e6c0	= ./button/anim/common_w119_mii_suit_large_text_light_02_select.brlan
+  0x12e9a0	= ./button/anim/common_w119_mii_suit_large_text_light_02_stop.brlan
+  0x12eca0	= ./button/anim/common_w120_connect_menu_fade_in.brlan
+  0x12ee80	= ./button/anim/common_w120_connect_menu_fade_in_after.brlan
+  0x12f060	= ./button/anim/common_w120_connect_menu_fade_in_before.brlan
+  0x12f240	= ./button/anim/common_w120_connect_menu_fade_out.brlan
+  0x12f420	= ./button/anim/common_w120_connect_menu_free.brlan
+  0x12f600	= ./button/anim/common_w120_connect_menu_free_to_select.brlan
+  0x12f860	= ./button/anim/common_w120_connect_menu_fuchi_check_loop.brlan
+  0x12fb20	= ./button/anim/common_w120_connect_menu_select.brlan
+  0x12fd40	= ./button/anim/common_w120_connect_menu_select_to_free.brlan
+  0x12ff40	= ./button/anim/common_w120_connect_menu_text_light_01_ok.brlan
+  0x1301c0	= ./button/anim/common_w120_connect_menu_text_light_01_stop.brlan
+  0x1303a0	= ./button/anim/common_w120_connect_menu_text_light_02_select.brlan
+  0x130660	= ./button/anim/common_w120_connect_menu_text_light_02_stop.brlan
+  0x1308e0	= ./button/anim/common_w128_drift_menu_wifi_fade_in.brlan
+  0x130ba0	= ./button/anim/common_w128_drift_menu_wifi_fade_in_after.brlan
+  0x130e40	= ./button/anim/common_w128_drift_menu_wifi_fade_in_before.brlan
+  0x1310e0	= ./button/anim/common_w128_drift_menu_wifi_fade_out.brlan
+  0x1313a0	= ./button/anim/common_w128_drift_menu_wifi_free.brlan
+  0x1318a0	= ./button/anim/common_w128_drift_menu_wifi_free_to_select.brlan
+  0x131d40	= ./button/anim/common_w128_drift_menu_wifi_fuchi_check_loop.brlan
+  0x131e00	= ./button/anim/common_w128_drift_menu_wifi_select.brlan
+  0x132200	= ./button/anim/common_w128_drift_menu_wifi_select_to_free.brlan
+  0x132620	= ./button/anim/common_w128_drift_menu_wifi_text_light_01_ok.brlan
+  0x132960	= ./button/anim/common_w128_drift_menu_wifi_text_light_01_stop.brlan
+  0x132c20	= ./button/anim/common_w128_drift_menu_wifi_text_light_02_select.brlan
+  0x132f60	= ./button/anim/common_w128_drift_menu_wifi_text_light_02_stop.brlan
+  0x133220	= ./button/anim/common_w129_movie_button_single_top_fade_in.brlan
+  0x1334e0	= ./button/anim/common_w129_movie_button_single_top_fade_in_after.brlan
+  0x133780	= ./button/anim/common_w129_movie_button_single_top_fade_in_before.brlan
+  0x133a20	= ./button/anim/common_w129_movie_button_single_top_fade_out.brlan
+  0x133ce0	= ./button/anim/common_w129_movie_button_single_top_free.brlan
+  0x1342a0	= ./button/anim/common_w129_movie_button_single_top_free_to_select.brlan
+  0x134820	= ./button/anim/common_w129_movie_button_single_top_fuchi_check_loop.brlan
+  0x134920	= ./button/anim/common_w129_movie_button_single_top_select.brlan
+  0x134dc0	= ./button/anim/common_w129_movie_button_single_top_select_to_free.brlan
+  0x1352a0	= ./button/anim/common_w129_movie_button_single_top_text_light_01_ok.brlan
+  0x1355e0	= ./button/anim/common_w129_movie_button_single_top_text_light_01_stop.brlan
+  0x1358a0	= ./button/anim/common_w129_movie_button_single_top_text_light_02_select.brlan
+  0x135be0	= ./button/anim/common_w129_movie_button_single_top_text_light_02_stop.brlan
+  0x135ea0	= ./button/anim/common_w132_movie_button_multi_fade_in.brlan
+  0x136160	= ./button/anim/common_w132_movie_button_multi_fade_in_after.brlan
+  0x136400	= ./button/anim/common_w132_movie_button_multi_fade_in_before.brlan
+  0x1366a0	= ./button/anim/common_w132_movie_button_multi_fade_out.brlan
+  0x136960	= ./button/anim/common_w132_movie_button_multi_free.brlan
+  0x136f20	= ./button/anim/common_w132_movie_button_multi_free_to_select.brlan
+  0x1374a0	= ./button/anim/common_w132_movie_button_multi_fuchi_check_loop.brlan
+  0x1375a0	= ./button/anim/common_w132_movie_button_multi_select.brlan
+  0x137a40	= ./button/anim/common_w132_movie_button_multi_select_to_free.brlan
+  0x137f20	= ./button/anim/common_w132_movie_button_multi_text_light_01_ok.brlan
+  0x138260	= ./button/anim/common_w132_movie_button_multi_text_light_01_stop.brlan
+  0x138520	= ./button/anim/common_w132_movie_button_multi_text_light_02_select.brlan
+  0x138860	= ./button/anim/common_w132_movie_button_multi_text_light_02_stop.brlan
+  0x138b20	= ./button/anim/open_icon_rule_chara_light_01_ok.brlan
+  0x139300	= ./button/anim/open_icon_rule_chara_light_01_stop.brlan
+  0x139920	= ./button/anim/open_icon_rule_chara_light_02_select.brlan
+  0x13a100	= ./button/anim/open_icon_rule_chara_light_02_stop.brlan
+  0x13a720	= ./button/anim/open_icon_rule_fade_in.brlan
+  0x13ac20	= ./button/anim/open_icon_rule_fade_in_after.brlan
+  0x13b100	= ./button/anim/open_icon_rule_fade_in_before.brlan
+  0x13b5e0	= ./button/anim/open_icon_rule_fade_out.brlan
+  0x13bae0	= ./button/anim/open_icon_rule_free.brlan
+  0x13c240	= ./button/anim/open_icon_rule_free_to_select.brlan
+  0x13c960	= ./button/anim/open_icon_rule_fuchi_check_loop.brlan
+  0x13ca00	= ./button/anim/open_icon_rule_fuchi_off.brlan
+  0x13d000	= ./button/anim/open_icon_rule_fuchi_on.brlan
+  0x13d600	= ./button/anim/open_icon_rule_fuchi_on_to_off.brlan
+  0x13dc00	= ./button/anim/open_icon_rule_select.brlan
+  0x13e500	= ./button/anim/open_icon_rule_select_to_free.brlan
+  0x13eb00	= ./button/anim/open_icon_rule_text_light_01_ok.brlan
+  0x13f180	= ./button/anim/open_icon_rule_text_light_01_stop.brlan
+  0x13f680	= ./button/anim/open_icon_rule_text_light_02_select.brlan
+  0x13fd00	= ./button/anim/open_icon_rule_text_light_02_stop.brlan
+		= ./button/blyt/
+  0x140200	= ./button/blyt/battle_machine_select_button.brlyt
+  0x140ea0	= ./button/blyt/character_64x64_common.brlyt
+  0x142e00	= ./button/blyt/class_select_menu_ikinoko4_common.brlyt
+  0x1432c0	= ./button/blyt/common_w004_menu.brlyt
+  0x144260	= ./button/blyt/common_w006_chara.brlyt
+  0x1458a0	= ./button/blyt/common_w008_back.brlyt
+  0x146220	= ./button/blyt/common_w010_cup.brlyt
+  0x147920	= ./button/blyt/common_w012_class.brlyt
+  0x148bc0	= ./button/blyt/common_w016_yajirushi_left.brlyt
+  0x149e80	= ./button/blyt/common_w019_mii.brlyt
+  0x14b140	= ./button/blyt/common_w021_yajirushi_right.brlyt
+  0x14c400	= ./button/blyt/common_w025_chara_middle.brlyt
+  0x14da40	= ./button/blyt/common_w026_chara_large.brlyt
+  0x14f080	= ./button/blyt/common_w030_machine_12.brlyt
+  0x150440	= ./button/blyt/common_w031_machine_6_yoko.brlyt
+  0x151800	= ./button/blyt/common_w032_machine_6_tate.brlyt
+  0x152bc0	= ./button/blyt/common_w032_machine_6_tate_battle.brlyt
+  0x153f80	= ./button/blyt/common_w033_machine_5.brlyt
+  0x155340	= ./button/blyt/common_w034_machine_4.brlyt
+  0x156700	= ./button/blyt/common_w035_machine_3.brlyt
+  0x157ac0	= ./button/blyt/common_w036_machine_8.brlyt
+  0x158e80	= ./button/blyt/common_w037_machine_10.brlyt
+  0x15a240	= ./button/blyt/common_w083_earth_chat_message.brlyt
+  0x15b420	= ./button/blyt/common_w084_earth_delete.brlyt
+  0x15c5a0	= ./button/blyt/common_w087_course_movie.brlyt
+  0x15d480	= ./button/blyt/common_w088_mission_movie.brlyt
+  0x15e560	= ./button/blyt/common_w092_mission_level_label.brlyt
+  0x15fac0	= ./button/blyt/common_w094_battle_menu.brlyt
+  0x160a60	= ./button/blyt/common_w102_option_menu.brlyt
+  0x161ae0	= ./button/blyt/common_w103_wifi_menu_normal.brlyt
+  0x162b80	= ./button/blyt/common_w109_go_button.brlyt
+  0x163740	= ./button/blyt/common_w110_drift_menu.brlyt
+  0x164b20	= ./button/blyt/common_w111_team_select_multi_2P.brlyt
+  0x165ec0	= ./button/blyt/common_w112_team_select_multi_4P.brlyt
+  0x167160	= ./button/blyt/common_w113_drift_select_multi_2P.brlyt
+  0x168300	= ./button/blyt/common_w114_drift_select_multi_4P.brlyt
+  0x1694a0	= ./button/blyt/common_w115_individual_or_team_movie.brlyt
+  0x16a440	= ./button/blyt/common_w117_mii_suit.brlyt
+  0x16c4e0	= ./button/blyt/common_w118_mii_suit_middle.brlyt
+  0x16e440	= ./button/blyt/common_w119_mii_suit_large.brlyt
+  0x1703a0	= ./button/blyt/common_w120_connect_menu.brlyt
+  0x171320	= ./button/blyt/common_w128_drift_menu_wifi.brlyt
+  0x172700	= ./button/blyt/common_w129_movie_button_single_top.brlyt
+  0x173f60	= ./button/blyt/common_w132_movie_button_multi.brlyt
+  0x1757a0	= ./button/blyt/cup_icon_64x64_common.brlyt
+  0x176580	= ./button/blyt/machine_64x64_common.brlyt
+  0x177fe0	= ./button/blyt/open_icon_rule.brlyt
+  0x178f00	= ./button/blyt/stage_icon_common.brlyt
+  0x1791c0	= ./button/blyt/team_color_select_menu_common.brlyt
+		= ./button/ctrl/
+  0x1794a0	= ./button/ctrl/Back.brctr
+  0x179840	= ./button/ctrl/BattleCupSelectCup.brctr
+  0x179d20	= ./button/ctrl/BattleSelect.brctr
+  0x17a0c0	= ./button/ctrl/BattleSetting.brctr
+  0x17a3c0	= ./button/ctrl/BattleStageSelectStage.brctr
+  0x17a900	= ./button/ctrl/CharacterSelect2_0.brctr
+  0x17ae80	= ./button/ctrl/CharacterSelect2_1.brctr
+  0x17b400	= ./button/ctrl/CharacterSelect2_2.brctr
+  0x17b980	= ./button/ctrl/CharacterSelect2_3.brctr
+  0x17bf00	= ./button/ctrl/CharacterSelect2_3_Mii.brctr
+  0x17c4a0	= ./button/ctrl/CharacterSelect3_0.brctr
+  0x17c960	= ./button/ctrl/CharacterSelect3_1.brctr
+  0x17ce20	= ./button/ctrl/CharacterSelect3_2.brctr
+  0x17d2e0	= ./button/ctrl/CharacterSelect3_3.brctr
+  0x17d680	= ./button/ctrl/CharacterSelect3_3_Mii.brctr
+  0x17da40	= ./button/ctrl/CharacterSelect4_0.brctr
+  0x17df80	= ./button/ctrl/CharacterSelect4_1.brctr
+  0x17e4c0	= ./button/ctrl/CharacterSelect4_2.brctr
+  0x17ea00	= ./button/ctrl/CharacterSelect4_3.brctr
+  0x17ef40	= ./button/ctrl/CharacterSelect4_3_Mii.brctr
+  0x17f4a0	= ./button/ctrl/ClassSelect.brctr
+  0x17f8c0	= ./button/ctrl/ClassSelect2.brctr
+  0x17fce0	= ./button/ctrl/CourseSelectCourse.brctr
+  0x180120	= ./button/ctrl/CupSelectCup.brctr
+  0x180600	= ./button/ctrl/DisplayGhostBattle.brctr
+  0x180980	= ./button/ctrl/DriftHelp.brctr
+  0x180c60	= ./button/ctrl/drift_2.brctr
+  0x181060	= ./button/ctrl/drift_4.brctr
+  0x181460	= ./button/ctrl/EventExplanationButton.brctr
+  0x181800	= ./button/ctrl/GhostBattleExplanationButton.brctr
+  0x181ba0	= ./button/ctrl/GlobePadEasy.brctr
+  0x181f60	= ./button/ctrl/MachineSelect1_3.brctr
+  0x1822e0	= ./button/ctrl/MachineSelect1_4.brctr
+  0x182620	= ./button/ctrl/MachineSelect1_5.brctr
+  0x182960	= ./button/ctrl/MachineSelect1_6.brctr
+  0x182ce0	= ./button/ctrl/MachineSelect2_3.brctr
+  0x1830a0	= ./button/ctrl/MachineSelect2_4.brctr
+  0x183420	= ./button/ctrl/MachineSelect2_5.brctr
+  0x1837c0	= ./button/ctrl/MachineSelect2_6.brctr
+  0x183b60	= ./button/ctrl/MachineSelectBattleSingle.brctr
+  0x183f60	= ./button/ctrl/MenuEndConfirm.brctr
+  0x1842e0	= ./button/ctrl/MiiSelectArrowLeft.brctr
+  0x1846e0	= ./button/ctrl/MiiSelectArrowRight.brctr
+  0x184ae0	= ./button/ctrl/MiiSelectMii.brctr
+  0x185060	= ./button/ctrl/MissionInstruction.brctr
+  0x185420	= ./button/ctrl/MissionLevelSelectLevel.brctr
+  0x185980	= ./button/ctrl/MissionStageSelectStage.brctr
+  0x185ec0	= ./button/ctrl/MultiTop.brctr
+  0x1862e0	= ./button/ctrl/OptionExplanationButton.brctr
+  0x186680	= ./button/ctrl/OptionSelectButton.brctr
+  0x186b60	= ./button/ctrl/PadEasy.brctr
+  0x186f40	= ./button/ctrl/PlayerEntryButton.brctr
+  0x1872c0	= ./button/ctrl/RuleSetting.brctr
+  0x1875c0	= ./button/ctrl/SingleTop.brctr
+  0x187ac0	= ./button/ctrl/TeamConfirmOK.brctr
+  0x187dc0	= ./button/ctrl/TeamSelect_2.brctr
+  0x1881c0	= ./button/ctrl/TeamSelect_4.brctr
+  0x1885c0	= ./button/ctrl/TimeAttackGhostList.brctr
+  0x1889e0	= ./button/ctrl/TimeAttackGhostListArrowLeft.brctr
+  0x188de0	= ./button/ctrl/TimeAttackGhostListArrowRight.brctr
+  0x1891e0	= ./button/ctrl/VSSelect.brctr
+  0x189600	= ./button/ctrl/VSSetting.brctr
+  0x189900	= ./button/ctrl/WatchGhostConfirm.brctr
+  0x189c00	= ./button/ctrl/WifiMemberConfirmButton.brctr
+		= ./button/timg/
+  0x189f00	= ./button/timg/fm_icon_hosi01.tpl
+  0x18a740	= ./button/timg/fm_team_color_flag_blue_00.tpl
+  0x18d980	= ./button/timg/fm_team_color_flag_red_00.tpl
+  0x190bc0	= ./button/timg/st_battle_icon_balloon.tpl
+  0x198c00	= ./button/timg/st_battle_icon_coin.tpl
+  0x1a0c40	= ./button/timg/st_battle_icon_flag.tpl
+  0x1a8c80	= ./button/timg/tt_baby_daisy_64x64.tpl
+  0x1aacc0	= ./button/timg/tt_baby_luigi_64x64.tpl
+  0x1acd00	= ./button/timg/tt_baby_mario_64x64.tpl
+  0x1aed40	= ./button/timg/tt_baby_peach_64x64.tpl
+  0x1b0d80	= ./button/timg/tt_boss_packun_64x64.tpl
+  0x1b2dc0	= ./button/timg/tt_catherine_64x64.tpl
+  0x1b4e00	= ./button/timg/tt_classic_icon_sphere_128.tpl
+  0x1bce40	= ./button/timg/tt_class_kinoko_1.tpl
+  0x1bee80	= ./button/timg/tt_class_kinoko_2.tpl
+  0x1c0ec0	= ./button/timg/tt_class_kinoko_3.tpl
+  0x1c2f00	= ./button/timg/tt_class_kinoko_m.tpl
+  0x1c4f40	= ./button/timg/tt_cup_icon_banana_00.tpl
+  0x1ccf80	= ./button/timg/tt_cup_icon_flower_00.tpl
+  0x1d4fc0	= ./button/timg/tt_cup_icon_kinoko_00.tpl
+  0x1dd000	= ./button/timg/tt_cup_icon_konoha_00.tpl
+  0x1e5040	= ./button/timg/tt_cup_icon_koura_00.tpl
+  0x1ed080	= ./button/timg/tt_cup_icon_mirror_00.tpl
+  0x1f50c0	= ./button/timg/tt_cup_icon_oukan_00.tpl
+  0x1fd100	= ./button/timg/tt_cup_icon_star_00.tpl
+  0x205140	= ./button/timg/tt_cup_icon_thunder_00.tpl
+  0x20d180	= ./button/timg/tt_daisy_64x64.tpl
+  0x20f1c0	= ./button/timg/tt_didy_64x64.tpl
+  0x211200	= ./button/timg/tt_donky_64x64.tpl
+  0x213240	= ./button/timg/tt_funky_64x64.tpl
+  0x2152a0	= ./button/timg/tt_glass_sphere_sono3.tpl
+  0x21d2e0	= ./button/timg/tt_glass_sphere_waku_sono1.tpl
+  0x225320	= ./button/timg/tt_glass_waku_180.tpl
+  0x22cf40	= ./button/timg/tt_gr_maru_normal_00.tpl
+  0x22e180	= ./button/timg/tt_hammer_64x64.tpl
+  0x2301c0	= ./button/timg/tt_hatena_64x64.tpl
+  0x232200	= ./button/timg/tt_hone_koopa_64x64.tpl
+  0x234240	= ./button/timg/tt_karon_64x64.tpl
+  0x236280	= ./button/timg/tt_kinopico_64x64.tpl
+  0x2382c0	= ./button/timg/tt_kinopio_64x64.tpl
+  0x23a300	= ./button/timg/tt_koopa_64x64.tpl
+  0x23c340	= ./button/timg/tt_koopa_jr_64x64.tpl
+  0x23e380	= ./button/timg/tt_ldf_bike_blue.tpl
+  0x2458c0	= ./button/timg/tt_ldf_bike_red.tpl
+  0x24ce00	= ./button/timg/tt_ldf_kart_blue.tpl
+  0x254340	= ./button/timg/tt_ldf_kart_red.tpl
+  0x25b880	= ./button/timg/tt_luigi_64x64.tpl
+  0x25d8c0	= ./button/timg/tt_mario_64x64.tpl
+  0x25f920	= ./button/timg/tt_ma_kart.tpl
+  0x26ed20	= ./button/timg/tt_mdf_bike_blue.tpl
+  0x276260	= ./button/timg/tt_mdf_bike_red.tpl
+  0x27d7a0	= ./button/timg/tt_mdf_kart_blue.tpl
+  0x284ce0	= ./button/timg/tt_mdf_kart_red.tpl
+  0x28c220	= ./button/timg/tt_mii_suit_a_64x64.tpl
+  0x28e260	= ./button/timg/tt_mii_suit_b_64x64.tpl
+  0x2902a0	= ./button/timg/tt_mii_suit_c_64x64.tpl
+  0x2922e0	= ./button/timg/tt_noko_64x64.tpl
+  0x294320	= ./button/timg/tt_ok_button.tpl
+  0x321760	= ./button/timg/tt_ok_button_mini.tpl
+  0x322560	= ./button/timg/tt_open_icon_rule_000.tpl
+  0x32a5a0	= ./button/timg/tt_pata_64x64.tpl
+  0x32c5e0	= ./button/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x32ca20	= ./button/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x32d260	= ./button/timg/tt_peach_64x64.tpl
+  0x32f2a0	= ./button/timg/tt_roseta_64x64.tpl
+  0x3312e0	= ./button/timg/tt_sdf_bike_blue.tpl
+  0x338820	= ./button/timg/tt_sdf_bike_red.tpl
+  0x33fd60	= ./button/timg/tt_sdf_kart_blue.tpl
+  0x3472a0	= ./button/timg/tt_sdf_kart_red.tpl
+  0x34e7e0	= ./button/timg/tt_teresa_64x64.tpl
+  0x350820	= ./button/timg/tt_waluigi_64x64.tpl
+  0x352860	= ./button/timg/tt_wario_64x64.tpl
+  0x3548a0	= ./button/timg/tt_wii_icon_128.tpl
+  0x35c8e0	= ./button/timg/tt_window_vol3sono2.tpl
+  0x35ca20	= ./button/timg/tt_yajirushi_type1.tpl
+  0x35de60	= ./button/timg/tt_yoshi_64x64.tpl
+		= ./control/
+		= ./control/anim/
+  0x35fea0	= ./control/anim/common_w010_cup_fade_in.brlan
+  0x360340	= ./control/anim/common_w010_cup_fade_in_after.brlan
+  0x3607c0	= ./control/anim/common_w010_cup_fade_in_before.brlan
+  0x360c40	= ./control/anim/common_w010_cup_fade_out.brlan
+  0x3610e0	= ./control/anim/common_w010_cup_free.brlan
+  0x3617e0	= ./control/anim/common_w010_cup_free_to_select.brlan
+  0x361ea0	= ./control/anim/common_w010_cup_fuchi_check_loop.brlan
+  0x361f60	= ./control/anim/common_w010_cup_fuchi_off.brlan
+  0x3624c0	= ./control/anim/common_w010_cup_fuchi_on_to_off.brlan
+  0x362a60	= ./control/anim/common_w010_cup_select.brlan
+  0x363060	= ./control/anim/common_w010_cup_select_to_free.brlan
+  0x363620	= ./control/anim/common_w010_cup_text_light_01_ok.brlan
+  0x363be0	= ./control/anim/common_w010_cup_text_light_01_stop.brlan
+  0x364080	= ./control/anim/common_w010_cup_text_light_02_select.brlan
+  0x364640	= ./control/anim/common_w010_cup_text_light_02_stop.brlan
+  0x364ae0	= ./control/anim/common_w014_mii_select_long_btn_active_off.brlan
+  0x364d60	= ./control/anim/common_w014_mii_select_long_btn_active_off_to_on.brlan
+  0x364f80	= ./control/anim/common_w014_mii_select_long_btn_active_on.brlan
+  0x365180	= ./control/anim/common_w014_mii_select_long_btn_fade_in.brlan
+  0x3654c0	= ./control/anim/common_w014_mii_select_long_btn_fade_in_after.brlan
+  0x3657e0	= ./control/anim/common_w014_mii_select_long_btn_fade_in_before.brlan
+  0x365b00	= ./control/anim/common_w014_mii_select_long_btn_fade_out.brlan
+  0x365e40	= ./control/anim/common_w014_mii_select_long_btn_free.brlan
+  0x366380	= ./control/anim/common_w014_mii_select_long_btn_free_to_select.brlan
+  0x366860	= ./control/anim/common_w014_mii_select_long_btn_fuchi_check_loop.brlan
+  0x366920	= ./control/anim/common_w014_mii_select_long_btn_select.brlan
+  0x366d60	= ./control/anim/common_w014_mii_select_long_btn_select_to_free.brlan
+  0x3671c0	= ./control/anim/common_w014_mii_select_long_btn_text_light_01_ok.brlan
+  0x3675a0	= ./control/anim/common_w014_mii_select_long_btn_text_light_01_stop.brlan
+  0x3678e0	= ./control/anim/common_w014_mii_select_long_btn_text_light_02_select.brlan
+  0x367cc0	= ./control/anim/common_w014_mii_select_long_btn_text_light_02_stop.brlan
+  0x368000	= ./control/anim/common_w016_yajirushi_left_chara_light_01_ok.brlan
+  0x3683a0	= ./control/anim/common_w016_yajirushi_left_chara_light_01_stop.brlan
+  0x368680	= ./control/anim/common_w016_yajirushi_left_chara_light_02_select.brlan
+  0x368a20	= ./control/anim/common_w016_yajirushi_left_chara_light_02_stop.brlan
+  0x368d00	= ./control/anim/common_w016_yajirushi_left_fade_in.brlan
+  0x368fe0	= ./control/anim/common_w016_yajirushi_left_fade_in_after.brlan
+  0x3692a0	= ./control/anim/common_w016_yajirushi_left_fade_in_before.brlan
+  0x369560	= ./control/anim/common_w016_yajirushi_left_fade_out.brlan
+  0x369820	= ./control/anim/common_w016_yajirushi_left_free.brlan
+  0x369be0	= ./control/anim/common_w016_yajirushi_left_free_to_select.brlan
+  0x369f60	= ./control/anim/common_w016_yajirushi_left_fuchi_check_loop.brlan
+  0x36a020	= ./control/anim/common_w016_yajirushi_left_select.brlan
+  0x36a340	= ./control/anim/common_w016_yajirushi_left_select_to_free.brlan
+  0x36a620	= ./control/anim/common_w020_file_kanri_fade_in.brlan
+  0x36a8e0	= ./control/anim/common_w020_file_kanri_fade_in_after.brlan
+  0x36ab80	= ./control/anim/common_w020_file_kanri_fade_in_before.brlan
+  0x36ae20	= ./control/anim/common_w020_file_kanri_fade_out.brlan
+  0x36b0e0	= ./control/anim/common_w020_file_kanri_free.brlan
+  0x36b660	= ./control/anim/common_w020_file_kanri_free_to_select.brlan
+  0x36bb80	= ./control/anim/common_w020_file_kanri_fuchi_check_loop.brlan
+  0x36bf40	= ./control/anim/common_w020_file_kanri_select.brlan
+  0x36c3c0	= ./control/anim/common_w020_file_kanri_select_to_free.brlan
+  0x36c860	= ./control/anim/common_w020_file_kanri_text_light_01_ok.brlan
+  0x36cba0	= ./control/anim/common_w020_file_kanri_text_light_01_stop.brlan
+  0x36ce60	= ./control/anim/common_w020_file_kanri_text_light_02_select.brlan
+  0x36d1a0	= ./control/anim/common_w020_file_kanri_text_light_02_stop.brlan
+  0x36d460	= ./control/anim/common_w021_yajirushi_right_chara_light_01_ok.brlan
+  0x36d800	= ./control/anim/common_w021_yajirushi_right_chara_light_01_stop.brlan
+  0x36dae0	= ./control/anim/common_w021_yajirushi_right_chara_light_02_select.brlan
+  0x36de80	= ./control/anim/common_w021_yajirushi_right_chara_light_02_stop.brlan
+  0x36e160	= ./control/anim/common_w021_yajirushi_right_fade_in.brlan
+  0x36e440	= ./control/anim/common_w021_yajirushi_right_fade_in_after.brlan
+  0x36e700	= ./control/anim/common_w021_yajirushi_right_fade_in_before.brlan
+  0x36e9c0	= ./control/anim/common_w021_yajirushi_right_fade_out.brlan
+  0x36ec80	= ./control/anim/common_w021_yajirushi_right_free.brlan
+  0x36f040	= ./control/anim/common_w021_yajirushi_right_free_to_select.brlan
+  0x36f3c0	= ./control/anim/common_w021_yajirushi_right_fuchi_check_loop.brlan
+  0x36f480	= ./control/anim/common_w021_yajirushi_right_select.brlan
+  0x36f7a0	= ./control/anim/common_w021_yajirushi_right_select_to_free.brlan
+  0x36fa80	= ./control/anim/common_w023_rule_menu_fade_in.brlan
+  0x36fce0	= ./control/anim/common_w023_rule_menu_fade_in_after.brlan
+  0x36ff20	= ./control/anim/common_w023_rule_menu_fade_in_before.brlan
+  0x370160	= ./control/anim/common_w023_rule_menu_fade_out.brlan
+  0x3703c0	= ./control/anim/common_w023_rule_menu_free.brlan
+  0x3708e0	= ./control/anim/common_w023_rule_menu_free_to_select.brlan
+  0x370da0	= ./control/anim/common_w023_rule_menu_fuchi_check_loop.brlan
+  0x371160	= ./control/anim/common_w023_rule_menu_select.brlan
+  0x371580	= ./control/anim/common_w023_rule_menu_select_to_free.brlan
+  0x3719a0	= ./control/anim/common_w023_rule_menu_text_light_01_ok.brlan
+  0x371c60	= ./control/anim/common_w023_rule_menu_text_light_01_stop.brlan
+  0x371ec0	= ./control/anim/common_w023_rule_menu_text_light_02_select.brlan
+  0x3721a0	= ./control/anim/common_w023_rule_menu_text_light_02_stop.brlan
+  0x372400	= ./control/anim/common_w024_rule_icon_active_off.brlan
+  0x372680	= ./control/anim/common_w024_rule_icon_active_off_to_on.brlan
+  0x3728c0	= ./control/anim/common_w024_rule_icon_active_on.brlan
+  0x372ac0	= ./control/anim/common_w024_rule_icon_fade_in.brlan
+  0x372e00	= ./control/anim/common_w024_rule_icon_fade_in_after.brlan
+  0x373120	= ./control/anim/common_w024_rule_icon_fade_in_before.brlan
+  0x373440	= ./control/anim/common_w024_rule_icon_fade_out.brlan
+  0x373780	= ./control/anim/common_w024_rule_icon_free.brlan
+  0x373cc0	= ./control/anim/common_w024_rule_icon_free_to_select.brlan
+  0x3741c0	= ./control/anim/common_w024_rule_icon_fuchi_check_loop.brlan
+  0x3744e0	= ./control/anim/common_w024_rule_icon_select.brlan
+  0x374920	= ./control/anim/common_w024_rule_icon_select_to_free.brlan
+  0x374d80	= ./control/anim/common_w024_rule_icon_text_light_01_ok.brlan
+  0x375180	= ./control/anim/common_w024_rule_icon_text_light_01_stop.brlan
+  0x3754c0	= ./control/anim/common_w024_rule_icon_text_light_02_select.brlan
+  0x3758c0	= ./control/anim/common_w024_rule_icon_text_light_02_stop.brlan
+  0x375c00	= ./control/anim/common_w048_rule_rap_free.brlan
+  0x375e60	= ./control/anim/common_w048_rule_rap_free_to_select.brlan
+  0x3760e0	= ./control/anim/common_w048_rule_rap_fuchi_check_loop.brlan
+  0x3761a0	= ./control/anim/common_w048_rule_rap_select.brlan
+  0x376400	= ./control/anim/common_w048_rule_rap_select_to_free.brlan
+  0x376680	= ./control/anim/common_w048_rule_rap_text_free.brlan
+  0x376960	= ./control/anim/common_w048_rule_rap_text_free_to_select.brlan
+  0x376c80	= ./control/anim/common_w048_rule_rap_text_select.brlan
+  0x376f40	= ./control/anim/common_w048_rule_rap_text_select_to_free.brlan
+  0x3771e0	= ./control/anim/common_w048_rule_rap_text_text_center_to_right.brlan
+  0x377360	= ./control/anim/common_w048_rule_rap_text_text_hide.brlan
+  0x3774c0	= ./control/anim/common_w048_rule_rap_text_text_left_to_center.brlan
+  0x377640	= ./control/anim/common_w048_rule_rap_text_text_light_01_ok.brlan
+  0x377860	= ./control/anim/common_w048_rule_rap_text_text_light_01_stop.brlan
+  0x377a20	= ./control/anim/common_w048_rule_rap_text_text_light_02_select.brlan
+  0x377c60	= ./control/anim/common_w048_rule_rap_text_text_light_02_stop.brlan
+  0x377e20	= ./control/anim/common_w048_rule_rap_text_text_stop.brlan
+  0x378040	= ./control/anim/common_w050_earth_message_fade_in.brlan
+  0x378140	= ./control/anim/common_w050_earth_message_fade_in_after.brlan
+  0x378220	= ./control/anim/common_w050_earth_message_fade_in_before.brlan
+  0x378300	= ./control/anim/common_w050_earth_message_fade_out.brlan
+  0x378400	= ./control/anim/common_w050_earth_message_text_color_loop.brlan
+  0x378540	= ./control/anim/common_w051_team_blue_red_chara_point_flash.brlan
+  0x378a20	= ./control/anim/common_w051_team_blue_red_chara_point_flash_stop.brlan
+  0x378e20	= ./control/anim/common_w051_team_blue_red_chara_point_gold_loop.brlan
+  0x378f20	= ./control/anim/common_w051_team_blue_red_chara_point_select_gold_parts.brlan
+  0x379060	= ./control/anim/common_w051_team_blue_red_chara_point_select_gold_parts_nasi.brlan
+  0x379180	= ./control/anim/common_w058_vote_blue_on.brlan
+  0x379300	= ./control/anim/common_w058_vote_decision_color.brlan
+  0x379520	= ./control/anim/common_w058_vote_fade_in.brlan
+  0x379620	= ./control/anim/common_w058_vote_fade_in_before.brlan
+  0x379720	= ./control/anim/common_w058_vote_fade_out.brlan
+  0x379820	= ./control/anim/common_w058_vote_fade_out_after.brlan
+  0x379920	= ./control/anim/common_w058_vote_gold_loop.brlan
+  0x3799c0	= ./control/anim/common_w058_vote_my_icon_scale.brlan
+  0x379ac0	= ./control/anim/common_w058_vote_normal_icon_scale.brlan
+  0x379be0	= ./control/anim/common_w058_vote_red_blue_off.brlan
+  0x379d60	= ./control/anim/common_w058_vote_red_on.brlan
+  0x379ec0	= ./control/anim/common_w058_vote_select_gold_parts.brlan
+  0x37a0c0	= ./control/anim/common_w058_vote_select_gold_parts_nasi.brlan
+  0x37a2a0	= ./control/anim/common_w058_vote_stop_position.brlan
+  0x37a3a0	= ./control/anim/common_w062_multi_machine_rap_free.brlan
+  0x37a500	= ./control/anim/common_w062_multi_machine_rap_free_to_select.brlan
+  0x37a680	= ./control/anim/common_w062_multi_machine_rap_fuchi_check_loop.brlan
+  0x37a740	= ./control/anim/common_w062_multi_machine_rap_select.brlan
+  0x37a8a0	= ./control/anim/common_w062_multi_machine_rap_select_to_free.brlan
+  0x37aa00	= ./control/anim/common_w062_multi_machine_rap_text_free.brlan
+  0x37ace0	= ./control/anim/common_w062_multi_machine_rap_text_free_to_select.brlan
+  0x37b020	= ./control/anim/common_w062_multi_machine_rap_text_select.brlan
+  0x37b2e0	= ./control/anim/common_w062_multi_machine_rap_text_select_to_free.brlan
+  0x37b5a0	= ./control/anim/common_w062_multi_machine_rap_text_text_center_to_right.brlan
+  0x37b720	= ./control/anim/common_w062_multi_machine_rap_text_text_hide.brlan
+  0x37b880	= ./control/anim/common_w062_multi_machine_rap_text_text_left_to_center.brlan
+  0x37ba00	= ./control/anim/common_w062_multi_machine_rap_text_text_light_01_ok.brlan
+  0x37bc20	= ./control/anim/common_w062_multi_machine_rap_text_text_light_01_stop.brlan
+  0x37bde0	= ./control/anim/common_w062_multi_machine_rap_text_text_light_02_select.brlan
+  0x37c020	= ./control/anim/common_w062_multi_machine_rap_text_text_light_02_stop.brlan
+  0x37c1e0	= ./control/anim/common_w062_multi_machine_rap_text_text_stop.brlan
+  0x37c400	= ./control/anim/common_w089_course_big_movie_fade_in.brlan
+  0x37c4c0	= ./control/anim/common_w089_course_big_movie_fade_in_after.brlan
+  0x37c580	= ./control/anim/common_w089_course_big_movie_fade_in_before.brlan
+  0x37c640	= ./control/anim/common_w089_course_big_movie_fade_out.brlan
+  0x37c720	= ./control/anim/common_w100_earth_mii_point_wifi_flash.brlan
+  0x37c8a0	= ./control/anim/common_w100_earth_mii_point_wifi_flash_stop.brlan
+  0x37ca20	= ./control/anim/common_w100_earth_mii_point_wifi_gold_loop.brlan
+  0x37cac0	= ./control/anim/common_w100_earth_mii_point_wifi_select_gold_parts.brlan
+  0x37cbc0	= ./control/anim/common_w100_earth_mii_point_wifi_select_gold_parts_nasi.brlan
+  0x37cca0	= ./control/anim/common_w107_easy_connect_remocon_bright.brlan
+  0x37cd80	= ./control/anim/common_w107_easy_connect_remocon_connect_action.brlan
+  0x37cfa0	= ./control/anim/common_w107_easy_connect_remocon_connect_action_stop.brlan
+  0x37d180	= ./control/anim/common_w107_easy_connect_remocon_dark.brlan
+  0x37d260	= ./control/anim/common_w107_easy_connect_remocon_flash.brlan
+  0x37d3e0	= ./control/anim/common_w107_easy_connect_remocon_stop.brlan
+  0x37d500	= ./control/anim/common_w134_rule_rap_yaji_l_chara_light_01_ok.brlan
+  0x37d860	= ./control/anim/common_w134_rule_rap_yaji_l_chara_light_01_stop.brlan
+  0x37db20	= ./control/anim/common_w134_rule_rap_yaji_l_chara_light_02_select.brlan
+  0x37de80	= ./control/anim/common_w134_rule_rap_yaji_l_chara_light_02_stop.brlan
+  0x37e140	= ./control/anim/common_w134_rule_rap_yaji_l_fade_in.brlan
+  0x37e400	= ./control/anim/common_w134_rule_rap_yaji_l_fade_in_after.brlan
+  0x37e6c0	= ./control/anim/common_w134_rule_rap_yaji_l_fade_in_before.brlan
+  0x37e980	= ./control/anim/common_w134_rule_rap_yaji_l_fade_out.brlan
+  0x37ec40	= ./control/anim/common_w134_rule_rap_yaji_l_free.brlan
+  0x37ef60	= ./control/anim/common_w134_rule_rap_yaji_l_free_to_select.brlan
+  0x37f2a0	= ./control/anim/common_w134_rule_rap_yaji_l_fuchi_check_loop.brlan
+  0x37f400	= ./control/anim/common_w134_rule_rap_yaji_l_select.brlan
+  0x37f720	= ./control/anim/common_w134_rule_rap_yaji_l_select_to_free.brlan
+  0x37f9e0	= ./control/anim/common_w135_rule_rap_yaji_r_chara_light_01_ok.brlan
+  0x37fd40	= ./control/anim/common_w135_rule_rap_yaji_r_chara_light_01_stop.brlan
+  0x380000	= ./control/anim/common_w135_rule_rap_yaji_r_chara_light_02_select.brlan
+  0x380360	= ./control/anim/common_w135_rule_rap_yaji_r_chara_light_02_stop.brlan
+  0x380620	= ./control/anim/common_w135_rule_rap_yaji_r_fade_in.brlan
+  0x3808e0	= ./control/anim/common_w135_rule_rap_yaji_r_fade_in_after.brlan
+  0x380ba0	= ./control/anim/common_w135_rule_rap_yaji_r_fade_in_before.brlan
+  0x380e60	= ./control/anim/common_w135_rule_rap_yaji_r_fade_out.brlan
+  0x381120	= ./control/anim/common_w135_rule_rap_yaji_r_free.brlan
+  0x381440	= ./control/anim/common_w135_rule_rap_yaji_r_free_to_select.brlan
+  0x381780	= ./control/anim/common_w135_rule_rap_yaji_r_fuchi_check_loop.brlan
+  0x3818e0	= ./control/anim/common_w135_rule_rap_yaji_r_select.brlan
+  0x381c00	= ./control/anim/common_w135_rule_rap_yaji_r_select_to_free.brlan
+  0x381ec0	= ./control/anim/common_w137_course_movie_text_only_fade_in.brlan
+  0x382280	= ./control/anim/common_w137_course_movie_text_only_fade_in_after.brlan
+  0x382640	= ./control/anim/common_w137_course_movie_text_only_fade_in_before.brlan
+  0x382a00	= ./control/anim/common_w137_course_movie_text_only_fade_out.brlan
+  0x382dc0	= ./control/anim/common_w137_course_movie_text_only_free.brlan
+  0x383300	= ./control/anim/common_w137_course_movie_text_only_free_to_select.brlan
+  0x383860	= ./control/anim/common_w137_course_movie_text_only_fuchi_check_loop.brlan
+  0x383920	= ./control/anim/common_w137_course_movie_text_only_fuchi_off.brlan
+  0x383da0	= ./control/anim/common_w137_course_movie_text_only_fuchi_on.brlan
+  0x384220	= ./control/anim/common_w137_course_movie_text_only_fuchi_on_to_off.brlan
+  0x3846c0	= ./control/anim/common_w137_course_movie_text_only_select.brlan
+  0x384ba0	= ./control/anim/common_w137_course_movie_text_only_select_to_free.brlan
+  0x385060	= ./control/anim/common_w137_course_movie_text_only_text_light_01_ok.brlan
+  0x3854e0	= ./control/anim/common_w137_course_movie_text_only_text_light_01_stop.brlan
+  0x3858a0	= ./control/anim/common_w137_course_movie_text_only_text_light_02_select.brlan
+  0x385d20	= ./control/anim/common_w137_course_movie_text_only_text_light_02_stop.brlan
+  0x3860e0	= ./control/anim/common_w137_course_movie_text_only_waku_off.brlan
+  0x3863e0	= ./control/anim/common_w137_course_movie_text_only_waku_on.brlan
+  0x3866e0	= ./control/anim/common_w137_course_movie_text_only_waku_on_to_off.brlan
+  0x386a00	= ./control/anim/gr_course_select_menu_dummy0_loop.brlan
+  0x386ae0	= ./control/anim/gr_course_select_menu_dummy0_onetime.brlan
+  0x386bc0	= ./control/anim/gr_course_select_menu_dummy1_loop.brlan
+  0x386c60	= ./control/anim/gr_course_select_menu_dummy1_onetime.brlan
+  0x386d00	= ./control/anim/wifi_timer_color_anim.brlan
+  0x38a5c0	= ./control/anim/wifi_timer_fadein.brlan
+  0x38a660	= ./control/anim/wifi_timer_fadein_before.brlan
+  0x38a700	= ./control/anim/wifi_timer_fadeout.brlan
+  0x38a7a0	= ./control/anim/wifi_timer_fade_wait.brlan
+  0x38a840	= ./control/anim/wifi_timer_texture_pattern_0_9.brlan
+		= ./control/blyt/
+  0x38af00	= ./control/blyt/character_64x64_common.brlyt
+  0x38ce60	= ./control/blyt/common_w010_cup.brlyt
+  0x38e560	= ./control/blyt/common_w014_mii_select_long_btn.brlyt
+  0x38f920	= ./control/blyt/common_w016_yajirushi_left.brlyt
+  0x390be0	= ./control/blyt/common_w018_mii_name.brlyt
+  0x391640	= ./control/blyt/common_w020_file_kanri.brlyt
+  0x3927e0	= ./control/blyt/common_w021_yajirushi_right.brlyt
+  0x393aa0	= ./control/blyt/common_w023_rule_menu.brlyt
+  0x3946c0	= ./control/blyt/common_w024_rule_icon.brlyt
+  0x395820	= ./control/blyt/common_w027_chara_name.brlyt
+  0x3962a0	= ./control/blyt/common_w048_rule_rap.brlyt
+  0x397040	= ./control/blyt/common_w048_rule_rap_text.brlyt
+  0x397560	= ./control/blyt/common_w050_earth_message.brlyt
+  0x397920	= ./control/blyt/common_w051_team_blue_red_chara_point.brlyt
+  0x398d60	= ./control/blyt/common_w058_vote.brlyt
+  0x399f00	= ./control/blyt/common_w062_multi_machine_rap.brlyt
+  0x39a840	= ./control/blyt/common_w062_multi_machine_rap_text.brlyt
+  0x39ad60	= ./control/blyt/common_w089_course_big_movie.brlyt
+  0x39b000	= ./control/blyt/common_w099_machine_ability.brlyt
+  0x39b5c0	= ./control/blyt/common_w100_earth_mii_point_wifi.brlyt
+  0x39cbc0	= ./control/blyt/common_w104_page_number.brlyt
+  0x39cea0	= ./control/blyt/common_w105_close_text.brlyt
+  0x39d180	= ./control/blyt/common_w107_easy_connect_remocon.brlyt
+  0x39d820	= ./control/blyt/common_w122_message_mii_select.brlyt
+  0x39dc00	= ./control/blyt/common_w134_rule_rap_yaji_l.brlyt
+  0x39e840	= ./control/blyt/common_w135_rule_rap_yaji_r.brlyt
+  0x39f480	= ./control/blyt/common_w137_course_movie_text_only.brlyt
+  0x3a0380	= ./control/blyt/cup_icon_64x64_common.brlyt
+  0x3a1160	= ./control/blyt/gr_course_select_menu.brlyt
+  0x3a12e0	= ./control/blyt/null.brlyt
+  0x3a13e0	= ./control/blyt/remocon_connect_big_window.brlyt
+  0x3a1860	= ./control/blyt/stage_icon_common.brlyt
+  0x3a1b20	= ./control/blyt/wifi_timer.brlyt
+		= ./control/ctrl/
+  0x3a2d20	= ./control/ctrl/BattleCupSelectNULL.brctr
+  0x3a2ea0	= ./control/ctrl/BattleCupSelectStage.brctr
+  0x3a3380	= ./control/ctrl/BattleSettingRadioBase.brctr
+  0x3a3760	= ./control/ctrl/BattleSettingRadioOption.brctr
+  0x3a4140	= ./control/ctrl/BattleSettingUpDownBase.brctr
+  0x3a4380	= ./control/ctrl/BattleSettingUpDownButton.brctr
+  0x3a4700	= ./control/ctrl/BattleSettingUpDownButtonL.brctr
+  0x3a4aa0	= ./control/ctrl/BattleSettingUpDownButtonR.brctr
+  0x3a4e40	= ./control/ctrl/BattleSettingUpDownText.brctr
+  0x3a52a0	= ./control/ctrl/BattleSettingUpDownValue.brctr
+  0x3a5480	= ./control/ctrl/BattleStageSelectCup.brctr
+  0x3a5980	= ./control/ctrl/BattleStageSelectMovie.brctr
+  0x3a5b40	= ./control/ctrl/CharacterSelectName.brctr
+  0x3a5de0	= ./control/ctrl/CharacterSelectNULL.brctr
+  0x3a5ec0	= ./control/ctrl/ControllerConnect.brctr
+  0x3a61a0	= ./control/ctrl/ControllerConnectTitle.brctr
+  0x3a6240	= ./control/ctrl/CountDownTimer.brctr
+  0x3a64c0	= ./control/ctrl/CourseSelectCup.brctr
+  0x3a69c0	= ./control/ctrl/CourseSelectMovie.brctr
+  0x3a6be0	= ./control/ctrl/CupSelectCourse.brctr
+  0x3a7080	= ./control/ctrl/CupSelectNULL.brctr
+  0x3a7200	= ./control/ctrl/EasyPairing.brctr
+  0x3a7560	= ./control/ctrl/EasyPairingMessage.brctr
+  0x3a7600	= ./control/ctrl/EasyPairingTitle.brctr
+  0x3a7740	= ./control/ctrl/EasyPairingWindow.brctr
+  0x3a77e0	= ./control/ctrl/MachineAbility2.brctr
+  0x3a7a40	= ./control/ctrl/MachineAbilityNULL2.brctr
+  0x3a7b20	= ./control/ctrl/MachineArrowLeft.brctr
+  0x3a7f60	= ./control/ctrl/MachineArrowRight.brctr
+  0x3a83c0	= ./control/ctrl/MachineUpDownBase.brctr
+  0x3a85e0	= ./control/ctrl/MachineUpDownText.brctr
+  0x3a8ac0	= ./control/ctrl/MachineUpDownValue.brctr
+  0x3a8d20	= ./control/ctrl/MiiBlackBack.brctr
+  0x3a8dc0	= ./control/ctrl/MiiSelectName.brctr
+  0x3a8e60	= ./control/ctrl/MultiNULL2S.brctr
+  0x3a8f20	= ./control/ctrl/MultiNULL4S.brctr
+  0x3a9060	= ./control/ctrl/TabControlMiiSelect.brctr
+  0x3a95a0	= ./control/ctrl/TeamConfirmBlueRed.brctr
+  0x3a9980	= ./control/ctrl/TeamConfirmNULL.brctr
+  0x3a9aa0	= ./control/ctrl/Vote.brctr
+  0x3aa160	= ./control/ctrl/VoteNum.brctr
+  0x3aa200	= ./control/ctrl/VSSettingRadioBase.brctr
+  0x3aa5e0	= ./control/ctrl/VSSettingRadioOption.brctr
+  0x3ab000	= ./control/ctrl/VSSettingUpDownBase.brctr
+  0x3ab240	= ./control/ctrl/VSSettingUpDownButton.brctr
+  0x3ab5c0	= ./control/ctrl/VSSettingUpDownButtonL.brctr
+  0x3ab960	= ./control/ctrl/VSSettingUpDownButtonR.brctr
+  0x3abce0	= ./control/ctrl/VSSettingUpDownText.brctr
+  0x3ac140	= ./control/ctrl/VSSettingUpDownValue.brctr
+  0x3ac320	= ./control/ctrl/WifiMemberConfirm.brctr
+		= ./control/timg/
+  0x3ac880	= ./control/timg/fm_handle_new_1.tpl
+  0x3ad540	= ./control/timg/fm_handle_new_2.tpl
+  0x3ae200	= ./control/timg/ht_squareWhite_00.tpl
+  0x3ae260	= ./control/timg/st_battle_icon_balloon.tpl
+  0x3b62a0	= ./control/timg/st_battle_icon_coin.tpl
+  0x3be2e0	= ./control/timg/st_battle_icon_flag.tpl
+  0x3c6320	= ./control/timg/tt_ability_graph_00.tpl
+  0x3c6a20	= ./control/timg/tt_baby_daisy_64x64.tpl
+  0x3c8a60	= ./control/timg/tt_baby_luigi_64x64.tpl
+  0x3caaa0	= ./control/timg/tt_baby_mario_64x64.tpl
+  0x3ccae0	= ./control/timg/tt_baby_peach_64x64.tpl
+  0x3ceb20	= ./control/timg/tt_boss_packun_64x64.tpl
+  0x3d0b60	= ./control/timg/tt_catherine_64x64.tpl
+  0x3d2ba0	= ./control/timg/tt_classic_icon_sphere_128.tpl
+  0x3dabe0	= ./control/timg/tt_cup_icon_banana_00.tpl
+  0x3e2c20	= ./control/timg/tt_cup_icon_flower_00.tpl
+  0x3eac60	= ./control/timg/tt_cup_icon_kinoko_00.tpl
+  0x3f2ca0	= ./control/timg/tt_cup_icon_konoha_00.tpl
+  0x3face0	= ./control/timg/tt_cup_icon_koura_00.tpl
+  0x402d20	= ./control/timg/tt_cup_icon_mirror_00.tpl
+  0x40ad60	= ./control/timg/tt_cup_icon_oukan_00.tpl
+  0x412da0	= ./control/timg/tt_cup_icon_star_00.tpl
+  0x41ade0	= ./control/timg/tt_cup_icon_thunder_00.tpl
+  0x422e20	= ./control/timg/tt_daisy_64x64.tpl
+  0x424e60	= ./control/timg/tt_didy_64x64.tpl
+  0x426ea0	= ./control/timg/tt_donky_64x64.tpl
+  0x428ee0	= ./control/timg/tt_d_number_3d_00.tpl
+  0x42af20	= ./control/timg/tt_d_number_3d_01.tpl
+  0x42cf60	= ./control/timg/tt_d_number_3d_02.tpl
+  0x42efa0	= ./control/timg/tt_d_number_3d_03.tpl
+  0x430fe0	= ./control/timg/tt_d_number_3d_04.tpl
+  0x433020	= ./control/timg/tt_d_number_3d_05.tpl
+  0x435060	= ./control/timg/tt_d_number_3d_06.tpl
+  0x4370a0	= ./control/timg/tt_d_number_3d_07.tpl
+  0x4390e0	= ./control/timg/tt_d_number_3d_08.tpl
+  0x43b120	= ./control/timg/tt_d_number_3d_09.tpl
+  0x43d160	= ./control/timg/tt_d_number_3d_coron.tpl
+  0x43f1a0	= ./control/timg/tt_fukidashi_window_kado_common.tpl
+  0x43fe60	= ./control/timg/tt_funky_64x64.tpl
+  0x441ec0	= ./control/timg/tt_gccon_waku.tpl
+  0x461f00	= ./control/timg/tt_hammer_64x64.tpl
+  0x463f40	= ./control/timg/tt_hatena_64x64.tpl
+  0x465f80	= ./control/timg/tt_hone_koopa_64x64.tpl
+  0x467fc0	= ./control/timg/tt_karon_64x64.tpl
+  0x46a000	= ./control/timg/tt_kinopico_64x64.tpl
+  0x46c040	= ./control/timg/tt_kinopio_64x64.tpl
+  0x46e080	= ./control/timg/tt_koopa_64x64.tpl
+  0x4700c0	= ./control/timg/tt_koopa_jr_64x64.tpl
+  0x472100	= ./control/timg/tt_luigi_64x64.tpl
+  0x474140	= ./control/timg/tt_mario_64x64.tpl
+  0x476180	= ./control/timg/tt_mii_suit_a_64x64.tpl
+  0x4781c0	= ./control/timg/tt_mii_suit_b_64x64.tpl
+  0x47a200	= ./control/timg/tt_mii_suit_c_64x64.tpl
+  0x47c240	= ./control/timg/tt_noko_64x64.tpl
+  0x47e280	= ./control/timg/tt_pata_64x64.tpl
+  0x4802c0	= ./control/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x480700	= ./control/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x480f40	= ./control/timg/tt_peach_64x64.tpl
+  0x482f80	= ./control/timg/tt_remocon_body.tpl
+  0x492fc0	= ./control/timg/tt_roseta_64x64.tpl
+  0x495000	= ./control/timg/tt_teresa_64x64.tpl
+  0x497040	= ./control/timg/tt_waluigi_64x64.tpl
+  0x499080	= ./control/timg/tt_wario_64x64.tpl
+  0x49b0c0	= ./control/timg/tt_wii_icon_128.tpl
+  0x4a3100	= ./control/timg/tt_window_vol1.tpl
+  0x4a3180	= ./control/timg/tt_window_vol4_32.tpl
+  0x4a35c0	= ./control/timg/tt_yajirushi_type1.tpl
+  0x4a4a00	= ./control/timg/tt_yoshi_64x64.tpl
+		= ./dpd_pointer/
+		= ./dpd_pointer/anim/
+  0x4a6a40	= ./dpd_pointer/anim/pointing_cursor_blue_cursor.brlan
+  0x4a7320	= ./dpd_pointer/anim/pointing_cursor_common_cursor.brlan
+  0x4a7c00	= ./dpd_pointer/anim/pointing_cursor_c_left.brlan
+  0x4a7cc0	= ./dpd_pointer/anim/pointing_cursor_c_right.brlan
+  0x4a7d80	= ./dpd_pointer/anim/pointing_cursor_green_cursor.brlan
+  0x4a8660	= ./dpd_pointer/anim/pointing_cursor_left.brlan
+  0x4a8720	= ./dpd_pointer/anim/pointing_cursor_pointing_cursor_loop.brlan
+  0x4a87e0	= ./dpd_pointer/anim/pointing_cursor_race_blue_cursor.brlan
+  0x4a8980	= ./dpd_pointer/anim/pointing_cursor_race_common_cursor.brlan
+  0x4a8b20	= ./dpd_pointer/anim/pointing_cursor_race_c_left.brlan
+  0x4a8be0	= ./dpd_pointer/anim/pointing_cursor_race_c_right.brlan
+  0x4a8ca0	= ./dpd_pointer/anim/pointing_cursor_race_green_cursor.brlan
+  0x4a8e40	= ./dpd_pointer/anim/pointing_cursor_race_left.brlan
+  0x4a8f00	= ./dpd_pointer/anim/pointing_cursor_race_pointing_cursor_loop.brlan
+  0x4a8fc0	= ./dpd_pointer/anim/pointing_cursor_race_red_cursor.brlan
+  0x4a9160	= ./dpd_pointer/anim/pointing_cursor_race_right.brlan
+  0x4a9220	= ./dpd_pointer/anim/pointing_cursor_race_yellow_cursor.brlan
+  0x4a93c0	= ./dpd_pointer/anim/pointing_cursor_red_cursor.brlan
+  0x4a9ca0	= ./dpd_pointer/anim/pointing_cursor_right.brlan
+  0x4a9d60	= ./dpd_pointer/anim/pointing_cursor_yellow_cursor.brlan
+		= ./dpd_pointer/blyt/
+  0x4aa640	= ./dpd_pointer/blyt/pointing_cursor.brlyt
+  0x4abfe0	= ./dpd_pointer/blyt/pointing_cursor_race.brlyt
+		= ./dpd_pointer/ctrl/
+  0x4ac800	= ./dpd_pointer/ctrl/DpdPointer.brctr
+  0x4acb80	= ./dpd_pointer/ctrl/DpdPointerRace.brctr
+		= ./dpd_pointer/timg/
+  0x4acf20	= ./dpd_pointer/timg/cursor0.tpl
+  0x4ae860	= ./dpd_pointer/timg/tt_i_cursor_nakami_ver0.tpl
+  0x4aeba0	= ./dpd_pointer/timg/tt_i_cursor_shikaku.tpl
+  0x4aec20	= ./dpd_pointer/timg/tt_i_cursor_tongari.tpl
+		= ./effect/
+  0x4b1e60	= ./effect/RKMenu.breff
+  0x4b2100	= ./effect/RKMenu.breft
+		= ./globe/
+		= ./globe/anim/
+  0x4b31a0	= ./globe/anim/common_w050_earth_message_fade_in.brlan
+  0x4b32a0	= ./globe/anim/common_w050_earth_message_fade_in_after.brlan
+  0x4b3380	= ./globe/anim/common_w050_earth_message_fade_in_before.brlan
+  0x4b3460	= ./globe/anim/common_w050_earth_message_fade_out.brlan
+  0x4b3560	= ./globe/anim/common_w050_earth_message_text_color_loop.brlan
+		= ./globe/blyt/
+  0x4b36a0	= ./globe/blyt/common_w050_earth_message.brlyt
+		= ./globe/ctrl/
+  0x4b3a60	= ./globe/ctrl/SimpleMessageWindow.brctr
+		= ./message_window/
+		= ./message_window/anim/
+  0x4b3bc0	= ./message_window/anim/common_w004_menu_fade_in.brlan
+  0x4b3da0	= ./message_window/anim/common_w004_menu_fade_in_after.brlan
+  0x4b3f80	= ./message_window/anim/common_w004_menu_fade_in_before.brlan
+  0x4b4160	= ./message_window/anim/common_w004_menu_fade_out.brlan
+  0x4b4340	= ./message_window/anim/common_w004_menu_free.brlan
+  0x4b4520	= ./message_window/anim/common_w004_menu_free_to_select.brlan
+  0x4b4780	= ./message_window/anim/common_w004_menu_fuchi_check_loop.brlan
+  0x4b4a40	= ./message_window/anim/common_w004_menu_select.brlan
+  0x4b4c60	= ./message_window/anim/common_w004_menu_select_to_free.brlan
+  0x4b4e60	= ./message_window/anim/common_w004_menu_text_light_01_ok.brlan
+  0x4b50e0	= ./message_window/anim/common_w004_menu_text_light_01_stop.brlan
+  0x4b52c0	= ./message_window/anim/common_w004_menu_text_light_02_select.brlan
+  0x4b5580	= ./message_window/anim/common_w004_menu_text_light_02_stop.brlan
+  0x4b5800	= ./message_window/anim/common_w008_back_fade_in.brlan
+  0x4b5ac0	= ./message_window/anim/common_w008_back_fade_in_after.brlan
+  0x4b5d60	= ./message_window/anim/common_w008_back_fade_in_before.brlan
+  0x4b6000	= ./message_window/anim/common_w008_back_fade_out.brlan
+  0x4b62c0	= ./message_window/anim/common_w008_back_free.brlan
+  0x4b6840	= ./message_window/anim/common_w008_back_free_to_select.brlan
+  0x4b6d40	= ./message_window/anim/common_w008_back_fuchi_check_loop.brlan
+  0x4b7080	= ./message_window/anim/common_w008_back_select.brlan
+  0x4b7500	= ./message_window/anim/common_w008_back_select_to_free.brlan
+  0x4b7980	= ./message_window/anim/common_w008_back_text_light_01_ok.brlan
+  0x4b7cc0	= ./message_window/anim/common_w008_back_text_light_01_stop.brlan
+  0x4b7f80	= ./message_window/anim/common_w008_back_text_light_02_select.brlan
+  0x4b82c0	= ./message_window/anim/common_w008_back_text_light_02_stop.brlan
+  0x4b8580	= ./message_window/anim/common_w073_loading_loading.brlan
+		= ./message_window/blyt/
+  0x4b8900	= ./message_window/blyt/a_button_for_message_window.brlyt
+  0x4b8aa0	= ./message_window/blyt/black_down.brlyt
+  0x4b8d00	= ./message_window/blyt/black_down_race.brlyt
+  0x4b8f60	= ./message_window/blyt/common_w004_menu.brlyt
+  0x4b9f00	= ./message_window/blyt/common_w008_back.brlyt
+  0x4ba880	= ./message_window/blyt/common_w017_message.brlyt
+  0x4baec0	= ./message_window/blyt/common_w022_message_half.brlyt
+  0x4bb460	= ./message_window/blyt/common_w073_loading.brlyt
+  0x4bbde0	= ./message_window/blyt/common_w079_message_quarter.brlyt
+  0x4bc360	= ./message_window/blyt/common_w127_yes_no_message_window.brlyt
+  0x4bcb60	= ./message_window/blyt/yes_no_window_popup_container.brlyt
+		= ./message_window/ctrl/
+  0x4bcce0	= ./message_window/ctrl/Back.brctr
+  0x4bd040	= ./message_window/ctrl/BlackBack.brctr
+  0x4bd120	= ./message_window/ctrl/BusySymbol.brctr
+  0x4bd200	= ./message_window/ctrl/ConfirmOK.brctr
+  0x4bd540	= ./message_window/ctrl/MessageWindow.brctr
+  0x4bd680	= ./message_window/ctrl/MessageWindowFrame.brctr
+  0x4bd740	= ./message_window/ctrl/MessageWindowHalf.brctr
+  0x4bd8e0	= ./message_window/ctrl/MessageWindowQuarter.brctr
+  0x4bda80	= ./message_window/ctrl/OKKey.brctr
+  0x4bdb60	= ./message_window/ctrl/RaceConfirmBack.brctr
+  0x4bdc40	= ./message_window/ctrl/YesNoButton.brctr
+  0x4be000	= ./message_window/ctrl/YesNoPopupContainer.brctr
+		= ./message_window/timg/
+  0x4be0a0	= ./message_window/timg/loading1.tpl
+  0x4bf900	= ./message_window/timg/loading2.tpl
+  0x4c1160	= ./message_window/timg/loading3.tpl
+  0x4c29c0	= ./message_window/timg/loading4.tpl
+  0x4c4220	= ./message_window/timg/loading5.tpl
+  0x4c5a80	= ./message_window/timg/loading6.tpl
+  0x4c72e0	= ./message_window/timg/loading7.tpl
+  0x4c8b40	= ./message_window/timg/loading8.tpl
+  0x4ca3a0	= ./message_window/timg/tt_fukidashi_window_kado_common.tpl
+  0x4cb060	= ./message_window/timg/tt_glass_waku_180.tpl
+  0x4d1ea0	= ./message_window/timg/tt_pattern_chek_32x32.tpl
+  0x4d26e0	= ./message_window/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x4d2b20	= ./message_window/timg/tt_pattern_chek_bokashi_32x32.tpl
+		= ./model/
+		= ./model/anim/
+  0x4d3360	= ./model/anim/bg_model_set_p_alpha028.brlan
+  0x4d3400	= ./model/anim/bg_model_set_p_alpha128.brlan
+  0x4d34a0	= ./model/anim/bg_model_set_p_alpha200.brlan
+  0x4d3540	= ./model/anim/bg_model_set_p_alpha255.brlan
+  0x4d35e0	= ./model/anim/model_set_p_alpha028.brlan
+  0x4d3680	= ./model/anim/model_set_p_alpha128.brlan
+  0x4d3720	= ./model/anim/model_set_p_alpha200.brlan
+  0x4d37c0	= ./model/anim/model_set_p_alpha255.brlan
+		= ./model/blyt/
+  0x4d3860	= ./model/blyt/bg_model_set_p.brlyt
+  0x4d3ac0	= ./model/blyt/model_set_p.brlyt
+		= ./model/ctrl/
+  0x4d3d20	= ./model/ctrl/BackGroundModel.brctr
+  0x4d3e00	= ./model/ctrl/CharacterSelectModel.brctr
+  0x4d4120	= ./model/ctrl/MachineSelectModel.brctr
+  0x4d4440	= ./model/ctrl/PadEasyModel.brctr
+		= ./model/timg/
+  0x4d4760	= ./model/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+		= ./pad_recognize/
+		= ./pad_recognize/anim/
+  0x4d4ba0	= ./pad_recognize/anim/common_w055_message_connect_blue.brlan
+  0x4d4e00	= ./pad_recognize/anim/common_w055_message_connect_borderline_loop.brlan
+  0x4d4ea0	= ./pad_recognize/anim/common_w055_message_connect_cla_con.brlan
+  0x4d50c0	= ./pad_recognize/anim/common_w055_message_connect_connect.brlan
+  0x4d5320	= ./pad_recognize/anim/common_w055_message_connect_disconnect.brlan
+  0x4d5580	= ./pad_recognize/anim/common_w055_message_connect_entry_light.brlan
+  0x4d5680	= ./pad_recognize/anim/common_w055_message_connect_entry_light_stop.brlan
+  0x4d5760	= ./pad_recognize/anim/common_w055_message_connect_gc_con.brlan
+  0x4d5960	= ./pad_recognize/anim/common_w055_message_connect_green.brlan
+  0x4d5bc0	= ./pad_recognize/anim/common_w055_message_connect_han_con.brlan
+  0x4d5de0	= ./pad_recognize/anim/common_w055_message_connect_hatena.brlan
+  0x4d5fa0	= ./pad_recognize/anim/common_w055_message_connect_nun_con.brlan
+  0x4d61a0	= ./pad_recognize/anim/common_w055_message_connect_red.brlan
+  0x4d6400	= ./pad_recognize/anim/common_w055_message_connect_white.brlan
+  0x4d6660	= ./pad_recognize/anim/common_w055_message_connect_yellow.brlan
+		= ./pad_recognize/blyt/
+  0x4d68c0	= ./pad_recognize/blyt/common_w055_message_connect.brlyt
+  0x4d7220	= ./pad_recognize/blyt/common_w056_message_connect_window.brlyt
+		= ./pad_recognize/ctrl/
+  0x4d7820	= ./pad_recognize/ctrl/EntryPlayerPad.brctr
+  0x4d7e00	= ./pad_recognize/ctrl/RecognizePad.brctr
+  0x4d8280	= ./pad_recognize/ctrl/RecognizePadWindow.brctr
+		= ./pad_recognize/timg/
+  0x4d8340	= ./pad_recognize/timg/tt_a_body.tpl
+  0x4f8380	= ./pad_recognize/timg/tt_a_light.tpl
+  0x5183c0	= ./pad_recognize/timg/tt_clacon_body.tpl
+  0x538400	= ./pad_recognize/timg/tt_clacon_light.tpl
+  0x558440	= ./pad_recognize/timg/tt_fukidashi_window_kado_common.tpl
+  0x559100	= ./pad_recognize/timg/tt_gccon_body.tpl
+  0x579140	= ./pad_recognize/timg/tt_gccon_light.tpl
+  0x599180	= ./pad_recognize/timg/tt_gccon_waku.tpl
+  0x5b91c0	= ./pad_recognize/timg/tt_hatena_body.tpl
+  0x5d9200	= ./pad_recognize/timg/tt_hatena_light.tpl
+  0x5f9240	= ./pad_recognize/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x5f9680	= ./pad_recognize/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x5f9ec0	= ./pad_recognize/timg/tt_remocon_han_body.tpl
+  0x619f00	= ./pad_recognize/timg/tt_remocon_han_light.tpl
+  0x639f40	= ./pad_recognize/timg/tt_remocon_nun_body.tpl
+  0x659f80	= ./pad_recognize/timg/tt_remocon_nun_light.tpl
+		= ./parameter/
+  0x679fc0	= ./parameter/bikePartsDispParam.bin
+  0x67ac40	= ./parameter/default.blight
+  0x67b200	= ./parameter/default.blmap
+  0x67b4a0	= ./parameter/driverDispParam.bin
+  0x67b7c0	= ./parameter/driverParam.bin
+  0x67e1a0	= ./parameter/IconParam_140_44_L.bin
+  0x67e300	= ./parameter/IconParam_140_44_M.bin
+  0x67e460	= ./parameter/IconParam_140_44_S.bin
+  0x67e5c0	= ./parameter/IconParam_140_60_L.bin
+  0x67e720	= ./parameter/IconParam_140_60_M.bin
+  0x67e880	= ./parameter/IconParam_140_60_S.bin
+  0x67e9e0	= ./parameter/IconParam_140_72_L.bin
+  0x67eb40	= ./parameter/IconParam_140_72_M.bin
+  0x67eca0	= ./parameter/IconParam_140_72_S.bin
+  0x67ee00	= ./parameter/IconParam_140_96_L.bin
+  0x67ef60	= ./parameter/IconParam_140_96_M.bin
+  0x67f0c0	= ./parameter/IconParam_140_96_S.bin
+  0x67f220	= ./parameter/IconParam_192_44_L.bin
+  0x67f380	= ./parameter/IconParam_192_44_M.bin
+  0x67f4e0	= ./parameter/IconParam_192_44_S.bin
+  0x67f640	= ./parameter/IconParam_192_60_L.bin
+  0x67f7a0	= ./parameter/IconParam_192_60_M.bin
+  0x67f900	= ./parameter/IconParam_192_60_S.bin
+  0x67fa60	= ./parameter/IconParam_192_72_L.bin
+  0x67fbc0	= ./parameter/IconParam_192_72_M.bin
+  0x67fd20	= ./parameter/IconParam_192_72_S.bin
+  0x67fe80	= ./parameter/IconParam_192_96_L.bin
+  0x67ffe0	= ./parameter/IconParam_192_96_M.bin
+  0x680140	= ./parameter/IconParam_192_96_S.bin
+  0x6802a0	= ./parameter/kartCameraParam.bin
+  0x6804e0	= ./parameter/kartDriverDispParam.bin
+  0x697f00	= ./parameter/kartParam.bin
+  0x69b6c0	= ./parameter/kartPartsDispParam.bin
+  0x69ce80	= ./parameter/machine_para.bin
+
+#------------------------------------------------------------------------------
+

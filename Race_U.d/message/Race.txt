@@ -1,0 +1,218 @@
+#BMG  <<<  The first 4 characters '#BMG' are the magic for a BMG text file.
+#     <<<  Don't remove them!
+#
+# Details about BMG text files are available in the Web:
+#  * Syntax and Semantics: https://szs.wiimm.de/doc/bmg/text
+#  * The BMG file format:  https://szs.wiimm.de/r/wiki/BMG
+#
+#
+#------------------------------------------------------------------------------
+
+   3e8	= 
+   3e9	= Continue
+   3ea	= Quit
+   3eb	= Continue Game
+   3ec	= Quit Game
+   3ed	= Change Course
+   3ee	= Change Character
+   3ef	= Restart
+   3f0	= Choose a Mission
+   3f1	= Next Race
+   3f2	= Next
+   3f3	= Retry
+   3f4	= View Replay
+   3f5	= Continue Replay
+   3f6	= Restart Replay
+   3f7	= Check Rankings
+   3f8	= Check Ghost List
+   3f9	/
+   3fa	= Next Ghost
+   3fb	/
+   3fc	= Nintendo WFC Menu
+   3fd	= Quit Replay
+   3fe	= Start Race
+   3ff	= Next Race
+   400	= Next Battle
+   401	= Please wait a moment...
+   402	= Change Ghost
+   403	= Race This Ghost
+   404	= Continue Replay
+   405	= Quit Replay
+   406	= Restart Replay
+   407	= The next match might\n
+	+ have \z{a02,1000000000} players.
+   408	= Send Your Record
+   409	= 
+   44d	= Are you sure you want to quit?
+   44e	= Moving to Mario Kart\n
+	+ Channel rankings.\n
+	+ Is this OK?
+   44f	= OK
+   450	/
+   451	= Congratulations!\n
+	+ You beat \z{802,120000}'s ghost!\n
+	+ \n
+	+ Do you want to send your ghost\n
+	+ to \z{802,120000}?
+   452	= Send
+   453	= Don't Send
+   454	= Yes
+   455	= No
+   456	= 
+   457	= Go to your friend roster?
+   458	= Send your record? (This can\n
+	+ be done multiple times\n
+	+ during a tournament period.)
+   459	= Forfeit this match and\n
+	+ play the next ghost?
+   45a	= Forfeit this match\n
+	+ and return to the\n
+	+ main menu?
+   45b	= A ghost has been created for \z{602,0}!
+   45c	= Unable to create a ghost.
+   45d	= Unable to send a ghost challenge.
+   45e	= Return to the Courses\n
+	+ screen?
+   45f	= Unable to create a ghost.
+   460	= 
+   461	= A fast staff ghost has appeared!
+   4b1 [0] = 3
+   4b2 [0] = 2
+   4b3 [0] = 1
+   4b4 [0] = GO!
+   4b5 [0] = FINISHED!
+   4b6 [0] = YOU WIN!
+   4b7 [0] = YOU LOSE
+   4b8	/
+   4b9	/
+   4ba	= Congratulations!
+   4bb [0] = NEW RECORD!
+   4bc	= Record
+   4bd	= Best Lap
+   4be	= \c{red2}The red team wins!
+   4bf	= \c{blue1}The blue team wins!
+   4c0	= \c{red2}The red team wins!
+   4c1	= \c{blue1}The blue team wins!
+   4c2	= Tie
+   4c3	= You got 1st place!
+   4c4	= You got 2nd place!
+   4c5	= You got 3rd place!
+   4c6	= What a truly foolish end...
+   4c7	= \c{red2}The red team lost.
+   4c8	= \c{blue1}The blue team lost.
+   4c9	= \c{red2}The red team lost.
+   4ca	= \c{blue1}The blue team lost.
+   4cb	= 
+   515	= 1st
+   516	= 2nd
+   517	= 3rd
+   518	= 4th
+   519	= 5th
+   51a	= 6th
+   51b	= 7th
+   51c	= 8th
+   51d	= 9th
+   51e	= 10th
+   51f	= 11th
+   520	= 12th
+   521	= \z{c04,5240525}
+   522	= \z{a02,1000000000}
+   523	= \z{a02,1600000000}
+   524	= 
+   525	= 
+   526	= \z{c04,5270528}
+   527	= \c{red2}win
+   528	= \c{red2}wins
+   529	= \z{c04,52a052b}
+   52a	= \c{blue1}win
+   52b	= \c{blue1}wins
+   52c	= \z{c04,52d052e}
+   52d	= \c{red2}pt
+   52e	= \c{red2}pts
+   52f	= \z{c04,5300531}
+   530	= \c{blue1}pt
+   531	= \c{blue1}pts
+   532	= Ghost Race Wins: \z{a02,1000000000} Losses: \z{a02,1000010000}
+   533	= Ghost Race Wins: \z{a02,1000000000} Losses: \z{a02,1000010000}
+   534	= \c{red2}\z{802,110000}
+   535	= \c{blue1}\z{802,110000}
+   536	= TIME
+   537	= LAP
+   538	= SCORE
+   539 [0] = LIV\x{f07c}
+   53a	= You will join the next race\n
+	+ (\z{a02,1000000000} players).\n
+	+ Please wait a moment.
+   53b	= You will join the next battle\n
+	+ (\z{a02,1000000000} players).\n
+	+ Please wait a moment.
+   53c	= \n
+	+ The rankings have been\n
+	+ determined, so the race has ended.
+   53d	= \n
+	+ Five minutes have passed, so\n
+	+ the race has ended.
+   53e	= \n
+	+ Thirty seconds have passed since the leader\n
+	+ crossed the finish line, so the race has ended.
+   53f	= VR
+   540	= BR
+   541	= \u{f06d}
+   578	= \z{a02,1000000002}:\z{a02,1000010002}.\z{a02,1000020003}
+   579	= --:--.---
+   57a	= :
+   57b	= .
+   57c	= 
+   581	= \z{802,110000} Team VS Race \z{a02,1000000000}/\z{a02,1000010000}
+   582	= \z{802,110000} \z{802,110001} 1st Race
+   583	= \z{802,110000} \z{802,110001} 2nd Race
+   584	= \z{802,110000} \z{802,110001} 3rd Race
+   585	= \z{802,110000} \z{802,110001} Final Race
+   586	= \z{802,110000} VS \z{a02,1000000000}/\z{a02,1000010000}
+   587	= Balloon Battle
+   588	= Coin Runners
+
+#--- [589:58c] engines
+   589	= 50cc
+   58a	= 100cc
+   58b	= 150cc
+   58c	= Mirror
+
+   58d	= \z{802,110000} \z{802,110001}
+   58e	= \z{802,110000} VS
+   58f	= RANK:
+   590	= \u{f063}
+   591	= \u{f062}
+   592	= \u{f061}
+   593	= \u{f078}
+   594	= \u{f079}
+   595	= \u{f07a}
+   596	= \u{f07b}
+   597	= \u{f07c}
+   598	= F
+   599	= \z{802,110000} VS Race
+   59a	= \z{802,110000} Team VS Race
+   59b	= \z{802,110000} Team VS Match
+   59c	/
+   59d	/
+   59e	/
+   59f	/
+   5a0	= \z{802,110000} VS \z{802,110001}
+   5a1	= \z{802,110002}\z{802,110000} VS Race 1st Race
+   5a2	= \z{802,110002}\z{802,110000} VS Race 2nd Race
+   5a3	= \z{802,110002}\z{802,110000} VS Race 3rd Race
+   5a4	= \z{802,110002}\z{802,110000} VS Race Final Race
+   5a5	= \z{802,110002}Balloon Battle
+   5a6	= \z{802,110002}Coin Runners
+   5a7	= (\z{a02,1000000000} players)
+   5a8	= 
+   5a9	= \c{red2}
+   5aa	= \c{blue1}
+   5ab	= 
+   5dc	= Use Item
+   5dd	= Steer
+   5de	= Accelerate
+   5df	= Brake/Drift
+   5e0	= Brake
+   5e1	= 
+

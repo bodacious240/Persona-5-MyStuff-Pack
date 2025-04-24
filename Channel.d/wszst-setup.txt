@@ -1,0 +1,2598 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF, BREFT, LTA or LFL):
+archive-format = U8
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = YAZ0
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 1
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0x7a1be0
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./bg/timg/ht_squareWhite_00.tpl.d
+./bg/timg/tk_obi_bottom_curve_gp.tpl.d
+./bg/timg/tk_obi_bottom_left_gp.tpl.d
+./bg/timg/tk_obi_bottom_right_gp.tpl.d
+./bg/timg/tk_obi_check_gp.tpl.d
+./bg/timg/tk_obi_top_curve_gp.tpl.d
+./bg/timg/tk_obi_top_left_gp.tpl.d
+./bg/timg/tk_obi_top_right_gp.tpl.d
+./bg/timg/tt_block_16x16.tpl.d
+./bg/timg/tt_obi_bottom_curve_000.tpl.d
+./bg/timg/tt_obi_bottom_left_000.tpl.d
+./bg/timg/tt_obi_bottom_right_000.tpl.d
+./bg/timg/tt_obi_check_000.tpl.d
+./bg/timg/tt_obi_top_curve_000.tpl.d
+./bg/timg/tt_obi_top_left_000.tpl.d
+./bg/timg/tt_obi_top_right_000.tpl.d
+./bg/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./button/timg/001_001_japan.tpl.d
+./button/timg/002_136_koreaRep.tpl.d
+./button/timg/150_049_usa.tpl.d
+./button/timg/151_018_canada.tpl.d
+./button/timg/152_036_mexico.tpl.d
+./button/timg/153_008_anguilla.tpl.d
+./button/timg/153_009_antigua.tpl.d
+./button/timg/153_010_argentina.tpl.d
+./button/timg/153_011_aruba.tpl.d
+./button/timg/153_012_bahamas.tpl.d
+./button/timg/153_013_barbados.tpl.d
+./button/timg/153_014_belize.tpl.d
+./button/timg/153_015_bolivia.tpl.d
+./button/timg/153_016_brazil.tpl.d
+./button/timg/153_017_britishVirginIslands.tpl.d
+./button/timg/153_019_caymanIslands.tpl.d
+./button/timg/153_020_chile.tpl.d
+./button/timg/153_021_colombia.tpl.d
+./button/timg/153_022_costaRica.tpl.d
+./button/timg/153_023_dominica.tpl.d
+./button/timg/153_024_dominicanRep.tpl.d
+./button/timg/153_025_ecuador.tpl.d
+./button/timg/153_026_elSalvador.tpl.d
+./button/timg/153_028_grenada.tpl.d
+./button/timg/153_030_guatemala.tpl.d
+./button/timg/153_031_guyana.tpl.d
+./button/timg/153_032_haiti.tpl.d
+./button/timg/153_033_honduras.tpl.d
+./button/timg/153_034_jamaica.tpl.d
+./button/timg/153_037_montserrat.tpl.d
+./button/timg/153_038_netherlandsAntilles.tpl.d
+./button/timg/153_039_nicaragua.tpl.d
+./button/timg/153_040_panama.tpl.d
+./button/timg/153_041_paraguay.tpl.d
+./button/timg/153_042_peru.tpl.d
+./button/timg/153_043_stKitts.tpl.d
+./button/timg/153_044_stLucia.tpl.d
+./button/timg/153_045_stVincent.tpl.d
+./button/timg/153_046_suriname.tpl.d
+./button/timg/153_047_trinidadAndTobago.tpl.d
+./button/timg/153_048_turksCaicosIslands.tpl.d
+./button/timg/153_050_uruguay.tpl.d
+./button/timg/153_051_usVirginIslands.tpl.d
+./button/timg/153_052_venezuela.tpl.d
+./button/timg/153__041_paraguay.tpl.d
+./button/timg/200_065_australia.tpl.d
+./button/timg/200_082_ireland.tpl.d
+./button/timg/200_095_newZealand.tpl.d
+./button/timg/200_110_uk.tpl.d
+./button/timg/201_066_austria.tpl.d
+./button/timg/201_078_germany.tpl.d
+./button/timg/201_108_switzerland.tpl.d
+./button/timg/202_067_belgium.tpl.d
+./button/timg/202_077_france.tpl.d
+./button/timg/202_088_luxembourg.tpl.d
+./button/timg/203_083_italy.tpl.d
+./button/timg/204_098_portugal.tpl.d
+./button/timg/204_105_spain.tpl.d
+./button/timg/205_094_netherlands.tpl.d
+./button/timg/206_074_denmark.tpl.d
+./button/timg/206_076_finland.tpl.d
+./button/timg/206_079_greece.tpl.d
+./button/timg/206_096_norway.tpl.d
+./button/timg/206_107_sweden.tpl.d
+./button/timg/flag_blank_00.tpl.d
+./button/timg/fm_nikoniko_mark .tpl.d
+./button/timg/st_battle_icon_balloon.tpl.d
+./button/timg/st_battle_icon_coin.tpl.d
+./button/timg/st_battle_icon_flag.tpl.d
+./button/timg/st_mariokart_channel_ranking_image_event.tpl.d
+./button/timg/st_mariokart_channel_ranking_image_timeattack.tpl.d
+./button/timg/tt_baby_luigi_64x64.tpl.d
+./button/timg/tt_cup_icon_banana_00.tpl.d
+./button/timg/tt_cup_icon_flower_00.tpl.d
+./button/timg/tt_cup_icon_kinoko_00.tpl.d
+./button/timg/tt_cup_icon_konoha_00.tpl.d
+./button/timg/tt_cup_icon_koura_00.tpl.d
+./button/timg/tt_cup_icon_lisense_banana.tpl.d
+./button/timg/tt_cup_icon_lisense_flower.tpl.d
+./button/timg/tt_cup_icon_lisense_hatena.tpl.d
+./button/timg/tt_cup_icon_lisense_kinoko.tpl.d
+./button/timg/tt_cup_icon_lisense_kinokor.tpl.d
+./button/timg/tt_cup_icon_lisense_koura.tpl.d
+./button/timg/tt_cup_icon_lisense_oukan.tpl.d
+./button/timg/tt_cup_icon_lisense_star.tpl.d
+./button/timg/tt_cup_icon_lisense_thunder.tpl.d
+./button/timg/tt_cup_icon_mirror_00.tpl.d
+./button/timg/tt_cup_icon_oukan_00.tpl.d
+./button/timg/tt_cup_icon_star_00.tpl.d
+./button/timg/tt_cup_icon_thunder_00.tpl.d
+./button/timg/tt_glass_sphere_sono3.tpl.d
+./button/timg/tt_glass_waku_180.tpl.d
+./button/timg/tt_glass_waku_base_mini.tpl.d
+./button/timg/tt_gr_maru_normal_00.tpl.d
+./button/timg/tt_hatena_64x64.tpl.d
+./button/timg/tt_license_icon_004.tpl.d
+./button/timg/tt_mariokart_channel_top_menu_image_event.tpl.d
+./button/timg/tt_mariokart_channel_top_menu_image_friend_list.tpl.d
+./button/timg/tt_mariokart_channel_top_menu_image_ranking.tpl.d
+./button/timg/tt_mariokart_channel_top_menu_image_save_ghost.tpl.d
+./button/timg/tt_maru_32x32.tpl.d
+./button/timg/tt_mg_windiw_vol3_ll.tpl.d
+./button/timg/tt_mg_windiw_vol3_lu.tpl.d
+./button/timg/tt_mg_windiw_vol3_rl.tpl.d
+./button/timg/tt_mg_windiw_vol3_ru.tpl.d
+./button/timg/tt_mii_matuoka_64x64.tpl.d
+./button/timg/tt_open_icon_option_000.tpl.d
+./button/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./button/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./button/timg/tt_window_vol1.tpl.d
+./button/timg/tt_window_vol3sono2.tpl.d
+./button/timg/tt_yajirushi_type1.tpl.d
+./control/timg/001_001_japan.tpl.d
+./control/timg/002_136_koreaRep.tpl.d
+./control/timg/150_049_usa.tpl.d
+./control/timg/151_018_canada.tpl.d
+./control/timg/152_036_mexico.tpl.d
+./control/timg/153_008_anguilla.tpl.d
+./control/timg/153_009_antigua.tpl.d
+./control/timg/153_010_argentina.tpl.d
+./control/timg/153_011_aruba.tpl.d
+./control/timg/153_012_bahamas.tpl.d
+./control/timg/153_013_barbados.tpl.d
+./control/timg/153_014_belize.tpl.d
+./control/timg/153_015_bolivia.tpl.d
+./control/timg/153_016_brazil.tpl.d
+./control/timg/153_017_britishVirginIslands.tpl.d
+./control/timg/153_019_caymanIslands.tpl.d
+./control/timg/153_020_chile.tpl.d
+./control/timg/153_021_colombia.tpl.d
+./control/timg/153_022_costaRica.tpl.d
+./control/timg/153_023_dominica.tpl.d
+./control/timg/153_024_dominicanRep.tpl.d
+./control/timg/153_025_ecuador.tpl.d
+./control/timg/153_026_elSalvador.tpl.d
+./control/timg/153_028_grenada.tpl.d
+./control/timg/153_030_guatemala.tpl.d
+./control/timg/153_031_guyana.tpl.d
+./control/timg/153_032_haiti.tpl.d
+./control/timg/153_033_honduras.tpl.d
+./control/timg/153_034_jamaica.tpl.d
+./control/timg/153_037_montserrat.tpl.d
+./control/timg/153_038_netherlandsAntilles.tpl.d
+./control/timg/153_039_nicaragua.tpl.d
+./control/timg/153_040_panama.tpl.d
+./control/timg/153_041_paraguay.tpl.d
+./control/timg/153_042_peru.tpl.d
+./control/timg/153_043_stKitts.tpl.d
+./control/timg/153_044_stLucia.tpl.d
+./control/timg/153_045_stVincent.tpl.d
+./control/timg/153_046_suriname.tpl.d
+./control/timg/153_047_trinidadAndTobago.tpl.d
+./control/timg/153_048_turksCaicosIslands.tpl.d
+./control/timg/153_050_uruguay.tpl.d
+./control/timg/153_051_usVirginIslands.tpl.d
+./control/timg/153_052_venezuela.tpl.d
+./control/timg/200_065_australia.tpl.d
+./control/timg/200_082_ireland.tpl.d
+./control/timg/200_095_newZealand.tpl.d
+./control/timg/200_110_uk.tpl.d
+./control/timg/201_066_austria.tpl.d
+./control/timg/201_078_germany.tpl.d
+./control/timg/201_108_switzerland.tpl.d
+./control/timg/202_067_belgium.tpl.d
+./control/timg/202_077_france.tpl.d
+./control/timg/202_088_luxembourg.tpl.d
+./control/timg/203_083_italy.tpl.d
+./control/timg/204_098_portugal.tpl.d
+./control/timg/204_105_spain.tpl.d
+./control/timg/205_094_netherlands.tpl.d
+./control/timg/206_074_denmark.tpl.d
+./control/timg/206_076_finland.tpl.d
+./control/timg/206_079_greece.tpl.d
+./control/timg/206_096_norway.tpl.d
+./control/timg/206_107_sweden.tpl.d
+./control/timg/flag_blank_00.tpl.d
+./control/timg/fm_handle_new_x.tpl.d
+./control/timg/st_battle_icon_balloon.tpl.d
+./control/timg/st_battle_icon_coin.tpl.d
+./control/timg/st_battle_icon_flag.tpl.d
+./control/timg/st_la_bike.tpl.d
+./control/timg/st_la_kart.tpl.d
+./control/timg/st_lb_bike.tpl.d
+./control/timg/st_lb_kart.tpl.d
+./control/timg/st_lc_bike.tpl.d
+./control/timg/st_lc_kart.tpl.d
+./control/timg/st_ld_bike.tpl.d
+./control/timg/st_ld_kart.tpl.d
+./control/timg/st_ldf_bike.tpl.d
+./control/timg/st_ldf_kart.tpl.d
+./control/timg/st_le_bike.tpl.d
+./control/timg/st_le_kart.tpl.d
+./control/timg/st_ma_bike.tpl.d
+./control/timg/st_ma_kart.tpl.d
+./control/timg/st_mb_bike.tpl.d
+./control/timg/st_mb_kart.tpl.d
+./control/timg/st_mc_bike.tpl.d
+./control/timg/st_mc_kart.tpl.d
+./control/timg/st_md_bike.tpl.d
+./control/timg/st_md_kart.tpl.d
+./control/timg/st_mdf_bike.tpl.d
+./control/timg/st_mdf_kart.tpl.d
+./control/timg/st_me_bike.tpl.d
+./control/timg/st_me_kart.tpl.d
+./control/timg/st_sa_bike.tpl.d
+./control/timg/st_sa_kart.tpl.d
+./control/timg/st_sb_bike.tpl.d
+./control/timg/st_sb_kart.tpl.d
+./control/timg/st_sc_bike.tpl.d
+./control/timg/st_sc_kart.tpl.d
+./control/timg/st_sd_bike.tpl.d
+./control/timg/st_sd_kart.tpl.d
+./control/timg/st_sdf_bike.tpl.d
+./control/timg/st_sdf_kart.tpl.d
+./control/timg/st_se_bike.tpl.d
+./control/timg/st_se_kart.tpl.d
+./control/timg/tk_window.tpl.d
+./control/timg/tt_baby_daisy_64x64.tpl.d
+./control/timg/tt_baby_luigi_64x64.tpl.d
+./control/timg/tt_baby_mario_64x64.tpl.d
+./control/timg/tt_baby_peach_64x64.tpl.d
+./control/timg/tt_boss_packun_64x64.tpl.d
+./control/timg/tt_catherine_64x64.tpl.d
+./control/timg/tt_cup_icon_banana_00.tpl.d
+./control/timg/tt_cup_icon_flower_00.tpl.d
+./control/timg/tt_cup_icon_kinoko_00.tpl.d
+./control/timg/tt_cup_icon_konoha_00.tpl.d
+./control/timg/tt_cup_icon_koura_00.tpl.d
+./control/timg/tt_cup_icon_mirror_00.tpl.d
+./control/timg/tt_cup_icon_oukan_00.tpl.d
+./control/timg/tt_cup_icon_star_00.tpl.d
+./control/timg/tt_cup_icon_thunder_00.tpl.d
+./control/timg/tt_daisy_64x64.tpl.d
+./control/timg/tt_didy_64x64.tpl.d
+./control/timg/tt_donky_64x64.tpl.d
+./control/timg/tt_fukidashi_window_kado_common.tpl.d
+./control/timg/tt_funky_64x64.tpl.d
+./control/timg/tt_ghost_data_10.tpl.d
+./control/timg/tt_ghost_new_icon.tpl.d
+./control/timg/tt_hammer_64x64.tpl.d
+./control/timg/tt_hatena_64x64.tpl.d
+./control/timg/tt_hone_koopa_64x64.tpl.d
+./control/timg/tt_karon_64x64.tpl.d
+./control/timg/tt_kinopico_64x64.tpl.d
+./control/timg/tt_kinopio_64x64.tpl.d
+./control/timg/tt_koopa_64x64.tpl.d
+./control/timg/tt_koopa_jr_64x64.tpl.d
+./control/timg/tt_luigi_64x64.tpl.d
+./control/timg/tt_mario_64x64.tpl.d
+./control/timg/tt_mii_matuoka_64x64.tpl.d
+./control/timg/tt_mii_suit_a_64x64.tpl.d
+./control/timg/tt_mii_suit_b_64x64.tpl.d
+./control/timg/tt_mii_suit_c_64x64.tpl.d
+./control/timg/tt_nintendo_120x32.tpl.d
+./control/timg/tt_noko_64x64.tpl.d
+./control/timg/tt_pata_64x64.tpl.d
+./control/timg/tt_pattern_chek_32x32.tpl.d
+./control/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./control/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./control/timg/tt_peach_64x64.tpl.d
+./control/timg/tt_roseta_64x64.tpl.d
+./control/timg/tt_teresa_64x64.tpl.d
+./control/timg/tt_waluigi_64x64.tpl.d
+./control/timg/tt_wario_64x64.tpl.d
+./control/timg/tt_yoshi_64x64.tpl.d
+./course.kcl.d
+./course.kcl.flag
+./course.kcl.mtl
+./course.kcl.obj
+./course.kmp.d
+./course.kmp.txt
+./course.lex.txt
+./dpd_pointer/timg/cursor0.tpl.d
+./dpd_pointer/timg/tt_i_cursor_nakami_ver0.tpl.d
+./dpd_pointer/timg/tt_i_cursor_shikaku.tpl.d
+./dpd_pointer/timg/tt_i_cursor_tongari.tpl.d
+./effect/RKMenu.breff.d
+./effect/RKMenu.breft.d
+./globe/timg/001_001_japan.tpl.d
+./globe/timg/002_136_koreaRep.tpl.d
+./globe/timg/150_049_usa.tpl.d
+./globe/timg/151_018_canada.tpl.d
+./globe/timg/152_036_mexico.tpl.d
+./globe/timg/153_008_anguilla.tpl.d
+./globe/timg/153_009_antigua.tpl.d
+./globe/timg/153_010_argentina.tpl.d
+./globe/timg/153_011_aruba.tpl.d
+./globe/timg/153_012_bahamas.tpl.d
+./globe/timg/153_013_barbados.tpl.d
+./globe/timg/153_014_belize.tpl.d
+./globe/timg/153_015_bolivia.tpl.d
+./globe/timg/153_016_brazil.tpl.d
+./globe/timg/153_017_britishVirginIslands.tpl.d
+./globe/timg/153_019_caymanIslands.tpl.d
+./globe/timg/153_020_chile.tpl.d
+./globe/timg/153_021_colombia.tpl.d
+./globe/timg/153_022_costaRica.tpl.d
+./globe/timg/153_023_dominica.tpl.d
+./globe/timg/153_024_dominicanRep.tpl.d
+./globe/timg/153_025_ecuador.tpl.d
+./globe/timg/153_026_elSalvador.tpl.d
+./globe/timg/153_028_grenada.tpl.d
+./globe/timg/153_030_guatemala.tpl.d
+./globe/timg/153_031_guyana.tpl.d
+./globe/timg/153_032_haiti.tpl.d
+./globe/timg/153_033_honduras.tpl.d
+./globe/timg/153_034_jamaica.tpl.d
+./globe/timg/153_037_montserrat.tpl.d
+./globe/timg/153_038_netherlandsAntilles.tpl.d
+./globe/timg/153_039_nicaragua.tpl.d
+./globe/timg/153_040_panama.tpl.d
+./globe/timg/153_041_paraguay.tpl.d
+./globe/timg/153_042_peru.tpl.d
+./globe/timg/153_043_stKitts.tpl.d
+./globe/timg/153_044_stLucia.tpl.d
+./globe/timg/153_045_stVincent.tpl.d
+./globe/timg/153_046_suriname.tpl.d
+./globe/timg/153_047_trinidadAndTobago.tpl.d
+./globe/timg/153_048_turksCaicosIslands.tpl.d
+./globe/timg/153_050_uruguay.tpl.d
+./globe/timg/153_051_usVirginIslands.tpl.d
+./globe/timg/153_052_venezuela.tpl.d
+./globe/timg/153__041_paraguay.tpl.d
+./globe/timg/200_065_australia.tpl.d
+./globe/timg/200_082_ireland.tpl.d
+./globe/timg/200_095_newZealand.tpl.d
+./globe/timg/200_110_uk.tpl.d
+./globe/timg/201_066_austria.tpl.d
+./globe/timg/201_078_germany.tpl.d
+./globe/timg/201_108_switzerland.tpl.d
+./globe/timg/202_067_belgium.tpl.d
+./globe/timg/202_077_france.tpl.d
+./globe/timg/202_088_luxembourg.tpl.d
+./globe/timg/203_083_italy.tpl.d
+./globe/timg/204_098_portugal.tpl.d
+./globe/timg/204_105_spain.tpl.d
+./globe/timg/205_094_netherlands.tpl.d
+./globe/timg/206_074_denmark.tpl.d
+./globe/timg/206_076_finland.tpl.d
+./globe/timg/206_079_greece.tpl.d
+./globe/timg/206_096_norway.tpl.d
+./globe/timg/206_107_sweden.tpl.d
+./globe/timg/flag_blank_00.tpl.d
+./globe/timg/ht_squareWhite_00.tpl.d
+./globe/timg/tt_fukidashi_window_center_02.tpl.d
+./globe/timg/tt_fukidashi_window_left_00.tpl.d
+./globe/timg/tt_fukidashi_window_normal_00.tpl.d
+./globe/timg/tt_fukidashi_window_right_00.tpl.d
+./globe/timg/tt_mario_64x64.tpl.d
+./globe/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./message_window/timg/tt_fukidashi_window_kado_common.tpl.d
+./message_window/timg/tt_glass_waku_180.tpl.d
+./message_window/timg/tt_pattern_chek_32x32.tpl.d
+./message_window/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./message_window/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./pad_recognize/timg/tt_a_body.tpl.d
+./pad_recognize/timg/tt_a_light.tpl.d
+./pad_recognize/timg/tt_clacon_body.tpl.d
+./pad_recognize/timg/tt_clacon_light.tpl.d
+./pad_recognize/timg/tt_fukidashi_window_kado_common.tpl.d
+./pad_recognize/timg/tt_gccon_body.tpl.d
+./pad_recognize/timg/tt_gccon_light.tpl.d
+./pad_recognize/timg/tt_gccon_waku.tpl.d
+./pad_recognize/timg/tt_hatena_body.tpl.d
+./pad_recognize/timg/tt_hatena_light.tpl.d
+./pad_recognize/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./pad_recognize/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./pad_recognize/timg/tt_remocon_han_body.tpl.d
+./pad_recognize/timg/tt_remocon_han_light.tpl.d
+./pad_recognize/timg/tt_remocon_nun_body.tpl.d
+./pad_recognize/timg/tt_remocon_nun_light.tpl.d
+./ranking/timg/001_001_japan.tpl.d
+./ranking/timg/002_136_koreaRep.tpl.d
+./ranking/timg/150_049_usa.tpl.d
+./ranking/timg/151_018_canada.tpl.d
+./ranking/timg/152_036_mexico.tpl.d
+./ranking/timg/153_008_anguilla.tpl.d
+./ranking/timg/153_009_antigua.tpl.d
+./ranking/timg/153_010_argentina.tpl.d
+./ranking/timg/153_011_aruba.tpl.d
+./ranking/timg/153_012_bahamas.tpl.d
+./ranking/timg/153_013_barbados.tpl.d
+./ranking/timg/153_014_belize.tpl.d
+./ranking/timg/153_015_bolivia.tpl.d
+./ranking/timg/153_016_brazil.tpl.d
+./ranking/timg/153_017_britishVirginIslands.tpl.d
+./ranking/timg/153_019_caymanIslands.tpl.d
+./ranking/timg/153_020_chile.tpl.d
+./ranking/timg/153_021_colombia.tpl.d
+./ranking/timg/153_022_costaRica.tpl.d
+./ranking/timg/153_023_dominica.tpl.d
+./ranking/timg/153_024_dominicanRep.tpl.d
+./ranking/timg/153_025_ecuador.tpl.d
+./ranking/timg/153_026_elSalvador.tpl.d
+./ranking/timg/153_028_grenada.tpl.d
+./ranking/timg/153_030_guatemala.tpl.d
+./ranking/timg/153_031_guyana.tpl.d
+./ranking/timg/153_032_haiti.tpl.d
+./ranking/timg/153_033_honduras.tpl.d
+./ranking/timg/153_034_jamaica.tpl.d
+./ranking/timg/153_037_montserrat.tpl.d
+./ranking/timg/153_038_netherlandsAntilles.tpl.d
+./ranking/timg/153_039_nicaragua.tpl.d
+./ranking/timg/153_040_panama.tpl.d
+./ranking/timg/153_041_paraguay.tpl.d
+./ranking/timg/153_042_peru.tpl.d
+./ranking/timg/153_043_stKitts.tpl.d
+./ranking/timg/153_044_stLucia.tpl.d
+./ranking/timg/153_045_stVincent.tpl.d
+./ranking/timg/153_046_suriname.tpl.d
+./ranking/timg/153_047_trinidadAndTobago.tpl.d
+./ranking/timg/153_048_turksCaicosIslands.tpl.d
+./ranking/timg/153_050_uruguay.tpl.d
+./ranking/timg/153_051_usVirginIslands.tpl.d
+./ranking/timg/153_052_venezuela.tpl.d
+./ranking/timg/153__041_paraguay.tpl.d
+./ranking/timg/200_065_australia.tpl.d
+./ranking/timg/200_082_ireland.tpl.d
+./ranking/timg/200_095_newZealand.tpl.d
+./ranking/timg/200_110_uk.tpl.d
+./ranking/timg/201_066_austria.tpl.d
+./ranking/timg/201_078_germany.tpl.d
+./ranking/timg/201_108_switzerland.tpl.d
+./ranking/timg/202_067_belgium.tpl.d
+./ranking/timg/202_077_france.tpl.d
+./ranking/timg/202_088_luxembourg.tpl.d
+./ranking/timg/203_083_italy.tpl.d
+./ranking/timg/204_098_portugal.tpl.d
+./ranking/timg/204_105_spain.tpl.d
+./ranking/timg/205_094_netherlands.tpl.d
+./ranking/timg/206_074_denmark.tpl.d
+./ranking/timg/206_076_finland.tpl.d
+./ranking/timg/206_079_greece.tpl.d
+./ranking/timg/206_096_norway.tpl.d
+./ranking/timg/206_107_sweden.tpl.d
+./ranking/timg/Block_Plaza.tpl.d
+./ranking/timg/Chain_Chomp_Roulette.tpl.d
+./ranking/timg/DS_Twilight_House.tpl.d
+./ranking/timg/Delfino_Pier.tpl.d
+./ranking/timg/Funky_Stadium.tpl.d
+./ranking/timg/GBA_Battle_Course3.tpl.d
+./ranking/timg/GCN_Cookie_Land.tpl.d
+./ranking/timg/N64_Skyscraper.tpl.d
+./ranking/timg/SNES_Battle_Course4.tpl.d
+./ranking/timg/Thwomp_Desert.tpl.d
+./ranking/timg/beigoman_stage.tpl.d
+./ranking/timg/flag_blank_00.tpl.d
+./ranking/timg/fm_handle_new_x.tpl.d
+./ranking/timg/id00_castle_course.tpl.d
+./ranking/timg/id01_farm_course.tpl.d
+./ranking/timg/id02_kinoko_course.tpl.d
+./ranking/timg/id03_volcano_course.tpl.d
+./ranking/timg/id04_factory_course.tpl.d
+./ranking/timg/id05_shopping_course.tpl.d
+./ranking/timg/id06_boardcross_course.tpl.d
+./ranking/timg/id07_truck_course.tpl.d
+./ranking/timg/id08_beginner_course.tpl.d
+./ranking/timg/id08_beginner_course_evening.tpl.d
+./ranking/timg/id09_senior_course.tpl.d
+./ranking/timg/id10_ridgehighway_course.tpl.d
+./ranking/timg/id11_treehouse_course.tpl.d
+./ranking/timg/id12_koopa_course.tpl.d
+./ranking/timg/id13_rainbow_course.tpl.d
+./ranking/timg/id14_desert_course.tpl.d
+./ranking/timg/id15_water_course.tpl.d
+./ranking/timg/id16_old_peach_gc.tpl.d
+./ranking/timg/id17_MarioGC.tpl.d
+./ranking/timg/id18_old_waluigi_gc.tpl.d
+./ranking/timg/id19_old_donkey_gc.tpl.d
+./ranking/timg/id20_old_falls_ds.tpl.d
+./ranking/timg/id21_old_desert_ds.tpl.d
+./ranking/timg/id22_old_garden_ds.tpl.d
+./ranking/timg/id23_old_town_ds.tpl.d
+./ranking/timg/id24_old_mario_sfc.tpl.d
+./ranking/timg/id25_old_obake_sfc.tpl.d
+./ranking/timg/id26_old_mario_64.tpl.d
+./ranking/timg/id27_old_sherbet_64.tpl.d
+./ranking/timg/id28_old_koopa_64.tpl.d
+./ranking/timg/id29_old_donkey_64.tpl.d
+./ranking/timg/id30_old_koopa_gba.tpl.d
+./ranking/timg/id31_old_heyho_gba.tpl.d
+./ranking/timg/tt_america.tpl.d
+./ranking/timg/tt_baby_luigi_64x64.tpl.d
+./ranking/timg/tt_battle_victory_score_crown.tpl.d
+./ranking/timg/tt_block_16x16.tpl.d
+./ranking/timg/tt_ghost_ranking_course_name_bg.tpl.d
+./ranking/timg/tt_gr_maru_normal_00.tpl.d
+./ranking/timg/tt_gr_tate_line_00.tpl.d
+./ranking/timg/tt_gr_yajirushi_line.tpl.d
+./ranking/timg/tt_gr_yajirushi_yajirushi.tpl.d
+./ranking/timg/tt_grid_900.tpl.d
+./ranking/timg/tt_mario_64x64.tpl.d
+./ranking/timg/tt_maru_32x32.tpl.d
+./ranking/timg/tt_mii_matuoka_64x64.tpl.d
+./ranking/timg/tt_navi_l.tpl.d
+./ranking/timg/tt_obi_bottom_curve_000.tpl.d
+./ranking/timg/tt_obi_bottom_left_000.tpl.d
+./ranking/timg/tt_obi_bottom_right_000.tpl.d
+./ranking/timg/tt_obi_check_000.tpl.d
+./ranking/timg/tt_obi_top_curve_000.tpl.d
+./ranking/timg/tt_obi_top_left_000.tpl.d
+./ranking/timg/tt_pattern_chek_32x32_alpha.tpl.d
+./ranking/timg/tt_pattern_chek_alpha_nasi_32x32.tpl.d
+./ranking/timg/tt_pattern_chek_bokashi_32x32.tpl.d
+./ranking/timg/tt_ranking_flag.tpl.d
+./ranking/timg/tt_remocon_han_body_mini3.tpl.d
+./ranking/timg/tt_window_vol3sono2.tpl.d
+./ranking/timg/tt_yajirushi_type1.tpl.d
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+TPL,I4,1	= ./bg/timg/ht_squareWhite_00.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_bottom_curve_gp.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_bottom_left_gp.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_bottom_right_gp.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_check_gp.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_top_curve_gp.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_top_left_gp.tpl
+TPL,RGB5A3,1	= ./bg/timg/tk_obi_top_right_gp.tpl
+TPL,IA4,1	= ./bg/timg/tt_block_16x16.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_bottom_curve_000.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_bottom_left_000.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_bottom_right_000.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_check_000.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_top_curve_000.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_top_left_000.tpl
+TPL,RGB5A3,1	= ./bg/timg/tt_obi_top_right_000.tpl
+TPL,IA8,1	= ./bg/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,C4,P-RGB5A3,1	= ./button/timg/001_001_japan.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/002_136_koreaRep.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/150_049_usa.tpl
+TPL,C4,P-RGB5A3,1	= ./button/timg/151_018_canada.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/152_036_mexico.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_008_anguilla.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_009_antigua.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_010_argentina.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_011_aruba.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_012_bahamas.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_013_barbados.tpl
+TPL,C8,P-RGB5A3,1	= ./button/timg/153_014_belize.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_015_bolivia.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_016_brazil.tpl
+TPL,C8,P-RGB5A3,1	= ./button/timg/153_017_britishVirginIslands.tpl
+TPL,C14X2,P-RGB565,1	= ./button/timg/153_019_caymanIslands.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_020_chile.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/153_021_colombia.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_022_costaRica.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_023_dominica.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_024_dominicanRep.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_025_ecuador.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_026_elSalvador.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_028_grenada.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_030_guatemala.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_031_guyana.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_032_haiti.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_033_honduras.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_034_jamaica.tpl
+TPL,C8,P-RGB5A3,1	= ./button/timg/153_037_montserrat.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_038_netherlandsAntilles.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_039_nicaragua.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_040_panama.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_042_peru.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_043_stKitts.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_044_stLucia.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_045_stVincent.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_046_suriname.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_047_trinidadAndTobago.tpl
+TPL,C8,P-RGB5A3,1	= ./button/timg/153_048_turksCaicosIslands.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_050_uruguay.tpl
+TPL,C8,P-RGB5A3,1	= ./button/timg/153_051_usVirginIslands.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153_052_venezuela.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/153__041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/200_065_australia.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/200_082_ireland.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/200_095_newZealand.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/200_110_uk.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/201_066_austria.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/201_078_germany.tpl
+TPL,C4,P-RGB5A3,1	= ./button/timg/201_108_switzerland.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/202_067_belgium.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/202_077_france.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/202_088_luxembourg.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/203_083_italy.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/204_098_portugal.tpl
+TPL,C8,P-RGB565,1	= ./button/timg/204_105_spain.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/205_094_netherlands.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/206_074_denmark.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/206_076_finland.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/206_079_greece.tpl
+TPL,C4,P-RGB5A3,1	= ./button/timg/206_096_norway.tpl
+TPL,C4,P-RGB565,1	= ./button/timg/206_107_sweden.tpl
+TPL,C4,P-RGB5A3,1	= ./button/timg/flag_blank_00.tpl
+TPL,IA8,1	= ./button/timg/fm_nikoniko_mark .tpl
+TPL,RGB5A3,1	= ./button/timg/st_battle_icon_balloon.tpl
+TPL,RGB5A3,1	= ./button/timg/st_battle_icon_coin.tpl
+TPL,RGB5A3,1	= ./button/timg/st_battle_icon_flag.tpl
+TPL,RGB5A3,1	= ./button/timg/st_mariokart_channel_ranking_image_event.tpl
+TPL,RGB5A3,1	= ./button/timg/st_mariokart_channel_ranking_image_timeattack.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_baby_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_banana_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_flower_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_kinoko_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_konoha_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_koura_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_banana.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_flower.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_hatena.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_kinoko.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_kinokor.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_koura.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_oukan.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_star.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_lisense_thunder.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_mirror_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_oukan_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_star_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_cup_icon_thunder_00.tpl
+TPL,IA8,1	= ./button/timg/tt_glass_sphere_sono3.tpl
+TPL,IA8,1	= ./button/timg/tt_glass_waku_180.tpl
+TPL,IA8,1	= ./button/timg/tt_glass_waku_base_mini.tpl
+TPL,IA8,1	= ./button/timg/tt_gr_maru_normal_00.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_hatena_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_license_icon_004.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mariokart_channel_top_menu_image_event.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mariokart_channel_top_menu_image_friend_list.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mariokart_channel_top_menu_image_ranking.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mariokart_channel_top_menu_image_save_ghost.tpl
+TPL,IA4,1	= ./button/timg/tt_maru_32x32.tpl
+TPL,IA8,1	= ./button/timg/tt_mg_windiw_vol3_ll.tpl
+TPL,IA8,1	= ./button/timg/tt_mg_windiw_vol3_lu.tpl
+TPL,IA8,1	= ./button/timg/tt_mg_windiw_vol3_rl.tpl
+TPL,IA8,1	= ./button/timg/tt_mg_windiw_vol3_ru.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_mii_matuoka_64x64.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_open_icon_option_000.tpl
+TPL,IA4,1	= ./button/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./button/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,IA4,1	= ./button/timg/tt_window_vol1.tpl
+TPL,IA4,1	= ./button/timg/tt_window_vol3sono2.tpl
+TPL,IA4,1	= ./button/timg/tt_yajirushi_type1.tpl
+TPL,C4,P-RGB5A3,1	= ./control/timg/001_001_japan.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/002_136_koreaRep.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/150_049_usa.tpl
+TPL,C4,P-RGB5A3,1	= ./control/timg/151_018_canada.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/152_036_mexico.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_008_anguilla.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_009_antigua.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_010_argentina.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_011_aruba.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_012_bahamas.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_013_barbados.tpl
+TPL,C8,P-RGB5A3,1	= ./control/timg/153_014_belize.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_015_bolivia.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_016_brazil.tpl
+TPL,C8,P-RGB5A3,1	= ./control/timg/153_017_britishVirginIslands.tpl
+TPL,C14X2,P-RGB565,1	= ./control/timg/153_019_caymanIslands.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_020_chile.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/153_021_colombia.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_022_costaRica.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_023_dominica.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_024_dominicanRep.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_025_ecuador.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_026_elSalvador.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_028_grenada.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_030_guatemala.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_031_guyana.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_032_haiti.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_033_honduras.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_034_jamaica.tpl
+TPL,C8,P-RGB5A3,1	= ./control/timg/153_037_montserrat.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_038_netherlandsAntilles.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_039_nicaragua.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_040_panama.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_042_peru.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_043_stKitts.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_044_stLucia.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_045_stVincent.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_046_suriname.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_047_trinidadAndTobago.tpl
+TPL,C8,P-RGB5A3,1	= ./control/timg/153_048_turksCaicosIslands.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_050_uruguay.tpl
+TPL,C8,P-RGB5A3,1	= ./control/timg/153_051_usVirginIslands.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/153_052_venezuela.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/200_065_australia.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/200_082_ireland.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/200_095_newZealand.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/200_110_uk.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/201_066_austria.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/201_078_germany.tpl
+TPL,C4,P-RGB5A3,1	= ./control/timg/201_108_switzerland.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/202_067_belgium.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/202_077_france.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/202_088_luxembourg.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/203_083_italy.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/204_098_portugal.tpl
+TPL,C8,P-RGB565,1	= ./control/timg/204_105_spain.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/205_094_netherlands.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/206_074_denmark.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/206_076_finland.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/206_079_greece.tpl
+TPL,C4,P-RGB5A3,1	= ./control/timg/206_096_norway.tpl
+TPL,C4,P-RGB565,1	= ./control/timg/206_107_sweden.tpl
+TPL,C4,P-RGB5A3,1	= ./control/timg/flag_blank_00.tpl
+TPL,RGB5A3,1	= ./control/timg/fm_handle_new_x.tpl
+TPL,RGB5A3,1	= ./control/timg/st_battle_icon_balloon.tpl
+TPL,RGB5A3,1	= ./control/timg/st_battle_icon_coin.tpl
+TPL,RGB5A3,1	= ./control/timg/st_battle_icon_flag.tpl
+TPL,RGB5A3,1	= ./control/timg/st_la_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_la_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_lb_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_lb_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_lc_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_lc_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_ld_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_ld_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_ldf_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_ldf_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_le_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_le_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_ma_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_ma_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_mb_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_mb_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_mc_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_mc_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_md_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_md_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_mdf_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_mdf_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_me_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_me_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sa_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sa_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sb_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sb_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sc_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sc_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sd_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sd_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sdf_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_sdf_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/st_se_bike.tpl
+TPL,RGB5A3,1	= ./control/timg/st_se_kart.tpl
+TPL,RGB5A3,1	= ./control/timg/tk_window.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_daisy_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_mario_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_baby_peach_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_boss_packun_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_catherine_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_banana_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_flower_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_kinoko_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_konoha_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_koura_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_mirror_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_oukan_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_star_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_cup_icon_thunder_00.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_daisy_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_didy_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_donky_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_fukidashi_window_kado_common.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_funky_64x64.tpl
+TPL,IA8,1	= ./control/timg/tt_ghost_data_10.tpl
+TPL,IA8,1	= ./control/timg/tt_ghost_new_icon.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_hammer_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_hatena_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_hone_koopa_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_karon_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_kinopico_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_kinopio_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_koopa_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_koopa_jr_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mario_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_matuoka_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_suit_a_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_suit_b_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_mii_suit_c_64x64.tpl
+TPL,I8,1	= ./control/timg/tt_nintendo_120x32.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_noko_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_pata_64x64.tpl
+TPL,RGB565,1	= ./control/timg/tt_pattern_chek_32x32.tpl
+TPL,IA4,1	= ./control/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_peach_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_roseta_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_teresa_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_waluigi_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_wario_64x64.tpl
+TPL,RGB5A3,1	= ./control/timg/tt_yoshi_64x64.tpl
+KCL		= ./course.kcl
+KMP		= ./course.kmp
+LEX		= ./course.lex
+TPL,I8,1	= ./dpd_pointer/timg/cursor0.tpl
+TPL,IA4,1	= ./dpd_pointer/timg/tt_i_cursor_nakami_ver0.tpl
+TPL,IA4,1	= ./dpd_pointer/timg/tt_i_cursor_shikaku.tpl
+TPL,IA8,1	= ./dpd_pointer/timg/tt_i_cursor_tongari.tpl
+TPL,C4,P-RGB5A3,1	= ./globe/timg/001_001_japan.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/002_136_koreaRep.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/150_049_usa.tpl
+TPL,C4,P-RGB5A3,1	= ./globe/timg/151_018_canada.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/152_036_mexico.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_008_anguilla.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_009_antigua.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_010_argentina.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_011_aruba.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_012_bahamas.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_013_barbados.tpl
+TPL,C8,P-RGB5A3,1	= ./globe/timg/153_014_belize.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_015_bolivia.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_016_brazil.tpl
+TPL,C8,P-RGB5A3,1	= ./globe/timg/153_017_britishVirginIslands.tpl
+TPL,C14X2,P-RGB565,1	= ./globe/timg/153_019_caymanIslands.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_020_chile.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/153_021_colombia.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_022_costaRica.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_023_dominica.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_024_dominicanRep.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_025_ecuador.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_026_elSalvador.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_028_grenada.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_030_guatemala.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_031_guyana.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_032_haiti.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_033_honduras.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_034_jamaica.tpl
+TPL,C8,P-RGB5A3,1	= ./globe/timg/153_037_montserrat.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_038_netherlandsAntilles.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_039_nicaragua.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_040_panama.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_042_peru.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_043_stKitts.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_044_stLucia.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_045_stVincent.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_046_suriname.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_047_trinidadAndTobago.tpl
+TPL,C8,P-RGB5A3,1	= ./globe/timg/153_048_turksCaicosIslands.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_050_uruguay.tpl
+TPL,C8,P-RGB5A3,1	= ./globe/timg/153_051_usVirginIslands.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153_052_venezuela.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/153__041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/200_065_australia.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/200_082_ireland.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/200_095_newZealand.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/200_110_uk.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/201_066_austria.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/201_078_germany.tpl
+TPL,C4,P-RGB5A3,1	= ./globe/timg/201_108_switzerland.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/202_067_belgium.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/202_077_france.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/202_088_luxembourg.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/203_083_italy.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/204_098_portugal.tpl
+TPL,C8,P-RGB565,1	= ./globe/timg/204_105_spain.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/205_094_netherlands.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/206_074_denmark.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/206_076_finland.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/206_079_greece.tpl
+TPL,C4,P-RGB5A3,1	= ./globe/timg/206_096_norway.tpl
+TPL,C4,P-RGB565,1	= ./globe/timg/206_107_sweden.tpl
+TPL,C4,P-RGB5A3,1	= ./globe/timg/flag_blank_00.tpl
+TPL,I4,1	= ./globe/timg/ht_squareWhite_00.tpl
+TPL,RGB5A3,1	= ./globe/timg/tt_fukidashi_window_center_02.tpl
+TPL,RGB5A3,1	= ./globe/timg/tt_fukidashi_window_left_00.tpl
+TPL,RGB5A3,1	= ./globe/timg/tt_fukidashi_window_normal_00.tpl
+TPL,RGB5A3,1	= ./globe/timg/tt_fukidashi_window_right_00.tpl
+TPL,RGB5A3,1	= ./globe/timg/tt_mario_64x64.tpl
+TPL,IA8,1	= ./globe/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./message_window/timg/tt_fukidashi_window_kado_common.tpl
+TPL,IA8,1	= ./message_window/timg/tt_glass_waku_180.tpl
+TPL,RGB565,1	= ./message_window/timg/tt_pattern_chek_32x32.tpl
+TPL,IA4,1	= ./message_window/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./message_window/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_a_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_a_light.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_clacon_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_clacon_light.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_fukidashi_window_kado_common.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_gccon_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_gccon_light.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_gccon_waku.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_hatena_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_hatena_light.tpl
+TPL,IA4,1	= ./pad_recognize/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_remocon_han_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_remocon_han_light.tpl
+TPL,RGB5A3,1	= ./pad_recognize/timg/tt_remocon_nun_body.tpl
+TPL,IA8,1	= ./pad_recognize/timg/tt_remocon_nun_light.tpl
+TPL,C4,P-RGB5A3,1	= ./ranking/timg/001_001_japan.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/002_136_koreaRep.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/150_049_usa.tpl
+TPL,C4,P-RGB5A3,1	= ./ranking/timg/151_018_canada.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/152_036_mexico.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_008_anguilla.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_009_antigua.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_010_argentina.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_011_aruba.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_012_bahamas.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_013_barbados.tpl
+TPL,C8,P-RGB5A3,1	= ./ranking/timg/153_014_belize.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_015_bolivia.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_016_brazil.tpl
+TPL,C8,P-RGB5A3,1	= ./ranking/timg/153_017_britishVirginIslands.tpl
+TPL,C14X2,P-RGB565,1	= ./ranking/timg/153_019_caymanIslands.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_020_chile.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/153_021_colombia.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_022_costaRica.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_023_dominica.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_024_dominicanRep.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_025_ecuador.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_026_elSalvador.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_028_grenada.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_030_guatemala.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_031_guyana.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_032_haiti.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_033_honduras.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_034_jamaica.tpl
+TPL,C8,P-RGB5A3,1	= ./ranking/timg/153_037_montserrat.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_038_netherlandsAntilles.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_039_nicaragua.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_040_panama.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_042_peru.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_043_stKitts.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_044_stLucia.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_045_stVincent.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_046_suriname.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_047_trinidadAndTobago.tpl
+TPL,C8,P-RGB5A3,1	= ./ranking/timg/153_048_turksCaicosIslands.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_050_uruguay.tpl
+TPL,C8,P-RGB5A3,1	= ./ranking/timg/153_051_usVirginIslands.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153_052_venezuela.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/153__041_paraguay.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/200_065_australia.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/200_082_ireland.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/200_095_newZealand.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/200_110_uk.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/201_066_austria.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/201_078_germany.tpl
+TPL,C4,P-RGB5A3,1	= ./ranking/timg/201_108_switzerland.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/202_067_belgium.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/202_077_france.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/202_088_luxembourg.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/203_083_italy.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/204_098_portugal.tpl
+TPL,C8,P-RGB565,1	= ./ranking/timg/204_105_spain.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/205_094_netherlands.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/206_074_denmark.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/206_076_finland.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/206_079_greece.tpl
+TPL,C4,P-RGB5A3,1	= ./ranking/timg/206_096_norway.tpl
+TPL,C4,P-RGB565,1	= ./ranking/timg/206_107_sweden.tpl
+TPL,RGB565,1	= ./ranking/timg/Block_Plaza.tpl
+TPL,RGB565,1	= ./ranking/timg/Chain_Chomp_Roulette.tpl
+TPL,RGB565,1	= ./ranking/timg/DS_Twilight_House.tpl
+TPL,RGB565,1	= ./ranking/timg/Delfino_Pier.tpl
+TPL,RGB565,1	= ./ranking/timg/Funky_Stadium.tpl
+TPL,RGB565,1	= ./ranking/timg/GBA_Battle_Course3.tpl
+TPL,RGB565,1	= ./ranking/timg/GCN_Cookie_Land.tpl
+TPL,RGB565,1	= ./ranking/timg/N64_Skyscraper.tpl
+TPL,RGB565,1	= ./ranking/timg/SNES_Battle_Course4.tpl
+TPL,RGB565,1	= ./ranking/timg/Thwomp_Desert.tpl
+TPL,RGB565,1	= ./ranking/timg/beigoman_stage.tpl
+TPL,C4,P-RGB5A3,1	= ./ranking/timg/flag_blank_00.tpl
+TPL,RGB5A3,1	= ./ranking/timg/fm_handle_new_x.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id00_castle_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id01_farm_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id02_kinoko_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id03_volcano_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id04_factory_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id05_shopping_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id06_boardcross_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id07_truck_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id08_beginner_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id08_beginner_course_evening.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id09_senior_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id10_ridgehighway_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id11_treehouse_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id12_koopa_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id13_rainbow_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id14_desert_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id15_water_course.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id16_old_peach_gc.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id17_MarioGC.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id18_old_waluigi_gc.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id19_old_donkey_gc.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id20_old_falls_ds.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id21_old_desert_ds.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id22_old_garden_ds.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id23_old_town_ds.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id24_old_mario_sfc.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id25_old_obake_sfc.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id26_old_mario_64.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id27_old_sherbet_64.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id28_old_koopa_64.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id29_old_donkey_64.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id30_old_koopa_gba.tpl
+TPL,RGB5A3,1	= ./ranking/timg/id31_old_heyho_gba.tpl
+TPL,RGB565,1	= ./ranking/timg/tt_america.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_baby_luigi_64x64.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_battle_victory_score_crown.tpl
+TPL,IA4,1	= ./ranking/timg/tt_block_16x16.tpl
+TPL,RGB565,1	= ./ranking/timg/tt_ghost_ranking_course_name_bg.tpl
+TPL,IA8,1	= ./ranking/timg/tt_gr_maru_normal_00.tpl
+TPL,IA8,1	= ./ranking/timg/tt_gr_tate_line_00.tpl
+TPL,IA8,1	= ./ranking/timg/tt_gr_yajirushi_line.tpl
+TPL,IA8,1	= ./ranking/timg/tt_gr_yajirushi_yajirushi.tpl
+TPL,IA4,1	= ./ranking/timg/tt_grid_900.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_mario_64x64.tpl
+TPL,IA4,1	= ./ranking/timg/tt_maru_32x32.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_mii_matuoka_64x64.tpl
+TPL,IA8,1	= ./ranking/timg/tt_navi_l.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_obi_bottom_curve_000.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_obi_bottom_left_000.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_obi_bottom_right_000.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_obi_check_000.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_obi_top_curve_000.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_obi_top_left_000.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_pattern_chek_32x32_alpha.tpl
+TPL,IA4,1	= ./ranking/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+TPL,IA8,1	= ./ranking/timg/tt_pattern_chek_bokashi_32x32.tpl
+TPL,RGB5A3,1	= ./ranking/timg/tt_ranking_flag.tpl
+TPL,IA8,1	= ./ranking/timg/tt_remocon_han_body_mini3.tpl
+TPL,IA4,1	= ./ranking/timg/tt_window_vol3sono2.tpl
+TPL,IA4,1	= ./ranking/timg/tt_yajirushi_type1.tpl
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+./effect/RKMenu.breff
+./effect/RKMenu.breft
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but neither U8 nor LTA) this list will be used to sort
+# the found files. For archives with directory support (all except PACK) it is
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./
+		= ./bg/
+		= ./bg/anim/
+    0xe880	= ./bg/anim/bg_Loop.brlan
+    0xe920	= ./bg/anim/option_bg_Loop.brlan
+		= ./bg/blyt/
+    0xe9c0	= ./bg/blyt/bg.brlyt
+    0xedc0	= ./bg/blyt/obi_bottom.brlyt
+    0xf420	= ./bg/blyt/obi_bottom_message.brlyt
+   0x10020	= ./bg/blyt/obi_top.brlyt
+   0x10680	= ./bg/blyt/obi_top_text.brlyt
+   0x108a0	= ./bg/blyt/option_bg.brlyt
+   0x10ca0	= ./bg/blyt/option_obi_top.brlyt
+   0x11420	= ./bg/blyt/option_obi_top_text.brlyt
+   0x11620	= ./bg/blyt/present_obi_bottom_gp.brlyt
+   0x11c80	= ./bg/blyt/present_obi_top_gp.brlyt
+		= ./bg/ctrl/
+   0x122e0	= ./bg/ctrl/EventObiBottom.brctr
+   0x123e0	= ./bg/ctrl/EventObiTop.brctr
+   0x124c0	= ./bg/ctrl/MenuBG.brctr
+   0x12560	= ./bg/ctrl/MenuObiBottom.brctr
+   0x12640	= ./bg/ctrl/MenuObiInstructionText.brctr
+   0x126e0	= ./bg/ctrl/MenuObiTitleText.brctr
+   0x12780	= ./bg/ctrl/MenuObiTitleTextOption.brctr
+   0x12820	= ./bg/ctrl/MenuObiTop.brctr
+   0x12900	= ./bg/ctrl/MenuObiTopOption.brctr
+   0x129a0	= ./bg/ctrl/OptionBG.brctr
+		= ./bg/timg/
+   0x12a60	= ./bg/timg/ht_squareWhite_00.tpl
+   0x12ac0	= ./bg/timg/tk_obi_bottom_curve_gp.tpl
+   0x260c0	= ./bg/timg/tk_obi_bottom_left_gp.tpl
+   0x26b80	= ./bg/timg/tk_obi_bottom_right_gp.tpl
+   0x27640	= ./bg/timg/tk_obi_check_gp.tpl
+   0x2b440	= ./bg/timg/tk_obi_top_curve_gp.tpl
+   0x3ab00	= ./bg/timg/tk_obi_top_left_gp.tpl
+   0x3b3c0	= ./bg/timg/tk_obi_top_right_gp.tpl
+   0x3bc80	= ./bg/timg/tt_block_16x16.tpl
+   0x3c0c0	= ./bg/timg/tt_obi_bottom_curve_000.tpl
+   0x4f6c0	= ./bg/timg/tt_obi_bottom_left_000.tpl
+   0x50180	= ./bg/timg/tt_obi_bottom_right_000.tpl
+   0x50c40	= ./bg/timg/tt_obi_check_000.tpl
+   0x54a40	= ./bg/timg/tt_obi_top_curve_000.tpl
+   0x68040	= ./bg/timg/tt_obi_top_left_000.tpl
+   0x68b00	= ./bg/timg/tt_obi_top_right_000.tpl
+   0x695c0	= ./bg/timg/tt_pattern_chek_bokashi_32x32.tpl
+		= ./button/
+		= ./button/anim/
+   0x69e00	= ./button/anim/common_w004_menu_fade_in.brlan
+   0x69fe0	= ./button/anim/common_w004_menu_fade_in_after.brlan
+   0x6a1c0	= ./button/anim/common_w004_menu_fade_in_before.brlan
+   0x6a3a0	= ./button/anim/common_w004_menu_fade_out.brlan
+   0x6a580	= ./button/anim/common_w004_menu_free.brlan
+   0x6a760	= ./button/anim/common_w004_menu_free_to_select.brlan
+   0x6a9c0	= ./button/anim/common_w004_menu_fuchi_check_loop.brlan
+   0x6ac80	= ./button/anim/common_w004_menu_select.brlan
+   0x6aea0	= ./button/anim/common_w004_menu_select_to_free.brlan
+   0x6b0a0	= ./button/anim/common_w004_menu_text_light_01_ok.brlan
+   0x6b320	= ./button/anim/common_w004_menu_text_light_01_stop.brlan
+   0x6b500	= ./button/anim/common_w004_menu_text_light_02_select.brlan
+   0x6b7c0	= ./button/anim/common_w004_menu_text_light_02_stop.brlan
+   0x6ba40	= ./button/anim/common_w008_back_fade_in.brlan
+   0x6bd00	= ./button/anim/common_w008_back_fade_in_after.brlan
+   0x6bfa0	= ./button/anim/common_w008_back_fade_in_before.brlan
+   0x6c240	= ./button/anim/common_w008_back_fade_out.brlan
+   0x6c500	= ./button/anim/common_w008_back_free.brlan
+   0x6ca80	= ./button/anim/common_w008_back_free_to_select.brlan
+   0x6cf80	= ./button/anim/common_w008_back_fuchi_check_loop.brlan
+   0x6d2c0	= ./button/anim/common_w008_back_select.brlan
+   0x6d740	= ./button/anim/common_w008_back_select_to_free.brlan
+   0x6dbc0	= ./button/anim/common_w008_back_text_light_01_ok.brlan
+   0x6df00	= ./button/anim/common_w008_back_text_light_01_stop.brlan
+   0x6e1c0	= ./button/anim/common_w008_back_text_light_02_select.brlan
+   0x6e500	= ./button/anim/common_w008_back_text_light_02_stop.brlan
+   0x6e7c0	= ./button/anim/common_w010_cup_fade_in.brlan
+   0x6ec60	= ./button/anim/common_w010_cup_fade_in_after.brlan
+   0x6f0e0	= ./button/anim/common_w010_cup_fade_in_before.brlan
+   0x6f560	= ./button/anim/common_w010_cup_fade_out.brlan
+   0x6fa00	= ./button/anim/common_w010_cup_free.brlan
+   0x70100	= ./button/anim/common_w010_cup_free_to_select.brlan
+   0x707c0	= ./button/anim/common_w010_cup_fuchi_check_loop.brlan
+   0x70880	= ./button/anim/common_w010_cup_fuchi_off.brlan
+   0x70de0	= ./button/anim/common_w010_cup_fuchi_on_to_off.brlan
+   0x71380	= ./button/anim/common_w010_cup_select.brlan
+   0x71980	= ./button/anim/common_w010_cup_select_to_free.brlan
+   0x71f40	= ./button/anim/common_w010_cup_text_light_01_ok.brlan
+   0x72500	= ./button/anim/common_w010_cup_text_light_01_stop.brlan
+   0x729a0	= ./button/anim/common_w010_cup_text_light_02_select.brlan
+   0x72f60	= ./button/anim/common_w010_cup_text_light_02_stop.brlan
+   0x73400	= ./button/anim/common_w011_file_fade_in.brlan
+   0x73700	= ./button/anim/common_w011_file_fade_in_after.brlan
+   0x739e0	= ./button/anim/common_w011_file_fade_in_before.brlan
+   0x73cc0	= ./button/anim/common_w011_file_fade_out.brlan
+   0x73fc0	= ./button/anim/common_w011_file_free.brlan
+   0x745a0	= ./button/anim/common_w011_file_free_to_select.brlan
+   0x74b20	= ./button/anim/common_w011_file_fuchi_check_loop.brlan
+   0x74ee0	= ./button/anim/common_w011_file_select.brlan
+   0x753a0	= ./button/anim/common_w011_file_select_to_free.brlan
+   0x758a0	= ./button/anim/common_w011_file_text_light_01_ok.brlan
+   0x75c40	= ./button/anim/common_w011_file_text_light_01_stop.brlan
+   0x75f40	= ./button/anim/common_w011_file_text_light_02_select.brlan
+   0x762e0	= ./button/anim/common_w011_file_text_light_02_stop.brlan
+   0x765e0	= ./button/anim/common_w016_yajirushi_left_chara_light_01_ok.brlan
+   0x76980	= ./button/anim/common_w016_yajirushi_left_chara_light_01_stop.brlan
+   0x76c60	= ./button/anim/common_w016_yajirushi_left_chara_light_02_select.brlan
+   0x77000	= ./button/anim/common_w016_yajirushi_left_chara_light_02_stop.brlan
+   0x772e0	= ./button/anim/common_w016_yajirushi_left_fade_in.brlan
+   0x775c0	= ./button/anim/common_w016_yajirushi_left_fade_in_after.brlan
+   0x77880	= ./button/anim/common_w016_yajirushi_left_fade_in_before.brlan
+   0x77b40	= ./button/anim/common_w016_yajirushi_left_fade_out.brlan
+   0x77e00	= ./button/anim/common_w016_yajirushi_left_free.brlan
+   0x781c0	= ./button/anim/common_w016_yajirushi_left_free_to_select.brlan
+   0x78540	= ./button/anim/common_w016_yajirushi_left_fuchi_check_loop.brlan
+   0x78600	= ./button/anim/common_w016_yajirushi_left_select.brlan
+   0x78920	= ./button/anim/common_w016_yajirushi_left_select_to_free.brlan
+   0x78c00	= ./button/anim/common_w019_mii_wifi_chara_light_01_ok.brlan
+   0x79060	= ./button/anim/common_w019_mii_wifi_chara_light_01_stop.brlan
+   0x793c0	= ./button/anim/common_w019_mii_wifi_chara_light_02_select.brlan
+   0x79820	= ./button/anim/common_w019_mii_wifi_chara_light_02_stop.brlan
+   0x79b80	= ./button/anim/common_w019_mii_wifi_fade_in.brlan
+   0x79ec0	= ./button/anim/common_w019_mii_wifi_fade_in_after.brlan
+   0x7a200	= ./button/anim/common_w019_mii_wifi_fade_in_before.brlan
+   0x7a540	= ./button/anim/common_w019_mii_wifi_fade_out.brlan
+   0x7a8a0	= ./button/anim/common_w019_mii_wifi_free.brlan
+   0x7afc0	= ./button/anim/common_w019_mii_wifi_free_to_select.brlan
+   0x7b5e0	= ./button/anim/common_w019_mii_wifi_fuchi_check_loop.brlan
+   0x7b6a0	= ./button/anim/common_w019_mii_wifi_meet.brlan
+   0x7be40	= ./button/anim/common_w019_mii_wifi_offline.brlan
+   0x7c420	= ./button/anim/common_w019_mii_wifi_online.brlan
+   0x7ca00	= ./button/anim/common_w019_mii_wifi_room.brlan
+   0x7d0a0	= ./button/anim/common_w019_mii_wifi_select.brlan
+   0x7d840	= ./button/anim/common_w019_mii_wifi_select_to_free.brlan
+   0x7de20	= ./button/anim/common_w021_yajirushi_right_chara_light_01_ok.brlan
+   0x7e1c0	= ./button/anim/common_w021_yajirushi_right_chara_light_01_stop.brlan
+   0x7e4a0	= ./button/anim/common_w021_yajirushi_right_chara_light_02_select.brlan
+   0x7e840	= ./button/anim/common_w021_yajirushi_right_chara_light_02_stop.brlan
+   0x7eb20	= ./button/anim/common_w021_yajirushi_right_fade_in.brlan
+   0x7ee00	= ./button/anim/common_w021_yajirushi_right_fade_in_after.brlan
+   0x7f0c0	= ./button/anim/common_w021_yajirushi_right_fade_in_before.brlan
+   0x7f380	= ./button/anim/common_w021_yajirushi_right_fade_out.brlan
+   0x7f640	= ./button/anim/common_w021_yajirushi_right_free.brlan
+   0x7fa00	= ./button/anim/common_w021_yajirushi_right_free_to_select.brlan
+   0x7fd80	= ./button/anim/common_w021_yajirushi_right_fuchi_check_loop.brlan
+   0x7fe40	= ./button/anim/common_w021_yajirushi_right_select.brlan
+   0x80160	= ./button/anim/common_w021_yajirushi_right_select_to_free.brlan
+   0x80440	= ./button/anim/common_w042_id_fade_in.brlan
+   0x805e0	= ./button/anim/common_w042_id_fade_in_after.brlan
+   0x80760	= ./button/anim/common_w042_id_fade_in_before.brlan
+   0x808e0	= ./button/anim/common_w042_id_fade_out.brlan
+   0x80a80	= ./button/anim/common_w042_id_free.brlan
+   0x80dc0	= ./button/anim/common_w042_id_free_to_select.brlan
+   0x81040	= ./button/anim/common_w042_id_fuchi_check_loop.brlan
+   0x811c0	= ./button/anim/common_w042_id_select.brlan
+   0x81420	= ./button/anim/common_w042_id_select_to_free.brlan
+   0x816a0	= ./button/anim/common_w043_id_text_cursor_loop.brlan
+   0x81820	= ./button/anim/common_w043_id_text_text_light_01_ok.brlan
+   0x81a40	= ./button/anim/common_w043_id_text_text_light_01_stop.brlan
+   0x81c00	= ./button/anim/common_w043_id_text_text_light_02_select.brlan
+   0x81e40	= ./button/anim/common_w043_id_text_text_light_02_stop.brlan
+   0x82000	= ./button/anim/common_w044_id_key_fade_in.brlan
+   0x822c0	= ./button/anim/common_w044_id_key_fade_in_after.brlan
+   0x82560	= ./button/anim/common_w044_id_key_fade_in_before.brlan
+   0x82800	= ./button/anim/common_w044_id_key_fade_out.brlan
+   0x82ac0	= ./button/anim/common_w044_id_key_free.brlan
+   0x82f80	= ./button/anim/common_w044_id_key_free_to_select.brlan
+   0x833e0	= ./button/anim/common_w044_id_key_fuchi_check_loop.brlan
+   0x834a0	= ./button/anim/common_w044_id_key_select.brlan
+   0x83860	= ./button/anim/common_w044_id_key_select_to_free.brlan
+   0x83c40	= ./button/anim/common_w044_id_key_text_light_01_ok.brlan
+   0x83f80	= ./button/anim/common_w044_id_key_text_light_01_stop.brlan
+   0x84240	= ./button/anim/common_w044_id_key_text_light_02_select.brlan
+   0x84580	= ./button/anim/common_w044_id_key_text_light_02_stop.brlan
+   0x84840	= ./button/anim/common_w076_license_icon_tex_bottom_free.brlan
+   0x849c0	= ./button/anim/common_w076_license_icon_tex_bottom_free_to_select.brlan
+   0x84b80	= ./button/anim/common_w076_license_icon_tex_bottom_loop.brlan
+   0x84c20	= ./button/anim/common_w076_license_icon_tex_bottom_select.brlan
+   0x84da0	= ./button/anim/common_w076_license_icon_tex_bottom_select_to_free.brlan
+   0x84f40	= ./button/anim/common_w076_license_icon_tex_bottom_text_light_01_ok.brlan
+   0x851a0	= ./button/anim/common_w076_license_icon_tex_bottom_text_light_01_stop.brlan
+   0x85380	= ./button/anim/common_w076_license_icon_tex_bottom_text_light_02_select.brlan
+   0x855e0	= ./button/anim/common_w076_license_icon_tex_bottom_text_light_02_stop.brlan
+   0x857c0	= ./button/anim/common_w076_license_icon_tex_top_free.brlan
+   0x85940	= ./button/anim/common_w076_license_icon_tex_top_free_to_select.brlan
+   0x85b00	= ./button/anim/common_w076_license_icon_tex_top_loop.brlan
+   0x85ba0	= ./button/anim/common_w076_license_icon_tex_top_select.brlan
+   0x85d20	= ./button/anim/common_w076_license_icon_tex_top_select_to_free.brlan
+   0x85ec0	= ./button/anim/common_w076_license_icon_tex_top_text_light_01_ok.brlan
+   0x86120	= ./button/anim/common_w076_license_icon_tex_top_text_light_01_stop.brlan
+   0x86300	= ./button/anim/common_w076_license_icon_tex_top_text_light_02_select.brlan
+   0x86560	= ./button/anim/common_w076_license_icon_tex_top_text_light_02_stop.brlan
+   0x86740	= ./button/anim/common_w083_earth_chat_message_fade_in.brlan
+   0x86a00	= ./button/anim/common_w083_earth_chat_message_fade_in_after.brlan
+   0x86ca0	= ./button/anim/common_w083_earth_chat_message_fade_in_before.brlan
+   0x86f40	= ./button/anim/common_w083_earth_chat_message_fade_out.brlan
+   0x87200	= ./button/anim/common_w083_earth_chat_message_free.brlan
+   0x87700	= ./button/anim/common_w083_earth_chat_message_free_to_select.brlan
+   0x87ba0	= ./button/anim/common_w083_earth_chat_message_fuchi_check_loop.brlan
+   0x87c60	= ./button/anim/common_w083_earth_chat_message_select.brlan
+   0x88060	= ./button/anim/common_w083_earth_chat_message_select_to_free.brlan
+   0x88480	= ./button/anim/common_w083_earth_chat_message_text_light_01_ok.brlan
+   0x887c0	= ./button/anim/common_w083_earth_chat_message_text_light_01_stop.brlan
+   0x88a80	= ./button/anim/common_w083_earth_chat_message_text_light_02_select.brlan
+   0x88dc0	= ./button/anim/common_w083_earth_chat_message_text_light_02_stop.brlan
+   0x89080	= ./button/anim/common_w084_earth_delete_access_off.brlan
+   0x89400	= ./button/anim/common_w084_earth_delete_free.brlan
+   0x897c0	= ./button/anim/common_w084_earth_delete_free_to_select.brlan
+   0x89c20	= ./button/anim/common_w084_earth_delete_fuchi_check_loop.brlan
+   0x89ce0	= ./button/anim/common_w084_earth_delete_select.brlan
+   0x8a0a0	= ./button/anim/common_w084_earth_delete_select_to_free.brlan
+   0x8a480	= ./button/anim/common_w084_earth_delete_text_light_01_ok.brlan
+   0x8a780	= ./button/anim/common_w084_earth_delete_text_light_01_stop.brlan
+   0x8a9e0	= ./button/anim/common_w084_earth_delete_text_light_02_select.brlan
+   0x8ace0	= ./button/anim/common_w084_earth_delete_text_light_02_stop.brlan
+   0x8af40	= ./button/anim/common_w095_mariokart_channel_top_menu_fade_in.brlan
+   0x8b120	= ./button/anim/common_w095_mariokart_channel_top_menu_fade_in_after.brlan
+   0x8b300	= ./button/anim/common_w095_mariokart_channel_top_menu_fade_in_before.brlan
+   0x8b4e0	= ./button/anim/common_w095_mariokart_channel_top_menu_fade_out.brlan
+   0x8b6c0	= ./button/anim/common_w095_mariokart_channel_top_menu_free.brlan
+   0x8b8a0	= ./button/anim/common_w095_mariokart_channel_top_menu_free_to_select.brlan
+   0x8bb00	= ./button/anim/common_w095_mariokart_channel_top_menu_fuchi_check_loop.brlan
+   0x8bdc0	= ./button/anim/common_w095_mariokart_channel_top_menu_select.brlan
+   0x8bfe0	= ./button/anim/common_w095_mariokart_channel_top_menu_select_to_free.brlan
+   0x8c1e0	= ./button/anim/common_w095_mariokart_channel_top_menu_text_light_01_ok.brlan
+   0x8c460	= ./button/anim/common_w095_mariokart_channel_top_menu_text_light_01_stop.brlan
+   0x8c640	= ./button/anim/common_w095_mariokart_channel_top_menu_text_light_02_select.brlan
+   0x8c900	= ./button/anim/common_w095_mariokart_channel_top_menu_text_light_02_stop.brlan
+   0x8cb80	= ./button/anim/common_w098_wifi_menu_fade_in.brlan
+   0x8d0a0	= ./button/anim/common_w098_wifi_menu_fade_in_after.brlan
+   0x8d5c0	= ./button/anim/common_w098_wifi_menu_fade_in_before.brlan
+   0x8dae0	= ./button/anim/common_w098_wifi_menu_fade_out.brlan
+   0x8e020	= ./button/anim/common_w098_wifi_menu_free.brlan
+   0x8e740	= ./button/anim/common_w098_wifi_menu_free_to_select.brlan
+   0x8eea0	= ./button/anim/common_w098_wifi_menu_fuchi_check_loop.brlan
+   0x8fce0	= ./button/anim/common_w098_wifi_menu_meet.brlan
+   0x905c0	= ./button/anim/common_w098_wifi_menu_offline.brlan
+   0x90ae0	= ./button/anim/common_w098_wifi_menu_online.brlan
+   0x90f00	= ./button/anim/common_w098_wifi_menu_room.brlan
+   0x917e0	= ./button/anim/common_w098_wifi_menu_select.brlan
+   0x92240	= ./button/anim/common_w098_wifi_menu_select_to_free.brlan
+   0x92900	= ./button/anim/common_w098_wifi_menu_text_light_01_ok.brlan
+   0x92fc0	= ./button/anim/common_w098_wifi_menu_text_light_01_stop.brlan
+   0x93500	= ./button/anim/common_w098_wifi_menu_text_light_02_select.brlan
+   0x93bc0	= ./button/anim/common_w098_wifi_menu_text_light_02_stop.brlan
+   0x94100	= ./button/anim/common_w098_wifi_menu_text_meet.brlan
+   0x94a60	= ./button/anim/common_w098_wifi_menu_text_offline.brlan
+   0x95340	= ./button/anim/common_w098_wifi_menu_text_online.brlan
+   0x95c20	= ./button/anim/common_w098_wifi_menu_text_room.brlan
+   0x964e0	= ./button/anim/common_w101_earth_message_go_menu_fade_in.brlan
+   0x96780	= ./button/anim/common_w101_earth_message_go_menu_fade_in_after.brlan
+   0x96a20	= ./button/anim/common_w101_earth_message_go_menu_fade_in_before.brlan
+   0x96cc0	= ./button/anim/common_w101_earth_message_go_menu_fade_out.brlan
+   0x96f60	= ./button/anim/common_w101_earth_message_go_menu_free.brlan
+   0x97240	= ./button/anim/common_w101_earth_message_go_menu_free_to_select.brlan
+   0x97540	= ./button/anim/common_w101_earth_message_go_menu_fuchi_check_loop.brlan
+   0x97840	= ./button/anim/common_w101_earth_message_go_menu_invisible.brlan
+   0x979e0	= ./button/anim/common_w101_earth_message_go_menu_select.brlan
+   0x97cc0	= ./button/anim/common_w101_earth_message_go_menu_select_to_free.brlan
+   0x97f80	= ./button/anim/common_w101_earth_message_go_menu_text_light_01_ok.brlan
+   0x98300	= ./button/anim/common_w101_earth_message_go_menu_text_light_01_stop.brlan
+   0x985a0	= ./button/anim/common_w101_earth_message_go_menu_text_light_02_select.brlan
+   0x98920	= ./button/anim/common_w101_earth_message_go_menu_text_light_02_stop.brlan
+   0x98bc0	= ./button/anim/common_w101_earth_message_go_menu_visible.brlan
+   0x98d60	= ./button/anim/common_w101_earth_message_go_menu_visible_to_invisible.brlan
+   0x98f20	= ./button/anim/common_w102_option_menu_fade_in.brlan
+   0x99120	= ./button/anim/common_w102_option_menu_fade_in_after.brlan
+   0x99340	= ./button/anim/common_w102_option_menu_fade_in_before.brlan
+   0x99560	= ./button/anim/common_w102_option_menu_fade_out.brlan
+   0x99760	= ./button/anim/common_w102_option_menu_free.brlan
+   0x99aa0	= ./button/anim/common_w102_option_menu_free_to_select.brlan
+   0x99e80	= ./button/anim/common_w102_option_menu_fuchi_check_loop.brlan
+   0x9a180	= ./button/anim/common_w102_option_menu_select.brlan
+   0x9a4a0	= ./button/anim/common_w102_option_menu_select_to_free.brlan
+   0x9a7e0	= ./button/anim/common_w102_option_menu_text_light_01_ok.brlan
+   0x9aac0	= ./button/anim/common_w102_option_menu_text_light_01_stop.brlan
+   0x9ace0	= ./button/anim/common_w102_option_menu_text_light_02_select.brlan
+   0x9afc0	= ./button/anim/common_w102_option_menu_text_light_02_stop.brlan
+   0x9b1e0	= ./button/anim/common_w103_wifi_menu_normal_fade_in.brlan
+   0x9b3e0	= ./button/anim/common_w103_wifi_menu_normal_fade_in_after.brlan
+   0x9b600	= ./button/anim/common_w103_wifi_menu_normal_fade_in_before.brlan
+   0x9b820	= ./button/anim/common_w103_wifi_menu_normal_fade_out.brlan
+   0x9ba20	= ./button/anim/common_w103_wifi_menu_normal_free.brlan
+   0x9bc80	= ./button/anim/common_w103_wifi_menu_normal_free_to_select.brlan
+   0x9bf40	= ./button/anim/common_w103_wifi_menu_normal_fuchi_check_loop.brlan
+   0x9c240	= ./button/anim/common_w103_wifi_menu_normal_select.brlan
+   0x9c4a0	= ./button/anim/common_w103_wifi_menu_normal_select_to_free.brlan
+   0x9c6e0	= ./button/anim/common_w103_wifi_menu_normal_text_light_01_ok.brlan
+   0x9c840	= ./button/anim/common_w103_wifi_menu_normal_text_light_01_stop.brlan
+   0x9c960	= ./button/anim/common_w103_wifi_menu_normal_text_light_02_select.brlan
+   0x9cc40	= ./button/anim/common_w103_wifi_menu_normal_text_light_02_stop.brlan
+   0x9ce60	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_free.brlan
+   0x9d1e0	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_free_to_select.brlan
+   0x9d600	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_fuchi_check_loop.brlan
+   0x9d900	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_invisible.brlan
+   0x9da60	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_select.brlan
+   0x9de00	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_select_to_free.brlan
+   0x9e1a0	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_text_light_01_ok.brlan
+   0x9e360	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_text_light_01_stop.brlan
+   0x9e4e0	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_text_light_02_select.brlan
+   0x9e820	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_text_light_02_stop.brlan
+   0x9ea80	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_visible.brlan
+   0x9ebe0	= ./button/anim/common_w124_wifi_ghost_battle_go_menu_visible_to_invisible.brlan
+   0x9ed60	= ./button/anim/common_w133_channel_top_menu_friend_fade_in.brlan
+   0x9efc0	= ./button/anim/common_w133_channel_top_menu_friend_fade_in_after.brlan
+   0x9f240	= ./button/anim/common_w133_channel_top_menu_friend_fade_in_before.brlan
+   0x9f4c0	= ./button/anim/common_w133_channel_top_menu_friend_fade_out.brlan
+   0x9f720	= ./button/anim/common_w133_channel_top_menu_friend_free.brlan
+   0x9f9a0	= ./button/anim/common_w133_channel_top_menu_friend_free_to_select.brlan
+   0x9fcc0	= ./button/anim/common_w133_channel_top_menu_friend_fuchi_check_loop.brlan
+   0x9ff80	= ./button/anim/common_w133_channel_top_menu_friend_select.brlan
+   0xa0220	= ./button/anim/common_w133_channel_top_menu_friend_select_to_free.brlan
+   0xa04c0	= ./button/anim/common_w133_channel_top_menu_friend_text_light_01_ok.brlan
+   0xa0800	= ./button/anim/common_w133_channel_top_menu_friend_text_light_01_stop.brlan
+   0xa0a80	= ./button/anim/common_w133_channel_top_menu_friend_text_light_02_select.brlan
+   0xa0d40	= ./button/anim/common_w133_channel_top_menu_friend_text_light_02_stop.brlan
+   0xa0fc0	= ./button/anim/common_w136_adress_select_menu_fade_in.brlan
+   0xa1280	= ./button/anim/common_w136_adress_select_menu_fade_in_after.brlan
+   0xa1520	= ./button/anim/common_w136_adress_select_menu_fade_in_before.brlan
+   0xa17c0	= ./button/anim/common_w136_adress_select_menu_fade_out.brlan
+   0xa1a80	= ./button/anim/common_w136_adress_select_menu_free.brlan
+   0xa1f80	= ./button/anim/common_w136_adress_select_menu_free_to_select.brlan
+   0xa2420	= ./button/anim/common_w136_adress_select_menu_fuchi_check_loop.brlan
+   0xa24e0	= ./button/anim/common_w136_adress_select_menu_select.brlan
+   0xa28e0	= ./button/anim/common_w136_adress_select_menu_select_to_free.brlan
+   0xa2d00	= ./button/anim/common_w136_adress_select_menu_text_light_01_ok.brlan
+   0xa3040	= ./button/anim/common_w136_adress_select_menu_text_light_01_stop.brlan
+   0xa3300	= ./button/anim/common_w136_adress_select_menu_text_light_02_select.brlan
+   0xa3640	= ./button/anim/common_w136_adress_select_menu_text_light_02_stop.brlan
+   0xa3900	= ./button/anim/gr_common_w087_course_movie_fade_in.brlan
+   0xa3ce0	= ./button/anim/gr_common_w087_course_movie_fade_in_after.brlan
+   0xa40a0	= ./button/anim/gr_common_w087_course_movie_fade_in_before.brlan
+   0xa4460	= ./button/anim/gr_common_w087_course_movie_fade_out.brlan
+   0xa4840	= ./button/anim/gr_common_w087_course_movie_free.brlan
+   0xa4e80	= ./button/anim/gr_common_w087_course_movie_free_to_select.brlan
+   0xa5420	= ./button/anim/gr_common_w087_course_movie_fuchi_check_loop.brlan
+   0xa54e0	= ./button/anim/gr_common_w087_course_movie_fuchi_off.brlan
+   0xa5960	= ./button/anim/gr_common_w087_course_movie_fuchi_on.brlan
+   0xa5de0	= ./button/anim/gr_common_w087_course_movie_fuchi_on_to_off.brlan
+   0xa6280	= ./button/anim/gr_common_w087_course_movie_select.brlan
+   0xa6760	= ./button/anim/gr_common_w087_course_movie_select_to_free.brlan
+   0xa6c60	= ./button/anim/gr_common_w087_course_movie_text_light_01_ok.brlan
+   0xa7100	= ./button/anim/gr_common_w087_course_movie_text_light_01_stop.brlan
+   0xa74e0	= ./button/anim/gr_common_w087_course_movie_text_light_02_select.brlan
+   0xa79a0	= ./button/anim/gr_common_w087_course_movie_text_light_02_stop.brlan
+   0xa7d80	= ./button/anim/gr_common_w087_course_movie_waku_off.brlan
+   0xa8080	= ./button/anim/gr_common_w087_course_movie_waku_on.brlan
+   0xa8380	= ./button/anim/gr_common_w087_course_movie_waku_on_to_off.brlan
+   0xa86a0	= ./button/anim/open_icon_option_chara_light_01_ok.brlan
+   0xa8e80	= ./button/anim/open_icon_option_chara_light_01_stop.brlan
+   0xa94a0	= ./button/anim/open_icon_option_chara_light_02_select.brlan
+   0xa9c80	= ./button/anim/open_icon_option_chara_light_02_stop.brlan
+   0xaa2a0	= ./button/anim/open_icon_option_fade_in.brlan
+   0xaa7a0	= ./button/anim/open_icon_option_fade_in_after.brlan
+   0xaac80	= ./button/anim/open_icon_option_fade_in_before.brlan
+   0xab160	= ./button/anim/open_icon_option_fade_out.brlan
+   0xab660	= ./button/anim/open_icon_option_free.brlan
+   0xabdc0	= ./button/anim/open_icon_option_free_to_select.brlan
+   0xac4e0	= ./button/anim/open_icon_option_fuchi_check_loop.brlan
+   0xac580	= ./button/anim/open_icon_option_fuchi_off.brlan
+   0xacb80	= ./button/anim/open_icon_option_fuchi_on.brlan
+   0xad180	= ./button/anim/open_icon_option_fuchi_on_to_off.brlan
+   0xad780	= ./button/anim/open_icon_option_select.brlan
+   0xae080	= ./button/anim/open_icon_option_select_to_free.brlan
+   0xae680	= ./button/anim/open_icon_option_text_light_01_ok.brlan
+   0xaed00	= ./button/anim/open_icon_option_text_light_01_stop.brlan
+   0xaf200	= ./button/anim/open_icon_option_text_light_02_select.brlan
+   0xaf880	= ./button/anim/open_icon_option_text_light_02_stop.brlan
+		= ./button/blyt/
+   0xafd80	= ./button/blyt/common_w004_menu.brlyt
+   0xb0d20	= ./button/blyt/common_w008_back.brlyt
+   0xb16a0	= ./button/blyt/common_w010_cup.brlyt
+   0xb2da0	= ./button/blyt/common_w011_file.brlyt
+   0xb3dc0	= ./button/blyt/common_w016_yajirushi_left.brlyt
+   0xb5080	= ./button/blyt/common_w019_mii_wifi.brlyt
+   0xb69a0	= ./button/blyt/common_w021_yajirushi_right.brlyt
+   0xb7c60	= ./button/blyt/common_w042_id.brlyt
+   0xb8ec0	= ./button/blyt/common_w043_id_text.brlyt
+   0xb9680	= ./button/blyt/common_w044_id_key.brlyt
+   0xba6c0	= ./button/blyt/common_w076_license_icon_tex_bottom.brlyt
+   0xbe2e0	= ./button/blyt/common_w076_license_icon_tex_top.brlyt
+   0xc1f00	= ./button/blyt/common_w083_earth_chat_message.brlyt
+   0xc30e0	= ./button/blyt/common_w084_earth_delete.brlyt
+   0xc4260	= ./button/blyt/common_w095_mariokart_channel_top_menu.brlyt
+   0xc5320	= ./button/blyt/common_w098_wifi_menu.brlyt
+   0xc6da0	= ./button/blyt/common_w101_earth_message_go_menu.brlyt
+   0xc8020	= ./button/blyt/common_w102_option_menu.brlyt
+   0xc90a0	= ./button/blyt/common_w103_wifi_menu_normal.brlyt
+   0xca140	= ./button/blyt/common_w124_wifi_ghost_battle_go_menu.brlyt
+   0xcb520	= ./button/blyt/common_w133_channel_top_menu_friend.brlyt
+   0xcc9a0	= ./button/blyt/common_w136_adress_select_menu.brlyt
+   0xcdc60	= ./button/blyt/cup_icon_64x64_common.brlyt
+   0xcea40	= ./button/blyt/friend_mii_icon.brlyt
+   0xcec00	= ./button/blyt/gr_common_w087_course_movie.brlyt
+   0xcfc00	= ./button/blyt/mariokart_channel_top_menu_image_common.brlyt
+   0xd0360	= ./button/blyt/national_flag.brlyt
+   0xd4360	= ./button/blyt/open_icon_option.brlyt
+		= ./button/ctrl/
+   0xd5180	= ./button/ctrl/Back.brctr
+   0xd5520	= ./button/ctrl/ChannelFriendMenu.brctr
+   0xd58e0	= ./button/ctrl/ChannelFriendMenuListButton.brctr
+   0xd5e20	= ./button/ctrl/ChannelMenu.brctr
+   0xd62e0	= ./button/ctrl/ChannelMenuFriendList.brctr
+   0xd66a0	= ./button/ctrl/ConfirmOK.brctr
+   0xd69a0	= ./button/ctrl/CourseSelectCourse.brctr
+   0xd6ee0	= ./button/ctrl/CupSelectCup.brctr
+   0xd73c0	= ./button/ctrl/DisplayGhostBattle.brctr
+   0xd7740	= ./button/ctrl/DownloadGhostList.brctr
+   0xd7b60	= ./button/ctrl/DownloadGhostListArrowLeft.brctr
+   0xd7f60	= ./button/ctrl/DownloadGhostListArrowRight.brctr
+   0xd8360	= ./button/ctrl/EventExplanationButton.brctr
+   0xd8700	= ./button/ctrl/FileSelect.brctr
+   0xd8b20	= ./button/ctrl/FriendCodeEditBox.brctr
+   0xd8d40	= ./button/ctrl/FriendCodeEditBoxLetter.brctr
+   0xd8f60	= ./button/ctrl/FriendDeleteConfirm.brctr
+   0xd92a0	= ./button/ctrl/FriendListArrowLeft.brctr
+   0xd96a0	= ./button/ctrl/FriendListArrowRight.brctr
+   0xd9aa0	= ./button/ctrl/FriendListMii.brctr
+   0xda1a0	= ./button/ctrl/FriendSelectL.brctr
+   0xda6e0	= ./button/ctrl/FriendSelectS.brctr
+   0xdaa20	= ./button/ctrl/GhostDeleteConfirm.brctr
+   0xdad60	= ./button/ctrl/GhostMenu.brctr
+   0xdb0e0	= ./button/ctrl/GhostMenuGhostBattle.brctr
+   0xdb4c0	= ./button/ctrl/GhostSelectFixed.brctr
+   0xdb800	= ./button/ctrl/InvitationExplanationButton.brctr
+   0xdbba0	= ./button/ctrl/LicenseSelectB.brctr
+   0xdbfa0	= ./button/ctrl/LicenseSelectS.brctr
+   0xdc2a0	= ./button/ctrl/LicenseSelectT.brctr
+   0xdc680	= ./button/ctrl/NetworkOptionButton.brctr
+   0xdcb00	= ./button/ctrl/NotifyButton.brctr
+   0xdcfc0	= ./button/ctrl/OptionExplanationButton.brctr
+   0xdd360	= ./button/ctrl/OptionSelectButton.brctr
+   0xdd840	= ./button/ctrl/OptionTopButton.brctr
+   0xddc20	= ./button/ctrl/RankingMenu.brctr
+   0xde100	= ./button/ctrl/RegisterFriendKeyboard.brctr
+   0xde6e0	= ./button/ctrl/ReturnToMenu.brctr
+   0xde9e0	= ./button/ctrl/WatchGhostConfirm.brctr
+   0xdece0	= ./button/ctrl/WiiFriendSelectArrowLeft.brctr
+   0xdf0e0	= ./button/ctrl/WiiFriendSelectArrowRight.brctr
+   0xdf4e0	= ./button/ctrl/WiiFriendSelectOption.brctr
+		= ./button/timg/
+   0xdf860	= ./button/timg/001_001_japan.tpl
+   0xdfde0	= ./button/timg/002_136_koreaRep.tpl
+   0xe0960	= ./button/timg/150_049_usa.tpl
+   0xe1460	= ./button/timg/151_018_canada.tpl
+   0xe19e0	= ./button/timg/152_036_mexico.tpl
+   0xe2560	= ./button/timg/153_008_anguilla.tpl
+   0xe3180	= ./button/timg/153_009_antigua.tpl
+   0xe3d00	= ./button/timg/153_010_argentina.tpl
+   0xe4820	= ./button/timg/153_011_aruba.tpl
+   0xe5300	= ./button/timg/153_012_bahamas.tpl
+   0xe5de0	= ./button/timg/153_013_barbados.tpl
+   0xe68c0	= ./button/timg/153_014_belize.tpl
+   0xe7480	= ./button/timg/153_015_bolivia.tpl
+   0xe8020	= ./button/timg/153_016_brazil.tpl
+   0xe8bc0	= ./button/timg/153_017_britishVirginIslands.tpl
+   0xe97c0	= ./button/timg/153_019_caymanIslands.tpl
+   0xeae60	= ./button/timg/153_020_chile.tpl
+   0xeb920	= ./button/timg/153_021_colombia.tpl
+   0xebea0	= ./button/timg/153_022_costaRica.tpl
+   0xeca00	= ./button/timg/153_023_dominica.tpl
+   0xed660	= ./button/timg/153_024_dominicanRep.tpl
+   0xee160	= ./button/timg/153_025_ecuador.tpl
+   0xeedc0	= ./button/timg/153_026_elSalvador.tpl
+   0xef960	= ./button/timg/153_028_grenada.tpl
+   0xf0480	= ./button/timg/153_030_guatemala.tpl
+   0xf1040	= ./button/timg/153_031_guyana.tpl
+   0xf1bc0	= ./button/timg/153_032_haiti.tpl
+   0xf2760	= ./button/timg/153_033_honduras.tpl
+   0xf3220	= ./button/timg/153_034_jamaica.tpl
+   0xf3d40	= ./button/timg/153_037_montserrat.tpl
+   0xf4980	= ./button/timg/153_038_netherlandsAntilles.tpl
+   0xf5440	= ./button/timg/153_039_nicaragua.tpl
+   0xf5f40	= ./button/timg/153_040_panama.tpl
+   0xf6a20	= ./button/timg/153_041_paraguay.tpl
+   0xf7540	= ./button/timg/153_042_peru.tpl
+   0xf80e0	= ./button/timg/153_043_stKitts.tpl
+   0xf8c40	= ./button/timg/153_044_stLucia.tpl
+   0xf97c0	= ./button/timg/153_045_stVincent.tpl
+   0xfa280	= ./button/timg/153_046_suriname.tpl
+   0xfad40	= ./button/timg/153_047_trinidadAndTobago.tpl
+   0xfb8a0	= ./button/timg/153_048_turksCaicosIslands.tpl
+   0xfc500	= ./button/timg/153_050_uruguay.tpl
+   0xfd060	= ./button/timg/153_051_usVirginIslands.tpl
+   0xfdc40	= ./button/timg/153_052_venezuela.tpl
+   0xfe7a0	= ./button/timg/153__041_paraguay.tpl
+   0xff2c0	= ./button/timg/200_065_australia.tpl
+   0xffe20	= ./button/timg/200_082_ireland.tpl
+  0x1003a0	= ./button/timg/200_095_newZealand.tpl
+  0x100f60	= ./button/timg/200_110_uk.tpl
+  0x101ac0	= ./button/timg/201_066_austria.tpl
+  0x102040	= ./button/timg/201_078_germany.tpl
+  0x1025c0	= ./button/timg/201_108_switzerland.tpl
+  0x102b40	= ./button/timg/202_067_belgium.tpl
+  0x1030c0	= ./button/timg/202_077_france.tpl
+  0x103640	= ./button/timg/202_088_luxembourg.tpl
+  0x103bc0	= ./button/timg/203_083_italy.tpl
+  0x104140	= ./button/timg/204_098_portugal.tpl
+  0x104da0	= ./button/timg/204_105_spain.tpl
+  0x105940	= ./button/timg/205_094_netherlands.tpl
+  0x105ec0	= ./button/timg/206_074_denmark.tpl
+  0x106440	= ./button/timg/206_076_finland.tpl
+  0x1069c0	= ./button/timg/206_079_greece.tpl
+  0x106f40	= ./button/timg/206_096_norway.tpl
+  0x1074c0	= ./button/timg/206_107_sweden.tpl
+  0x107a40	= ./button/timg/flag_blank_00.tpl
+  0x107fc0	= ./button/timg/fm_nikoniko_mark .tpl
+  0x10a000	= ./button/timg/st_battle_icon_balloon.tpl
+  0x112040	= ./button/timg/st_battle_icon_coin.tpl
+  0x11a080	= ./button/timg/st_battle_icon_flag.tpl
+  0x1220c0	= ./button/timg/st_mariokart_channel_ranking_image_event.tpl
+  0x128140	= ./button/timg/st_mariokart_channel_ranking_image_timeattack.tpl
+  0x12e1c0	= ./button/timg/tt_baby_luigi_64x64.tpl
+  0x130200	= ./button/timg/tt_cup_icon_banana_00.tpl
+  0x138240	= ./button/timg/tt_cup_icon_flower_00.tpl
+  0x140280	= ./button/timg/tt_cup_icon_kinoko_00.tpl
+  0x1482c0	= ./button/timg/tt_cup_icon_konoha_00.tpl
+  0x150300	= ./button/timg/tt_cup_icon_koura_00.tpl
+  0x158340	= ./button/timg/tt_cup_icon_lisense_banana.tpl
+  0x158580	= ./button/timg/tt_cup_icon_lisense_flower.tpl
+  0x1587c0	= ./button/timg/tt_cup_icon_lisense_hatena.tpl
+  0x158a00	= ./button/timg/tt_cup_icon_lisense_kinoko.tpl
+  0x158c40	= ./button/timg/tt_cup_icon_lisense_kinokor.tpl
+  0x158e80	= ./button/timg/tt_cup_icon_lisense_koura.tpl
+  0x1590c0	= ./button/timg/tt_cup_icon_lisense_oukan.tpl
+  0x159300	= ./button/timg/tt_cup_icon_lisense_star.tpl
+  0x159540	= ./button/timg/tt_cup_icon_lisense_thunder.tpl
+  0x159780	= ./button/timg/tt_cup_icon_mirror_00.tpl
+  0x1617c0	= ./button/timg/tt_cup_icon_oukan_00.tpl
+  0x169800	= ./button/timg/tt_cup_icon_star_00.tpl
+  0x171840	= ./button/timg/tt_cup_icon_thunder_00.tpl
+  0x179880	= ./button/timg/tt_glass_sphere_sono3.tpl
+  0x1818c0	= ./button/timg/tt_glass_waku_180.tpl
+  0x188700	= ./button/timg/tt_glass_waku_base_mini.tpl
+  0x18a040	= ./button/timg/tt_gr_maru_normal_00.tpl
+  0x18b280	= ./button/timg/tt_hatena_64x64.tpl
+  0x18d2c0	= ./button/timg/tt_license_icon_004.tpl
+  0x1a1dc0	= ./button/timg/tt_mariokart_channel_top_menu_image_event.tpl
+  0x1a7e40	= ./button/timg/tt_mariokart_channel_top_menu_image_friend_list.tpl
+  0x1adec0	= ./button/timg/tt_mariokart_channel_top_menu_image_ranking.tpl
+  0x1b3f40	= ./button/timg/tt_mariokart_channel_top_menu_image_save_ghost.tpl
+  0x1b9fc0	= ./button/timg/tt_maru_32x32.tpl
+  0x1ba400	= ./button/timg/tt_mg_windiw_vol3_ll.tpl
+  0x1bb0c0	= ./button/timg/tt_mg_windiw_vol3_lu.tpl
+  0x1bbd80	= ./button/timg/tt_mg_windiw_vol3_rl.tpl
+  0x1bca40	= ./button/timg/tt_mg_windiw_vol3_ru.tpl
+  0x1bd700	= ./button/timg/tt_mii_matuoka_64x64.tpl
+  0x1bf740	= ./button/timg/tt_open_icon_option_000.tpl
+  0x1c7780	= ./button/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x1c7bc0	= ./button/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x1c8400	= ./button/timg/tt_window_vol1.tpl
+  0x1c8480	= ./button/timg/tt_window_vol3sono2.tpl
+  0x1c85c0	= ./button/timg/tt_yajirushi_type1.tpl
+		= ./control/
+		= ./control/anim/
+  0x1c9a00	= ./control/anim/common_w010_cup_fade_in.brlan
+  0x1c9ea0	= ./control/anim/common_w010_cup_fade_in_after.brlan
+  0x1ca320	= ./control/anim/common_w010_cup_fade_in_before.brlan
+  0x1ca7a0	= ./control/anim/common_w010_cup_fade_out.brlan
+  0x1cac40	= ./control/anim/common_w010_cup_free.brlan
+  0x1cb340	= ./control/anim/common_w010_cup_free_to_select.brlan
+  0x1cba00	= ./control/anim/common_w010_cup_fuchi_check_loop.brlan
+  0x1cbac0	= ./control/anim/common_w010_cup_fuchi_off.brlan
+  0x1cc020	= ./control/anim/common_w010_cup_fuchi_on_to_off.brlan
+  0x1cc5c0	= ./control/anim/common_w010_cup_select.brlan
+  0x1ccbc0	= ./control/anim/common_w010_cup_select_to_free.brlan
+  0x1cd180	= ./control/anim/common_w010_cup_text_light_01_ok.brlan
+  0x1cd740	= ./control/anim/common_w010_cup_text_light_01_stop.brlan
+  0x1cdbe0	= ./control/anim/common_w010_cup_text_light_02_select.brlan
+  0x1ce1a0	= ./control/anim/common_w010_cup_text_light_02_stop.brlan
+  0x1ce640	= ./control/anim/common_w075_ghost_data_delete.brlan
+  0x1ceb20	= ./control/anim/common_w075_ghost_data_fuchi_check_loop.brlan
+  0x1cebe0	= ./control/anim/common_w075_ghost_data_in.brlan
+  0x1cefc0	= ./control/anim/common_w075_ghost_data_in_out.brlan
+  0x1cf3a0	= ./control/anim/common_w075_ghost_data_new_invisible.brlan
+  0x1cf6a0	= ./control/anim/common_w075_ghost_data_new_visible.brlan
+  0x1cf9e0	= ./control/anim/common_w075_ghost_data_out.brlan
+  0x1cfde0	= ./control/anim/common_w075_ghost_data_out_in.brlan
+  0x1d01c0	= ./control/anim/common_w075_ghost_data_transmit.brlan
+  0x1d0680	= ./control/anim/common_w089_course_big_movie_fade_in.brlan
+  0x1d0740	= ./control/anim/common_w089_course_big_movie_fade_in_after.brlan
+  0x1d0800	= ./control/anim/common_w089_course_big_movie_fade_in_before.brlan
+  0x1d08c0	= ./control/anim/common_w089_course_big_movie_fade_out.brlan
+  0x1d09a0	= ./control/anim/common_w137_course_movie_text_only_fade_in.brlan
+  0x1d0d60	= ./control/anim/common_w137_course_movie_text_only_fade_in_after.brlan
+  0x1d1120	= ./control/anim/common_w137_course_movie_text_only_fade_in_before.brlan
+  0x1d14e0	= ./control/anim/common_w137_course_movie_text_only_fade_out.brlan
+  0x1d18a0	= ./control/anim/common_w137_course_movie_text_only_free.brlan
+  0x1d1de0	= ./control/anim/common_w137_course_movie_text_only_free_to_select.brlan
+  0x1d2340	= ./control/anim/common_w137_course_movie_text_only_fuchi_check_loop.brlan
+  0x1d2400	= ./control/anim/common_w137_course_movie_text_only_fuchi_off.brlan
+  0x1d2880	= ./control/anim/common_w137_course_movie_text_only_fuchi_on.brlan
+  0x1d2d00	= ./control/anim/common_w137_course_movie_text_only_fuchi_on_to_off.brlan
+  0x1d31a0	= ./control/anim/common_w137_course_movie_text_only_select.brlan
+  0x1d3680	= ./control/anim/common_w137_course_movie_text_only_select_to_free.brlan
+  0x1d3b40	= ./control/anim/common_w137_course_movie_text_only_text_light_01_ok.brlan
+  0x1d3fc0	= ./control/anim/common_w137_course_movie_text_only_text_light_01_stop.brlan
+  0x1d4380	= ./control/anim/common_w137_course_movie_text_only_text_light_02_select.brlan
+  0x1d4800	= ./control/anim/common_w137_course_movie_text_only_text_light_02_stop.brlan
+  0x1d4bc0	= ./control/anim/common_w137_course_movie_text_only_waku_off.brlan
+  0x1d4ec0	= ./control/anim/common_w137_course_movie_text_only_waku_on.brlan
+  0x1d51c0	= ./control/anim/common_w137_course_movie_text_only_waku_on_to_off.brlan
+		= ./control/blyt/
+  0x1d54e0	= ./control/blyt/chara_flag_machine_picture_common.brlyt
+  0x1dd640	= ./control/blyt/common_w010_cup.brlyt
+  0x1ded40	= ./control/blyt/common_w075_ghost_data.brlyt
+  0x1dfc60	= ./control/blyt/common_w089_course_big_movie.brlyt
+  0x1dff00	= ./control/blyt/common_w104_page_number.brlyt
+  0x1e01e0	= ./control/blyt/common_w137_course_movie_text_only.brlyt
+  0x1e10e0	= ./control/blyt/cup_icon_64x64_common.brlyt
+  0x1e1ec0	= ./control/blyt/gr_black_down.brlyt
+  0x1e2120	= ./control/blyt/null.brlyt
+  0x1e2220	= ./control/blyt/present_message_window_gp.brlyt
+  0x1e2700	= ./control/blyt/remocon_connect_big_window.brlyt
+		= ./control/ctrl/
+  0x1e2b80	= ./control/ctrl/CourseSelectCup.brctr
+  0x1e3080	= ./control/ctrl/CourseSelectMovie.brctr
+  0x1e32a0	= ./control/ctrl/CupSelectCourse.brctr
+  0x1e3740	= ./control/ctrl/CupSelectNULL.brctr
+  0x1e38c0	= ./control/ctrl/DownloadGhostListPageNum.brctr
+  0x1e3960	= ./control/ctrl/EventMessageWindow.brctr
+  0x1e3aa0	= ./control/ctrl/FriendListPageNum.brctr
+  0x1e3b40	= ./control/ctrl/GhostDeleteConfirmBack.brctr
+  0x1e3be0	= ./control/ctrl/GhostInfo.brctr
+  0x1e40e0	= ./control/ctrl/RankingBlackBack.brctr
+  0x1e4180	= ./control/ctrl/WiiFriendSelectPageNum.brctr
+		= ./control/timg/
+  0x1e4220	= ./control/timg/001_001_japan.tpl
+  0x1e47a0	= ./control/timg/002_136_koreaRep.tpl
+  0x1e5320	= ./control/timg/150_049_usa.tpl
+  0x1e5e20	= ./control/timg/151_018_canada.tpl
+  0x1e63a0	= ./control/timg/152_036_mexico.tpl
+  0x1e6f20	= ./control/timg/153_008_anguilla.tpl
+  0x1e7b40	= ./control/timg/153_009_antigua.tpl
+  0x1e86c0	= ./control/timg/153_010_argentina.tpl
+  0x1e91e0	= ./control/timg/153_011_aruba.tpl
+  0x1e9cc0	= ./control/timg/153_012_bahamas.tpl
+  0x1ea7a0	= ./control/timg/153_013_barbados.tpl
+  0x1eb280	= ./control/timg/153_014_belize.tpl
+  0x1ebe40	= ./control/timg/153_015_bolivia.tpl
+  0x1ec9e0	= ./control/timg/153_016_brazil.tpl
+  0x1ed580	= ./control/timg/153_017_britishVirginIslands.tpl
+  0x1ee180	= ./control/timg/153_019_caymanIslands.tpl
+  0x1ef820	= ./control/timg/153_020_chile.tpl
+  0x1f02e0	= ./control/timg/153_021_colombia.tpl
+  0x1f0860	= ./control/timg/153_022_costaRica.tpl
+  0x1f13c0	= ./control/timg/153_023_dominica.tpl
+  0x1f2020	= ./control/timg/153_024_dominicanRep.tpl
+  0x1f2b20	= ./control/timg/153_025_ecuador.tpl
+  0x1f3780	= ./control/timg/153_026_elSalvador.tpl
+  0x1f4320	= ./control/timg/153_028_grenada.tpl
+  0x1f4e40	= ./control/timg/153_030_guatemala.tpl
+  0x1f5a00	= ./control/timg/153_031_guyana.tpl
+  0x1f6580	= ./control/timg/153_032_haiti.tpl
+  0x1f7120	= ./control/timg/153_033_honduras.tpl
+  0x1f7be0	= ./control/timg/153_034_jamaica.tpl
+  0x1f8700	= ./control/timg/153_037_montserrat.tpl
+  0x1f9340	= ./control/timg/153_038_netherlandsAntilles.tpl
+  0x1f9e00	= ./control/timg/153_039_nicaragua.tpl
+  0x1fa900	= ./control/timg/153_040_panama.tpl
+  0x1fb3e0	= ./control/timg/153_041_paraguay.tpl
+  0x1fbf00	= ./control/timg/153_042_peru.tpl
+  0x1fcaa0	= ./control/timg/153_043_stKitts.tpl
+  0x1fd600	= ./control/timg/153_044_stLucia.tpl
+  0x1fe180	= ./control/timg/153_045_stVincent.tpl
+  0x1fec40	= ./control/timg/153_046_suriname.tpl
+  0x1ff700	= ./control/timg/153_047_trinidadAndTobago.tpl
+  0x200260	= ./control/timg/153_048_turksCaicosIslands.tpl
+  0x200ec0	= ./control/timg/153_050_uruguay.tpl
+  0x201a20	= ./control/timg/153_051_usVirginIslands.tpl
+  0x202600	= ./control/timg/153_052_venezuela.tpl
+  0x203160	= ./control/timg/200_065_australia.tpl
+  0x203cc0	= ./control/timg/200_082_ireland.tpl
+  0x204240	= ./control/timg/200_095_newZealand.tpl
+  0x204e00	= ./control/timg/200_110_uk.tpl
+  0x205960	= ./control/timg/201_066_austria.tpl
+  0x205ee0	= ./control/timg/201_078_germany.tpl
+  0x206460	= ./control/timg/201_108_switzerland.tpl
+  0x2069e0	= ./control/timg/202_067_belgium.tpl
+  0x206f60	= ./control/timg/202_077_france.tpl
+  0x2074e0	= ./control/timg/202_088_luxembourg.tpl
+  0x207a60	= ./control/timg/203_083_italy.tpl
+  0x207fe0	= ./control/timg/204_098_portugal.tpl
+  0x208c40	= ./control/timg/204_105_spain.tpl
+  0x2097e0	= ./control/timg/205_094_netherlands.tpl
+  0x209d60	= ./control/timg/206_074_denmark.tpl
+  0x20a2e0	= ./control/timg/206_076_finland.tpl
+  0x20a860	= ./control/timg/206_079_greece.tpl
+  0x20ade0	= ./control/timg/206_096_norway.tpl
+  0x20b360	= ./control/timg/206_107_sweden.tpl
+  0x20b8e0	= ./control/timg/flag_blank_00.tpl
+  0x20be60	= ./control/timg/fm_handle_new_x.tpl
+  0x20cb20	= ./control/timg/st_battle_icon_balloon.tpl
+  0x214b60	= ./control/timg/st_battle_icon_coin.tpl
+  0x21cba0	= ./control/timg/st_battle_icon_flag.tpl
+  0x224be0	= ./control/timg/st_la_bike.tpl
+  0x227320	= ./control/timg/st_la_kart.tpl
+  0x229a60	= ./control/timg/st_lb_bike.tpl
+  0x22c1a0	= ./control/timg/st_lb_kart.tpl
+  0x22e8e0	= ./control/timg/st_lc_bike.tpl
+  0x231020	= ./control/timg/st_lc_kart.tpl
+  0x233760	= ./control/timg/st_ldf_bike.tpl
+  0x235ea0	= ./control/timg/st_ldf_kart.tpl
+  0x2385e0	= ./control/timg/st_ld_bike.tpl
+  0x23ad20	= ./control/timg/st_ld_kart.tpl
+  0x23d460	= ./control/timg/st_le_bike.tpl
+  0x23fba0	= ./control/timg/st_le_kart.tpl
+  0x2422e0	= ./control/timg/st_ma_bike.tpl
+  0x244a20	= ./control/timg/st_ma_kart.tpl
+  0x247160	= ./control/timg/st_mb_bike.tpl
+  0x2498a0	= ./control/timg/st_mb_kart.tpl
+  0x24bfe0	= ./control/timg/st_mc_bike.tpl
+  0x24e720	= ./control/timg/st_mc_kart.tpl
+  0x250e60	= ./control/timg/st_mdf_bike.tpl
+  0x2535a0	= ./control/timg/st_mdf_kart.tpl
+  0x255ce0	= ./control/timg/st_md_bike.tpl
+  0x258420	= ./control/timg/st_md_kart.tpl
+  0x25ab60	= ./control/timg/st_me_bike.tpl
+  0x25d2a0	= ./control/timg/st_me_kart.tpl
+  0x25f9e0	= ./control/timg/st_sa_bike.tpl
+  0x262120	= ./control/timg/st_sa_kart.tpl
+  0x264860	= ./control/timg/st_sb_bike.tpl
+  0x266fa0	= ./control/timg/st_sb_kart.tpl
+  0x2696e0	= ./control/timg/st_sc_bike.tpl
+  0x26be20	= ./control/timg/st_sc_kart.tpl
+  0x26e560	= ./control/timg/st_sdf_bike.tpl
+  0x270ca0	= ./control/timg/st_sdf_kart.tpl
+  0x2733e0	= ./control/timg/st_sd_bike.tpl
+  0x275b20	= ./control/timg/st_sd_kart.tpl
+  0x278260	= ./control/timg/st_se_bike.tpl
+  0x27a9a0	= ./control/timg/st_se_kart.tpl
+  0x27d0e0	= ./control/timg/tk_window.tpl
+  0x2dc3a0	= ./control/timg/tt_baby_daisy_64x64.tpl
+  0x2de3e0	= ./control/timg/tt_baby_luigi_64x64.tpl
+  0x2e0420	= ./control/timg/tt_baby_mario_64x64.tpl
+  0x2e2460	= ./control/timg/tt_baby_peach_64x64.tpl
+  0x2e44a0	= ./control/timg/tt_boss_packun_64x64.tpl
+  0x2e64e0	= ./control/timg/tt_catherine_64x64.tpl
+  0x2e8520	= ./control/timg/tt_cup_icon_banana_00.tpl
+  0x2f0560	= ./control/timg/tt_cup_icon_flower_00.tpl
+  0x2f85a0	= ./control/timg/tt_cup_icon_kinoko_00.tpl
+  0x3005e0	= ./control/timg/tt_cup_icon_konoha_00.tpl
+  0x308620	= ./control/timg/tt_cup_icon_koura_00.tpl
+  0x310660	= ./control/timg/tt_cup_icon_mirror_00.tpl
+  0x3186a0	= ./control/timg/tt_cup_icon_oukan_00.tpl
+  0x3206e0	= ./control/timg/tt_cup_icon_star_00.tpl
+  0x328720	= ./control/timg/tt_cup_icon_thunder_00.tpl
+  0x330760	= ./control/timg/tt_daisy_64x64.tpl
+  0x3327a0	= ./control/timg/tt_didy_64x64.tpl
+  0x3347e0	= ./control/timg/tt_donky_64x64.tpl
+  0x336820	= ./control/timg/tt_fukidashi_window_kado_common.tpl
+  0x3374e0	= ./control/timg/tt_funky_64x64.tpl
+  0x339520	= ./control/timg/tt_ghost_data_10.tpl
+  0x35ea00	= ./control/timg/tt_ghost_new_icon.tpl
+  0x360b40	= ./control/timg/tt_hammer_64x64.tpl
+  0x362b80	= ./control/timg/tt_hatena_64x64.tpl
+  0x364bc0	= ./control/timg/tt_hone_koopa_64x64.tpl
+  0x366c00	= ./control/timg/tt_karon_64x64.tpl
+  0x368c40	= ./control/timg/tt_kinopico_64x64.tpl
+  0x36ac80	= ./control/timg/tt_kinopio_64x64.tpl
+  0x36ccc0	= ./control/timg/tt_koopa_64x64.tpl
+  0x36ed00	= ./control/timg/tt_koopa_jr_64x64.tpl
+  0x370d40	= ./control/timg/tt_luigi_64x64.tpl
+  0x372d80	= ./control/timg/tt_mario_64x64.tpl
+  0x374dc0	= ./control/timg/tt_mii_matuoka_64x64.tpl
+  0x376e00	= ./control/timg/tt_mii_suit_a_64x64.tpl
+  0x378e40	= ./control/timg/tt_mii_suit_b_64x64.tpl
+  0x37ae80	= ./control/timg/tt_mii_suit_c_64x64.tpl
+  0x37cec0	= ./control/timg/tt_nintendo_120x32.tpl
+  0x37de00	= ./control/timg/tt_noko_64x64.tpl
+  0x37fe40	= ./control/timg/tt_pata_64x64.tpl
+  0x381e80	= ./control/timg/tt_pattern_chek_32x32.tpl
+  0x3826c0	= ./control/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x382b00	= ./control/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x383340	= ./control/timg/tt_peach_64x64.tpl
+  0x385380	= ./control/timg/tt_roseta_64x64.tpl
+  0x3873c0	= ./control/timg/tt_teresa_64x64.tpl
+  0x389400	= ./control/timg/tt_waluigi_64x64.tpl
+  0x38b440	= ./control/timg/tt_wario_64x64.tpl
+  0x38d480	= ./control/timg/tt_yoshi_64x64.tpl
+		= ./debug/
+		= ./debug/blyt/
+  0x38f4c0	= ./debug/blyt/RomData.brlyt
+		= ./debug/ctrl/
+  0x38f680	= ./debug/ctrl/RomData.brctr
+		= ./dpd_pointer/
+		= ./dpd_pointer/anim/
+  0x38f700	= ./dpd_pointer/anim/pointing_cursor_blue_cursor.brlan
+  0x38ffe0	= ./dpd_pointer/anim/pointing_cursor_common_cursor.brlan
+  0x3908c0	= ./dpd_pointer/anim/pointing_cursor_c_left.brlan
+  0x390980	= ./dpd_pointer/anim/pointing_cursor_c_right.brlan
+  0x390a40	= ./dpd_pointer/anim/pointing_cursor_green_cursor.brlan
+  0x391320	= ./dpd_pointer/anim/pointing_cursor_left.brlan
+  0x3913e0	= ./dpd_pointer/anim/pointing_cursor_pointing_cursor_loop.brlan
+  0x3914a0	= ./dpd_pointer/anim/pointing_cursor_race_blue_cursor.brlan
+  0x391640	= ./dpd_pointer/anim/pointing_cursor_race_common_cursor.brlan
+  0x3917e0	= ./dpd_pointer/anim/pointing_cursor_race_c_left.brlan
+  0x3918a0	= ./dpd_pointer/anim/pointing_cursor_race_c_right.brlan
+  0x391960	= ./dpd_pointer/anim/pointing_cursor_race_green_cursor.brlan
+  0x391b00	= ./dpd_pointer/anim/pointing_cursor_race_left.brlan
+  0x391bc0	= ./dpd_pointer/anim/pointing_cursor_race_pointing_cursor_loop.brlan
+  0x391c80	= ./dpd_pointer/anim/pointing_cursor_race_red_cursor.brlan
+  0x391e20	= ./dpd_pointer/anim/pointing_cursor_race_right.brlan
+  0x391ee0	= ./dpd_pointer/anim/pointing_cursor_race_yellow_cursor.brlan
+  0x392080	= ./dpd_pointer/anim/pointing_cursor_red_cursor.brlan
+  0x392960	= ./dpd_pointer/anim/pointing_cursor_right.brlan
+  0x392a20	= ./dpd_pointer/anim/pointing_cursor_yellow_cursor.brlan
+		= ./dpd_pointer/blyt/
+  0x393300	= ./dpd_pointer/blyt/pointing_cursor.brlyt
+  0x394ca0	= ./dpd_pointer/blyt/pointing_cursor_race.brlyt
+		= ./dpd_pointer/ctrl/
+  0x3954c0	= ./dpd_pointer/ctrl/DpdPointer.brctr
+  0x395840	= ./dpd_pointer/ctrl/DpdPointerRace.brctr
+		= ./dpd_pointer/timg/
+  0x395be0	= ./dpd_pointer/timg/cursor0.tpl
+  0x397520	= ./dpd_pointer/timg/tt_i_cursor_nakami_ver0.tpl
+  0x397860	= ./dpd_pointer/timg/tt_i_cursor_shikaku.tpl
+  0x3978e0	= ./dpd_pointer/timg/tt_i_cursor_tongari.tpl
+		= ./effect/
+  0x39ab20	= ./effect/RKMenu.breff
+  0x39adc0	= ./effect/RKMenu.breft
+		= ./esrb/
+		= ./esrb/ctrl/
+  0x39be60	= ./esrb/ctrl/ESRB.brctr
+		= ./globe/
+		= ./globe/anim/
+  0x39bee0	= ./globe/anim/common_w050_earth_message_fade_in.brlan
+  0x39bfe0	= ./globe/anim/common_w050_earth_message_fade_in_after.brlan
+  0x39c0c0	= ./globe/anim/common_w050_earth_message_fade_in_before.brlan
+  0x39c1a0	= ./globe/anim/common_w050_earth_message_fade_out.brlan
+  0x39c2a0	= ./globe/anim/common_w050_earth_message_text_color_loop.brlan
+  0x39c3e0	= ./globe/anim/common_w085_earth_fukidashi_window_fade_in.brlan
+  0x39c4e0	= ./globe/anim/common_w085_earth_fukidashi_window_fade_in_after.brlan
+  0x39c5c0	= ./globe/anim/common_w085_earth_fukidashi_window_fade_in_before.brlan
+  0x39c6a0	= ./globe/anim/common_w085_earth_fukidashi_window_fade_out.brlan
+  0x39c7a0	= ./globe/anim/common_w085_earth_fukidashi_window_meet.brlan
+  0x39ca60	= ./globe/anim/common_w085_earth_fukidashi_window_offline.brlan
+  0x39cd20	= ./globe/anim/common_w085_earth_fukidashi_window_online.brlan
+  0x39cfe0	= ./globe/anim/common_w085_earth_fukidashi_window_room.brlan
+  0x39d2a0	= ./globe/anim/wiifriend_select_container_center_to_right.brlan
+  0x39d380	= ./globe/anim/wiifriend_select_container_hide.brlan
+  0x39d460	= ./globe/anim/wiifriend_select_container_left_to_center.brlan
+  0x39d540	= ./globe/anim/wiifriend_select_container_show.brlan
+		= ./globe/blyt/
+  0x39d600	= ./globe/blyt/common_w050_earth_message.brlyt
+  0x39d9c0	= ./globe/blyt/common_w052_earth_mii_point_left.brlyt
+  0x39ec40	= ./globe/blyt/common_w053_earth_mii_point_right.brlyt
+  0x39fec0	= ./globe/blyt/common_w085_earth_fukidashi_window.brlyt
+  0x3a0780	= ./globe/blyt/common_w086_earth_mii_name.brlyt
+  0x3a0f00	= ./globe/blyt/national_flag.brlyt
+  0x3a4f00	= ./globe/blyt/wiifriend_select_container.brlyt
+		= ./globe/ctrl/
+  0x3a51c0	= ./globe/ctrl/CommentWindow.brctr
+  0x3a5500	= ./globe/ctrl/EventSimpleMessageWindow.brctr
+  0x3a5660	= ./globe/ctrl/FriendSelectMessageWindow.brctr
+  0x3a5800	= ./globe/ctrl/FriendSelectRecordFriend.brctr
+  0x3a58a0	= ./globe/ctrl/FriendSelectRecordMe.brctr
+  0x3a5940	= ./globe/ctrl/NameWindow.brctr
+  0x3a59e0	= ./globe/ctrl/SimpleMessageWindow.brctr
+  0x3a5b40	= ./globe/ctrl/WiiFriendSelectBase.brctr
+		= ./globe/timg/
+  0x3a5d40	= ./globe/timg/001_001_japan.tpl
+  0x3a62c0	= ./globe/timg/002_136_koreaRep.tpl
+  0x3a6e40	= ./globe/timg/150_049_usa.tpl
+  0x3a7940	= ./globe/timg/151_018_canada.tpl
+  0x3a7ec0	= ./globe/timg/152_036_mexico.tpl
+  0x3a8a40	= ./globe/timg/153_008_anguilla.tpl
+  0x3a9660	= ./globe/timg/153_009_antigua.tpl
+  0x3aa1e0	= ./globe/timg/153_010_argentina.tpl
+  0x3aad00	= ./globe/timg/153_011_aruba.tpl
+  0x3ab7e0	= ./globe/timg/153_012_bahamas.tpl
+  0x3ac2c0	= ./globe/timg/153_013_barbados.tpl
+  0x3acda0	= ./globe/timg/153_014_belize.tpl
+  0x3ad960	= ./globe/timg/153_015_bolivia.tpl
+  0x3ae500	= ./globe/timg/153_016_brazil.tpl
+  0x3af0a0	= ./globe/timg/153_017_britishVirginIslands.tpl
+  0x3afca0	= ./globe/timg/153_019_caymanIslands.tpl
+  0x3b1340	= ./globe/timg/153_020_chile.tpl
+  0x3b1e00	= ./globe/timg/153_021_colombia.tpl
+  0x3b2380	= ./globe/timg/153_022_costaRica.tpl
+  0x3b2ee0	= ./globe/timg/153_023_dominica.tpl
+  0x3b3b40	= ./globe/timg/153_024_dominicanRep.tpl
+  0x3b4640	= ./globe/timg/153_025_ecuador.tpl
+  0x3b52a0	= ./globe/timg/153_026_elSalvador.tpl
+  0x3b5e40	= ./globe/timg/153_028_grenada.tpl
+  0x3b6960	= ./globe/timg/153_030_guatemala.tpl
+  0x3b7520	= ./globe/timg/153_031_guyana.tpl
+  0x3b80a0	= ./globe/timg/153_032_haiti.tpl
+  0x3b8c40	= ./globe/timg/153_033_honduras.tpl
+  0x3b9700	= ./globe/timg/153_034_jamaica.tpl
+  0x3ba220	= ./globe/timg/153_037_montserrat.tpl
+  0x3bae60	= ./globe/timg/153_038_netherlandsAntilles.tpl
+  0x3bb920	= ./globe/timg/153_039_nicaragua.tpl
+  0x3bc420	= ./globe/timg/153_040_panama.tpl
+  0x3bcf00	= ./globe/timg/153_041_paraguay.tpl
+  0x3bda20	= ./globe/timg/153_042_peru.tpl
+  0x3be5c0	= ./globe/timg/153_043_stKitts.tpl
+  0x3bf120	= ./globe/timg/153_044_stLucia.tpl
+  0x3bfca0	= ./globe/timg/153_045_stVincent.tpl
+  0x3c0760	= ./globe/timg/153_046_suriname.tpl
+  0x3c1220	= ./globe/timg/153_047_trinidadAndTobago.tpl
+  0x3c1d80	= ./globe/timg/153_048_turksCaicosIslands.tpl
+  0x3c29e0	= ./globe/timg/153_050_uruguay.tpl
+  0x3c3540	= ./globe/timg/153_051_usVirginIslands.tpl
+  0x3c4120	= ./globe/timg/153_052_venezuela.tpl
+  0x3c4c80	= ./globe/timg/153__041_paraguay.tpl
+  0x3c57a0	= ./globe/timg/200_065_australia.tpl
+  0x3c6300	= ./globe/timg/200_082_ireland.tpl
+  0x3c6880	= ./globe/timg/200_095_newZealand.tpl
+  0x3c7440	= ./globe/timg/200_110_uk.tpl
+  0x3c7fa0	= ./globe/timg/201_066_austria.tpl
+  0x3c8520	= ./globe/timg/201_078_germany.tpl
+  0x3c8aa0	= ./globe/timg/201_108_switzerland.tpl
+  0x3c9020	= ./globe/timg/202_067_belgium.tpl
+  0x3c95a0	= ./globe/timg/202_077_france.tpl
+  0x3c9b20	= ./globe/timg/202_088_luxembourg.tpl
+  0x3ca0a0	= ./globe/timg/203_083_italy.tpl
+  0x3ca620	= ./globe/timg/204_098_portugal.tpl
+  0x3cb280	= ./globe/timg/204_105_spain.tpl
+  0x3cbe20	= ./globe/timg/205_094_netherlands.tpl
+  0x3cc3a0	= ./globe/timg/206_074_denmark.tpl
+  0x3cc920	= ./globe/timg/206_076_finland.tpl
+  0x3ccea0	= ./globe/timg/206_079_greece.tpl
+  0x3cd420	= ./globe/timg/206_096_norway.tpl
+  0x3cd9a0	= ./globe/timg/206_107_sweden.tpl
+  0x3cdf20	= ./globe/timg/flag_blank_00.tpl
+  0x3ce4a0	= ./globe/timg/ht_squareWhite_00.tpl
+  0x3ce500	= ./globe/timg/tt_fukidashi_window_center_02.tpl
+  0x3d07a0	= ./globe/timg/tt_fukidashi_window_left_00.tpl
+  0x3d1e60	= ./globe/timg/tt_fukidashi_window_normal_00.tpl
+  0x3d2c20	= ./globe/timg/tt_fukidashi_window_right_00.tpl
+  0x3d42e0	= ./globe/timg/tt_mario_64x64.tpl
+  0x3d6320	= ./globe/timg/tt_pattern_chek_bokashi_32x32.tpl
+		= ./LetterForm/
+  0x3d6b60	= ./LetterForm/letter_jp_m.bin
+  0x3db0c0	= ./LetterForm/letter_nj_m.bin
+  0x3df5a0	= ./LetterForm/thumb_jp_m.bin
+  0x3dff60	= ./LetterForm/thumb_nj_m.bin
+		= ./LetterForm/bin/
+		= ./mailCs/
+  0x3e0920	= ./mailCs/mail.kwb
+		= ./message_window/
+		= ./message_window/anim/
+  0x3e0b00	= ./message_window/anim/common_w004_menu_fade_in.brlan
+  0x3e0ce0	= ./message_window/anim/common_w004_menu_fade_in_after.brlan
+  0x3e0ec0	= ./message_window/anim/common_w004_menu_fade_in_before.brlan
+  0x3e10a0	= ./message_window/anim/common_w004_menu_fade_out.brlan
+  0x3e1280	= ./message_window/anim/common_w004_menu_free.brlan
+  0x3e1460	= ./message_window/anim/common_w004_menu_free_to_select.brlan
+  0x3e16c0	= ./message_window/anim/common_w004_menu_fuchi_check_loop.brlan
+  0x3e1980	= ./message_window/anim/common_w004_menu_select.brlan
+  0x3e1ba0	= ./message_window/anim/common_w004_menu_select_to_free.brlan
+  0x3e1da0	= ./message_window/anim/common_w004_menu_text_light_01_ok.brlan
+  0x3e2020	= ./message_window/anim/common_w004_menu_text_light_01_stop.brlan
+  0x3e2200	= ./message_window/anim/common_w004_menu_text_light_02_select.brlan
+  0x3e24c0	= ./message_window/anim/common_w004_menu_text_light_02_stop.brlan
+  0x3e2740	= ./message_window/anim/common_w008_back_fade_in.brlan
+  0x3e2a00	= ./message_window/anim/common_w008_back_fade_in_after.brlan
+  0x3e2ca0	= ./message_window/anim/common_w008_back_fade_in_before.brlan
+  0x3e2f40	= ./message_window/anim/common_w008_back_fade_out.brlan
+  0x3e3200	= ./message_window/anim/common_w008_back_free.brlan
+  0x3e3780	= ./message_window/anim/common_w008_back_free_to_select.brlan
+  0x3e3c80	= ./message_window/anim/common_w008_back_fuchi_check_loop.brlan
+  0x3e3fc0	= ./message_window/anim/common_w008_back_select.brlan
+  0x3e4440	= ./message_window/anim/common_w008_back_select_to_free.brlan
+  0x3e48c0	= ./message_window/anim/common_w008_back_text_light_01_ok.brlan
+  0x3e4c00	= ./message_window/anim/common_w008_back_text_light_01_stop.brlan
+  0x3e4ec0	= ./message_window/anim/common_w008_back_text_light_02_select.brlan
+  0x3e5200	= ./message_window/anim/common_w008_back_text_light_02_stop.brlan
+  0x3e54c0	= ./message_window/anim/common_w073_loading_loading.brlan
+		= ./message_window/blyt/
+  0x3e5840	= ./message_window/blyt/a_button_for_message_window.brlyt
+  0x3e59e0	= ./message_window/blyt/black_down.brlyt
+  0x3e5c40	= ./message_window/blyt/black_down_race.brlyt
+  0x3e5ea0	= ./message_window/blyt/common_w004_menu.brlyt
+  0x3e6e40	= ./message_window/blyt/common_w008_back.brlyt
+  0x3e77c0	= ./message_window/blyt/common_w017_message.brlyt
+  0x3e7e00	= ./message_window/blyt/common_w022_message_half.brlyt
+  0x3e83a0	= ./message_window/blyt/common_w073_loading.brlyt
+  0x3e8ca0	= ./message_window/blyt/common_w079_message_quarter.brlyt
+  0x3e9220	= ./message_window/blyt/common_w127_yes_no_message_window.brlyt
+  0x3e9a20	= ./message_window/blyt/yes_no_window_popup_container.brlyt
+		= ./message_window/ctrl/
+  0x3e9ba0	= ./message_window/ctrl/Back.brctr
+  0x3e9f00	= ./message_window/ctrl/BlackBack.brctr
+  0x3e9fe0	= ./message_window/ctrl/BusySymbol.brctr
+  0x3ea0c0	= ./message_window/ctrl/ConfirmOK.brctr
+  0x3ea400	= ./message_window/ctrl/EventMessageWindowQuarter.brctr
+  0x3ea4a0	= ./message_window/ctrl/FriendDeleteBusySymbol.brctr
+  0x3ea580	= ./message_window/ctrl/FriendDeleteConfirmMessageWindow.brctr
+  0x3ea640	= ./message_window/ctrl/FriendDeleteMessageWindow.brctr
+  0x3ea6e0	= ./message_window/ctrl/GhostListMessageWindow.brctr
+  0x3ea780	= ./message_window/ctrl/MessageWindow.brctr
+  0x3ea8c0	= ./message_window/ctrl/MessageWindowFrame.brctr
+  0x3ea980	= ./message_window/ctrl/MessageWindowHalf.brctr
+  0x3eab20	= ./message_window/ctrl/MessageWindowQuarter.brctr
+  0x3eacc0	= ./message_window/ctrl/OKKey.brctr
+  0x3eada0	= ./message_window/ctrl/OptionMessageWindowHalf.brctr
+  0x3eae40	= ./message_window/ctrl/OptionMessageWindowQuarter.brctr
+  0x3eaee0	= ./message_window/ctrl/RaceConfirmBack.brctr
+  0x3eafc0	= ./message_window/ctrl/RankingMessageWindow.brctr
+  0x3eb060	= ./message_window/ctrl/YesNoButton.brctr
+  0x3eb420	= ./message_window/ctrl/YesNoPopupContainer.brctr
+		= ./message_window/timg/
+  0x3eb4c0	= ./message_window/timg/tt_fukidashi_window_kado_common.tpl
+  0x3ec180	= ./message_window/timg/tt_glass_waku_180.tpl
+  0x3f2fc0	= ./message_window/timg/tt_pattern_chek_32x32.tpl
+  0x3f3800	= ./message_window/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x3f3c40	= ./message_window/timg/tt_pattern_chek_bokashi_32x32.tpl
+		= ./pad_recognize/
+		= ./pad_recognize/anim/
+  0x3f4480	= ./pad_recognize/anim/common_w055_message_connect_blue.brlan
+  0x3f46e0	= ./pad_recognize/anim/common_w055_message_connect_borderline_loop.brlan
+  0x3f4780	= ./pad_recognize/anim/common_w055_message_connect_cla_con.brlan
+  0x3f49a0	= ./pad_recognize/anim/common_w055_message_connect_connect.brlan
+  0x3f4c00	= ./pad_recognize/anim/common_w055_message_connect_disconnect.brlan
+  0x3f4e60	= ./pad_recognize/anim/common_w055_message_connect_entry_light.brlan
+  0x3f4f60	= ./pad_recognize/anim/common_w055_message_connect_entry_light_stop.brlan
+  0x3f5040	= ./pad_recognize/anim/common_w055_message_connect_gc_con.brlan
+  0x3f5240	= ./pad_recognize/anim/common_w055_message_connect_green.brlan
+  0x3f54a0	= ./pad_recognize/anim/common_w055_message_connect_han_con.brlan
+  0x3f56c0	= ./pad_recognize/anim/common_w055_message_connect_hatena.brlan
+  0x3f5880	= ./pad_recognize/anim/common_w055_message_connect_nun_con.brlan
+  0x3f5a80	= ./pad_recognize/anim/common_w055_message_connect_red.brlan
+  0x3f5ce0	= ./pad_recognize/anim/common_w055_message_connect_white.brlan
+  0x3f5f40	= ./pad_recognize/anim/common_w055_message_connect_yellow.brlan
+		= ./pad_recognize/blyt/
+  0x3f61a0	= ./pad_recognize/blyt/common_w055_message_connect.brlyt
+  0x3f6b00	= ./pad_recognize/blyt/common_w056_message_connect_window.brlyt
+		= ./pad_recognize/ctrl/
+  0x3f7100	= ./pad_recognize/ctrl/ControllerBatteryWindow.brctr
+  0x3f71c0	= ./pad_recognize/ctrl/RecognizePad.brctr
+  0x3f7640	= ./pad_recognize/ctrl/RecognizePadWindow.brctr
+		= ./pad_recognize/timg/
+  0x3f7700	= ./pad_recognize/timg/tt_a_body.tpl
+  0x417740	= ./pad_recognize/timg/tt_a_light.tpl
+  0x437780	= ./pad_recognize/timg/tt_clacon_body.tpl
+  0x4577c0	= ./pad_recognize/timg/tt_clacon_light.tpl
+  0x477800	= ./pad_recognize/timg/tt_fukidashi_window_kado_common.tpl
+  0x4784c0	= ./pad_recognize/timg/tt_gccon_body.tpl
+  0x498500	= ./pad_recognize/timg/tt_gccon_light.tpl
+  0x4b8540	= ./pad_recognize/timg/tt_gccon_waku.tpl
+  0x4d8580	= ./pad_recognize/timg/tt_hatena_body.tpl
+  0x4f85c0	= ./pad_recognize/timg/tt_hatena_light.tpl
+  0x518600	= ./pad_recognize/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x518a40	= ./pad_recognize/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x519280	= ./pad_recognize/timg/tt_remocon_han_body.tpl
+  0x5392c0	= ./pad_recognize/timg/tt_remocon_han_light.tpl
+  0x559300	= ./pad_recognize/timg/tt_remocon_nun_body.tpl
+  0x579340	= ./pad_recognize/timg/tt_remocon_nun_light.tpl
+		= ./parameter/
+  0x599380	= ./parameter/default.blight
+  0x599940	= ./parameter/default.blmap
+		= ./ranking/
+		= ./ranking/anim/
+  0x599be0	= ./ranking/anim/area_select_window_free.brlan
+  0x599d40	= ./ranking/anim/area_select_window_free_to_select.brlan
+  0x599ee0	= ./ranking/anim/area_select_window_fuchi_check_loop.brlan
+  0x599fa0	= ./ranking/anim/area_select_window_select.brlan
+  0x59a100	= ./ranking/anim/area_select_window_select_to_free.brlan
+  0x59a280	= ./ranking/anim/area_select_window_text_free.brlan
+  0x59a560	= ./ranking/anim/area_select_window_text_free_to_select.brlan
+  0x59a8a0	= ./ranking/anim/area_select_window_text_select.brlan
+  0x59ab60	= ./ranking/anim/area_select_window_text_select_to_free.brlan
+  0x59ae20	= ./ranking/anim/area_select_window_text_text_center_to_right.brlan
+  0x59afa0	= ./ranking/anim/area_select_window_text_text_hide.brlan
+  0x59b100	= ./ranking/anim/area_select_window_text_text_left_to_center.brlan
+  0x59b280	= ./ranking/anim/area_select_window_text_text_light_01_ok.brlan
+  0x59b4a0	= ./ranking/anim/area_select_window_text_text_light_01_stop.brlan
+  0x59b660	= ./ranking/anim/area_select_window_text_text_light_02_select.brlan
+  0x59b8a0	= ./ranking/anim/area_select_window_text_text_light_02_stop.brlan
+  0x59ba60	= ./ranking/anim/area_select_window_text_text_stop.brlan
+  0x59bc80	= ./ranking/anim/bg_ranking_line_loop.brlan
+  0x59bd20	= ./ranking/anim/coachi_icon_chara_light_01_ok.brlan
+  0x59c280	= ./ranking/anim/coachi_icon_chara_light_01_stop.brlan
+  0x59c660	= ./ranking/anim/coachi_icon_chara_light_02_select.brlan
+  0x59cbc0	= ./ranking/anim/coachi_icon_chara_light_02_stop.brlan
+  0x59cfa0	= ./ranking/anim/coachi_icon_free.brlan
+  0x59d360	= ./ranking/anim/coachi_icon_free_to_select.brlan
+  0x59d7c0	= ./ranking/anim/coachi_icon_select.brlan
+  0x59dec0	= ./ranking/anim/coachi_icon_select_to_free.brlan
+  0x59e2c0	= ./ranking/anim/coachi_icon_waku_off.brlan
+  0x59e4c0	= ./ranking/anim/coachi_icon_waku_on.brlan
+  0x59e6a0	= ./ranking/anim/common_w020_file_kanri_fade_in.brlan
+  0x59e960	= ./ranking/anim/common_w020_file_kanri_fade_in_after.brlan
+  0x59ec00	= ./ranking/anim/common_w020_file_kanri_fade_in_before.brlan
+  0x59eea0	= ./ranking/anim/common_w020_file_kanri_fade_out.brlan
+  0x59f160	= ./ranking/anim/common_w020_file_kanri_free.brlan
+  0x59f6e0	= ./ranking/anim/common_w020_file_kanri_free_to_select.brlan
+  0x59fc00	= ./ranking/anim/common_w020_file_kanri_fuchi_check_loop.brlan
+  0x59ffc0	= ./ranking/anim/common_w020_file_kanri_select.brlan
+  0x5a0440	= ./ranking/anim/common_w020_file_kanri_select_to_free.brlan
+  0x5a08e0	= ./ranking/anim/common_w020_file_kanri_text_light_01_ok.brlan
+  0x5a0c20	= ./ranking/anim/common_w020_file_kanri_text_light_01_stop.brlan
+  0x5a0ee0	= ./ranking/anim/common_w020_file_kanri_text_light_02_select.brlan
+  0x5a1220	= ./ranking/anim/common_w020_file_kanri_text_light_02_stop.brlan
+  0x5a14e0	= ./ranking/anim/common_w078_ghost_top10_icon_free_color_gold_off.brlan
+  0x5a1820	= ./ranking/anim/common_w078_ghost_top10_icon_select_color_on.brlan
+  0x5a1b60	= ./ranking/anim/common_w078_ghost_top10_icon_select_gold1and2_rote.brlan
+  0x5a1ca0	= ./ranking/anim/course_select_window_free.brlan
+  0x5a1e00	= ./ranking/anim/course_select_window_free_to_select.brlan
+  0x5a1fa0	= ./ranking/anim/course_select_window_fuchi_check_loop.brlan
+  0x5a2060	= ./ranking/anim/course_select_window_select.brlan
+  0x5a21c0	= ./ranking/anim/course_select_window_select_to_free.brlan
+  0x5a2340	= ./ranking/anim/couse_select_window_text_free.brlan
+  0x5a2620	= ./ranking/anim/couse_select_window_text_free_to_select.brlan
+  0x5a2960	= ./ranking/anim/couse_select_window_text_select.brlan
+  0x5a2c20	= ./ranking/anim/couse_select_window_text_select_to_free.brlan
+  0x5a2ee0	= ./ranking/anim/couse_select_window_text_text_center_to_right.brlan
+  0x5a3060	= ./ranking/anim/couse_select_window_text_text_hide.brlan
+  0x5a31c0	= ./ranking/anim/couse_select_window_text_text_left_to_center.brlan
+  0x5a3340	= ./ranking/anim/couse_select_window_text_text_light_01_ok.brlan
+  0x5a3560	= ./ranking/anim/couse_select_window_text_text_light_01_stop.brlan
+  0x5a3720	= ./ranking/anim/couse_select_window_text_text_light_02_select.brlan
+  0x5a3960	= ./ranking/anim/couse_select_window_text_text_light_02_stop.brlan
+  0x5a3b20	= ./ranking/anim/couse_select_window_text_text_stop.brlan
+  0x5a3d40	= ./ranking/anim/gr_area_select_menu_dummy0_loop.brlan
+  0x5a3e20	= ./ranking/anim/gr_area_select_menu_dummy0_onetime.brlan
+  0x5a3f00	= ./ranking/anim/gr_area_select_menu_dummy1_loop.brlan
+  0x5a3fa0	= ./ranking/anim/gr_area_select_menu_dummy1_onetime.brlan
+  0x5a4040	= ./ranking/anim/gr_course_select_menu_dummy0_loop.brlan
+  0x5a4120	= ./ranking/anim/gr_course_select_menu_dummy0_onetime.brlan
+  0x5a4200	= ./ranking/anim/gr_course_select_menu_dummy1_loop.brlan
+  0x5a42a0	= ./ranking/anim/gr_course_select_menu_dummy1_onetime.brlan
+  0x5a4340	= ./ranking/anim/gr_yajirushi_left_chara_light_01_ok.brlan
+  0x5a46c0	= ./ranking/anim/gr_yajirushi_left_chara_light_01_stop.brlan
+  0x5a49a0	= ./ranking/anim/gr_yajirushi_left_chara_light_02_select.brlan
+  0x5a4d20	= ./ranking/anim/gr_yajirushi_left_chara_light_02_stop.brlan
+  0x5a5000	= ./ranking/anim/gr_yajirushi_left_fade_in.brlan
+  0x5a52e0	= ./ranking/anim/gr_yajirushi_left_fade_in_after.brlan
+  0x5a55a0	= ./ranking/anim/gr_yajirushi_left_fade_in_before.brlan
+  0x5a5860	= ./ranking/anim/gr_yajirushi_left_fade_out.brlan
+  0x5a5b20	= ./ranking/anim/gr_yajirushi_left_free.brlan
+  0x5a5ee0	= ./ranking/anim/gr_yajirushi_left_free_to_select.brlan
+  0x5a6240	= ./ranking/anim/gr_yajirushi_left_fuchi_check_loop.brlan
+  0x5a63a0	= ./ranking/anim/gr_yajirushi_left_select.brlan
+  0x5a66c0	= ./ranking/anim/gr_yajirushi_left_select_to_free.brlan
+  0x5a69a0	= ./ranking/anim/gr_yajirushi_right_chara_light_01_ok.brlan
+  0x5a6d20	= ./ranking/anim/gr_yajirushi_right_chara_light_01_stop.brlan
+  0x5a7000	= ./ranking/anim/gr_yajirushi_right_chara_light_02_select.brlan
+  0x5a7380	= ./ranking/anim/gr_yajirushi_right_chara_light_02_stop.brlan
+  0x5a7660	= ./ranking/anim/gr_yajirushi_right_fade_in.brlan
+  0x5a7940	= ./ranking/anim/gr_yajirushi_right_fade_in_after.brlan
+  0x5a7c00	= ./ranking/anim/gr_yajirushi_right_fade_in_before.brlan
+  0x5a7ec0	= ./ranking/anim/gr_yajirushi_right_fade_out.brlan
+  0x5a8180	= ./ranking/anim/gr_yajirushi_right_free.brlan
+  0x5a8540	= ./ranking/anim/gr_yajirushi_right_free_to_select.brlan
+  0x5a88a0	= ./ranking/anim/gr_yajirushi_right_fuchi_check_loop.brlan
+  0x5a8a00	= ./ranking/anim/gr_yajirushi_right_select.brlan
+  0x5a8d20	= ./ranking/anim/gr_yajirushi_right_select_to_free.brlan
+  0x5a9000	= ./ranking/anim/mii_icon_normal_chara_light_01_ok.brlan
+  0x5a9560	= ./ranking/anim/mii_icon_normal_chara_light_01_stop.brlan
+  0x5a9940	= ./ranking/anim/mii_icon_normal_chara_light_02_select.brlan
+  0x5a9ea0	= ./ranking/anim/mii_icon_normal_chara_light_02_stop.brlan
+  0x5aa280	= ./ranking/anim/mii_icon_normal_free.brlan
+  0x5aa640	= ./ranking/anim/mii_icon_normal_free_to_select.brlan
+  0x5aaaa0	= ./ranking/anim/mii_icon_normal_select.brlan
+  0x5ab1a0	= ./ranking/anim/mii_icon_normal_select_to_free.brlan
+  0x5ab5a0	= ./ranking/anim/mii_icon_normal_waku_off.brlan
+  0x5ab7a0	= ./ranking/anim/mii_icon_normal_waku_on.brlan
+  0x5ab980	= ./ranking/anim/mii_icon_you_chara_light_01_ok.brlan
+  0x5abee0	= ./ranking/anim/mii_icon_you_chara_light_01_stop.brlan
+  0x5ac2c0	= ./ranking/anim/mii_icon_you_chara_light_02_select.brlan
+  0x5ac820	= ./ranking/anim/mii_icon_you_chara_light_02_stop.brlan
+  0x5acc00	= ./ranking/anim/mii_icon_you_free.brlan
+  0x5acfc0	= ./ranking/anim/mii_icon_you_free_to_select.brlan
+  0x5ad420	= ./ranking/anim/mii_icon_you_select.brlan
+  0x5adb20	= ./ranking/anim/mii_icon_you_select_to_free.brlan
+  0x5adf20	= ./ranking/anim/mii_icon_you_waku_off.brlan
+  0x5ae120	= ./ranking/anim/mii_icon_you_waku_on.brlan
+  0x5ae300	= ./ranking/anim/top10_icon_chara_light_01_ok.brlan
+  0x5ae740	= ./ranking/anim/top10_icon_chara_light_01_stop.brlan
+  0x5aea60	= ./ranking/anim/top10_icon_chara_light_02_select.brlan
+  0x5aeea0	= ./ranking/anim/top10_icon_chara_light_02_stop.brlan
+  0x5af1c0	= ./ranking/anim/top10_icon_fade_in.brlan
+  0x5af4c0	= ./ranking/anim/top10_icon_fade_in_after.brlan
+  0x5af7c0	= ./ranking/anim/top10_icon_fade_in_before.brlan
+  0x5afac0	= ./ranking/anim/top10_icon_fade_out.brlan
+  0x5afdc0	= ./ranking/anim/top10_icon_free.brlan
+  0x5b00c0	= ./ranking/anim/top10_icon_free_to_select.brlan
+  0x5b0460	= ./ranking/anim/top10_icon_select.brlan
+  0x5b0920	= ./ranking/anim/top10_icon_select_to_free.brlan
+  0x5b0c60	= ./ranking/anim/top10_icon_waku_off.brlan
+  0x5b0dc0	= ./ranking/anim/top10_icon_waku_on.brlan
+		= ./ranking/blyt/
+  0x5b0f20	= ./ranking/blyt/area_select_window.brlyt
+  0x5b1ce0	= ./ranking/blyt/area_select_window_text.brlyt
+  0x5b2220	= ./ranking/blyt/bg_ranking.brlyt
+  0x5b2440	= ./ranking/blyt/coachi_icon.brlyt
+  0x5b2d60	= ./ranking/blyt/common_w020_file_kanri.brlyt
+  0x5b3f00	= ./ranking/blyt/common_w078_ghost_top10.brlyt
+  0x5b4d40	= ./ranking/blyt/course_select_window.brlyt
+  0x5b5b00	= ./ranking/blyt/couse_select_window_text.brlyt
+  0x5b6160	= ./ranking/blyt/grid.brlyt
+  0x5b6460	= ./ranking/blyt/gr_area_select_menu.brlyt
+  0x5b65e0	= ./ranking/blyt/gr_course_select_menu.brlyt
+  0x5b6760	= ./ranking/blyt/gr_obi_bottom.brlyt
+  0x5b6dc0	= ./ranking/blyt/gr_obi_top.brlyt
+  0x5b7280	= ./ranking/blyt/gr_yajirushi_left.brlyt
+  0x5b7ec0	= ./ranking/blyt/gr_yajirushi_right.brlyt
+  0x5b8b00	= ./ranking/blyt/mii_icon_normal.brlyt
+  0x5b9420	= ./ranking/blyt/mii_icon_other.brlyt
+  0x5b9640	= ./ranking/blyt/mii_icon_you.brlyt
+  0x5b9f60	= ./ranking/blyt/national_flag.brlyt
+  0x5bdf60	= ./ranking/blyt/null.brlyt
+  0x5be060	= ./ranking/blyt/prof_normal_2line_rival.brlyt
+  0x5be660	= ./ranking/blyt/prof_normal_3line.brlyt
+  0x5bed40	= ./ranking/blyt/prof_normal_3line_rank.brlyt
+  0x5bf4e0	= ./ranking/blyt/prof_normal_4line.brlyt
+  0x5bfd40	= ./ranking/blyt/prof_you_3line_rank.brlyt
+  0x5c04e0	= ./ranking/blyt/prof_you_4line.brlyt
+  0x5c0d40	= ./ranking/blyt/ranking_course_title_image_common.brlyt
+  0x5c39c0	= ./ranking/blyt/ranking_texture_common.brlyt
+  0x5c3b80	= ./ranking/blyt/tate_line_time.brlyt
+  0x5c3ea0	= ./ranking/blyt/time_line.brlyt
+  0x5c4400	= ./ranking/blyt/top10_icon.brlyt
+  0x5c50e0	= ./ranking/blyt/top_10_title.brlyt
+		= ./ranking/ctrl/
+  0x5c5300	= ./ranking/ctrl/RankingAreaUpDownBase.brctr
+  0x5c54c0	= ./ranking/ctrl/RankingAreaUpDownButtonLeft.brctr
+  0x5c57c0	= ./ranking/ctrl/RankingAreaUpDownButtonRight.brctr
+  0x5c5ae0	= ./ranking/ctrl/RankingAreaUpDownText.brctr
+  0x5c5f20	= ./ranking/ctrl/RankingAreaUpDownValue.brctr
+  0x5c6100	= ./ranking/ctrl/RankingBack.brctr
+  0x5c61c0	= ./ranking/ctrl/RankingBase.brctr
+  0x5c6240	= ./ranking/ctrl/RankingDetailItem.brctr
+  0x5c66a0	= ./ranking/ctrl/RankingDetailScrollDown.brctr
+  0x5c69a0	= ./ranking/ctrl/RankingDetailScrollUp.brctr
+  0x5c6ca0	= ./ranking/ctrl/RankingDetailTitle.brctr
+  0x5c6d20	= ./ranking/ctrl/RankingGraphButton.brctr
+  0x5c7060	= ./ranking/ctrl/RankingGrid.brctr
+  0x5c70e0	= ./ranking/ctrl/RankingItemCoach.brctr
+  0x5c7360	= ./ranking/ctrl/RankingItemMyself.brctr
+  0x5c75e0	= ./ranking/ctrl/RankingItemSelectable.brctr
+  0x5c7880	= ./ranking/ctrl/RankingItemStranger.brctr
+  0x5c7900	= ./ranking/ctrl/RankingItemTop10.brctr
+  0x5c7ba0	= ./ranking/ctrl/RankingMiiMyself.brctr
+  0x5c7ca0	= ./ranking/ctrl/RankingMiiSelectable.brctr
+  0x5c7dc0	= ./ranking/ctrl/RankingMiiStranger.brctr
+  0x5c7e40	= ./ranking/ctrl/RankingObiBottom.brctr
+  0x5c7ee0	= ./ranking/ctrl/RankingObiTop.brctr
+  0x5c7f80	= ./ranking/ctrl/RankingTargetUpDownBase.brctr
+  0x5c8160	= ./ranking/ctrl/RankingTargetUpDownButtonLeft.brctr
+  0x5c8460	= ./ranking/ctrl/RankingTargetUpDownButtonRight.brctr
+  0x5c8780	= ./ranking/ctrl/RankingTargetUpDownText.brctr
+  0x5c8c00	= ./ranking/ctrl/RankingTargetUpDownValue.brctr
+  0x5c8de0	= ./ranking/ctrl/RankingTimeAxis.brctr
+  0x5c8e60	= ./ranking/ctrl/RankingTimeRuler.brctr
+  0x5c8f00	= ./ranking/ctrl/RankingWindowMyselfTimeRank.brctr
+  0x5c8fa0	= ./ranking/ctrl/RankingWindowMyselfTimeRankPush.brctr
+  0x5c9040	= ./ranking/ctrl/RankingWindowNormalPush.brctr
+  0x5c90e0	= ./ranking/ctrl/RankingWindowNormalTimePush.brctr
+  0x5c9180	= ./ranking/ctrl/RankingWindowNormalTimeRank.brctr
+  0x5c9220	= ./ranking/ctrl/RankingWindowNormalTimeRankPush.brctr
+		= ./ranking/timg/
+  0x5c92c0	= ./ranking/timg/001_001_japan.tpl
+  0x5c9840	= ./ranking/timg/002_136_koreaRep.tpl
+  0x5ca3c0	= ./ranking/timg/150_049_usa.tpl
+  0x5caec0	= ./ranking/timg/151_018_canada.tpl
+  0x5cb440	= ./ranking/timg/152_036_mexico.tpl
+  0x5cbfc0	= ./ranking/timg/153_008_anguilla.tpl
+  0x5ccbe0	= ./ranking/timg/153_009_antigua.tpl
+  0x5cd760	= ./ranking/timg/153_010_argentina.tpl
+  0x5ce280	= ./ranking/timg/153_011_aruba.tpl
+  0x5ced60	= ./ranking/timg/153_012_bahamas.tpl
+  0x5cf840	= ./ranking/timg/153_013_barbados.tpl
+  0x5d0320	= ./ranking/timg/153_014_belize.tpl
+  0x5d0ee0	= ./ranking/timg/153_015_bolivia.tpl
+  0x5d1a80	= ./ranking/timg/153_016_brazil.tpl
+  0x5d2620	= ./ranking/timg/153_017_britishVirginIslands.tpl
+  0x5d3220	= ./ranking/timg/153_019_caymanIslands.tpl
+  0x5d48c0	= ./ranking/timg/153_020_chile.tpl
+  0x5d5380	= ./ranking/timg/153_021_colombia.tpl
+  0x5d5900	= ./ranking/timg/153_022_costaRica.tpl
+  0x5d6460	= ./ranking/timg/153_023_dominica.tpl
+  0x5d70c0	= ./ranking/timg/153_024_dominicanRep.tpl
+  0x5d7bc0	= ./ranking/timg/153_025_ecuador.tpl
+  0x5d8820	= ./ranking/timg/153_026_elSalvador.tpl
+  0x5d93c0	= ./ranking/timg/153_028_grenada.tpl
+  0x5d9ee0	= ./ranking/timg/153_030_guatemala.tpl
+  0x5daaa0	= ./ranking/timg/153_031_guyana.tpl
+  0x5db620	= ./ranking/timg/153_032_haiti.tpl
+  0x5dc1c0	= ./ranking/timg/153_033_honduras.tpl
+  0x5dcc80	= ./ranking/timg/153_034_jamaica.tpl
+  0x5dd7a0	= ./ranking/timg/153_037_montserrat.tpl
+  0x5de3e0	= ./ranking/timg/153_038_netherlandsAntilles.tpl
+  0x5deea0	= ./ranking/timg/153_039_nicaragua.tpl
+  0x5df9a0	= ./ranking/timg/153_040_panama.tpl
+  0x5e0480	= ./ranking/timg/153_041_paraguay.tpl
+  0x5e0fa0	= ./ranking/timg/153_042_peru.tpl
+  0x5e1b40	= ./ranking/timg/153_043_stKitts.tpl
+  0x5e26a0	= ./ranking/timg/153_044_stLucia.tpl
+  0x5e3220	= ./ranking/timg/153_045_stVincent.tpl
+  0x5e3ce0	= ./ranking/timg/153_046_suriname.tpl
+  0x5e47a0	= ./ranking/timg/153_047_trinidadAndTobago.tpl
+  0x5e5300	= ./ranking/timg/153_048_turksCaicosIslands.tpl
+  0x5e5f60	= ./ranking/timg/153_050_uruguay.tpl
+  0x5e6ac0	= ./ranking/timg/153_051_usVirginIslands.tpl
+  0x5e76a0	= ./ranking/timg/153_052_venezuela.tpl
+  0x5e8200	= ./ranking/timg/153__041_paraguay.tpl
+  0x5e8d20	= ./ranking/timg/200_065_australia.tpl
+  0x5e9880	= ./ranking/timg/200_082_ireland.tpl
+  0x5e9e00	= ./ranking/timg/200_095_newZealand.tpl
+  0x5ea9c0	= ./ranking/timg/200_110_uk.tpl
+  0x5eb520	= ./ranking/timg/201_066_austria.tpl
+  0x5ebaa0	= ./ranking/timg/201_078_germany.tpl
+  0x5ec020	= ./ranking/timg/201_108_switzerland.tpl
+  0x5ec5a0	= ./ranking/timg/202_067_belgium.tpl
+  0x5ecb20	= ./ranking/timg/202_077_france.tpl
+  0x5ed0a0	= ./ranking/timg/202_088_luxembourg.tpl
+  0x5ed620	= ./ranking/timg/203_083_italy.tpl
+  0x5edba0	= ./ranking/timg/204_098_portugal.tpl
+  0x5ee800	= ./ranking/timg/204_105_spain.tpl
+  0x5ef3a0	= ./ranking/timg/205_094_netherlands.tpl
+  0x5ef920	= ./ranking/timg/206_074_denmark.tpl
+  0x5efea0	= ./ranking/timg/206_076_finland.tpl
+  0x5f0420	= ./ranking/timg/206_079_greece.tpl
+  0x5f09a0	= ./ranking/timg/206_096_norway.tpl
+  0x5f0f20	= ./ranking/timg/206_107_sweden.tpl
+  0x5f14a0	= ./ranking/timg/beigoman_stage.tpl
+  0x5f9640	= ./ranking/timg/Block_Plaza.tpl
+  0x6017e0	= ./ranking/timg/Chain_Chomp_Roulette.tpl
+  0x609980	= ./ranking/timg/Delfino_Pier.tpl
+  0x611b20	= ./ranking/timg/DS_Twilight_House.tpl
+  0x619cc0	= ./ranking/timg/flag_blank_00.tpl
+  0x61a240	= ./ranking/timg/fm_handle_new_x.tpl
+  0x61af00	= ./ranking/timg/Funky_Stadium.tpl
+  0x6230a0	= ./ranking/timg/GBA_Battle_Course3.tpl
+  0x62b240	= ./ranking/timg/GCN_Cookie_Land.tpl
+  0x6333e0	= ./ranking/timg/id00_castle_course.tpl
+  0x63b580	= ./ranking/timg/id01_farm_course.tpl
+  0x643720	= ./ranking/timg/id02_kinoko_course.tpl
+  0x64b8c0	= ./ranking/timg/id03_volcano_course.tpl
+  0x653a60	= ./ranking/timg/id04_factory_course.tpl
+  0x65bc00	= ./ranking/timg/id05_shopping_course.tpl
+  0x663da0	= ./ranking/timg/id06_boardcross_course.tpl
+  0x66bf40	= ./ranking/timg/id07_truck_course.tpl
+  0x6740e0	= ./ranking/timg/id08_beginner_course.tpl
+  0x67c280	= ./ranking/timg/id08_beginner_course_evening.tpl
+  0x684420	= ./ranking/timg/id09_senior_course.tpl
+  0x68c5c0	= ./ranking/timg/id10_ridgehighway_course.tpl
+  0x694760	= ./ranking/timg/id11_treehouse_course.tpl
+  0x69c900	= ./ranking/timg/id12_koopa_course.tpl
+  0x6a4aa0	= ./ranking/timg/id13_rainbow_course.tpl
+  0x6acc40	= ./ranking/timg/id14_desert_course.tpl
+  0x6b4de0	= ./ranking/timg/id15_water_course.tpl
+  0x6bcf80	= ./ranking/timg/id16_old_peach_gc.tpl
+  0x6c5120	= ./ranking/timg/id17_MarioGC.tpl
+  0x6cd2c0	= ./ranking/timg/id18_old_waluigi_gc.tpl
+  0x6d5460	= ./ranking/timg/id19_old_donkey_gc.tpl
+  0x6dd600	= ./ranking/timg/id20_old_falls_ds.tpl
+  0x6e57a0	= ./ranking/timg/id21_old_desert_ds.tpl
+  0x6ed940	= ./ranking/timg/id22_old_garden_ds.tpl
+  0x6f5ae0	= ./ranking/timg/id23_old_town_ds.tpl
+  0x6fdc80	= ./ranking/timg/id24_old_mario_sfc.tpl
+  0x705e20	= ./ranking/timg/id25_old_obake_sfc.tpl
+  0x70dfc0	= ./ranking/timg/id26_old_mario_64.tpl
+  0x716160	= ./ranking/timg/id27_old_sherbet_64.tpl
+  0x71e300	= ./ranking/timg/id28_old_koopa_64.tpl
+  0x7264a0	= ./ranking/timg/id29_old_donkey_64.tpl
+  0x72e640	= ./ranking/timg/id30_old_koopa_gba.tpl
+  0x7367e0	= ./ranking/timg/id31_old_heyho_gba.tpl
+  0x73e980	= ./ranking/timg/N64_Skyscraper.tpl
+  0x746b20	= ./ranking/timg/SNES_Battle_Course4.tpl
+  0x74ecc0	= ./ranking/timg/Thwomp_Desert.tpl
+  0x756e60	= ./ranking/timg/tt_america.tpl
+  0x7597e0	= ./ranking/timg/tt_baby_luigi_64x64.tpl
+  0x75b820	= ./ranking/timg/tt_battle_victory_score_crown.tpl
+  0x75bea0	= ./ranking/timg/tt_block_16x16.tpl
+  0x75c2e0	= ./ranking/timg/tt_ghost_ranking_course_name_bg.tpl
+  0x764480	= ./ranking/timg/tt_grid_900.tpl
+  0x7652e0	= ./ranking/timg/tt_gr_maru_normal_00.tpl
+  0x766520	= ./ranking/timg/tt_gr_tate_line_00.tpl
+  0x768fe0	= ./ranking/timg/tt_gr_yajirushi_line.tpl
+  0x769920	= ./ranking/timg/tt_gr_yajirushi_yajirushi.tpl
+  0x76ad60	= ./ranking/timg/tt_mario_64x64.tpl
+  0x76cda0	= ./ranking/timg/tt_maru_32x32.tpl
+  0x76d1e0	= ./ranking/timg/tt_mii_matuoka_64x64.tpl
+  0x76f220	= ./ranking/timg/tt_navi_l.tpl
+  0x76fa60	= ./ranking/timg/tt_obi_bottom_curve_000.tpl
+  0x783060	= ./ranking/timg/tt_obi_bottom_left_000.tpl
+  0x783b20	= ./ranking/timg/tt_obi_bottom_right_000.tpl
+  0x7845e0	= ./ranking/timg/tt_obi_check_000.tpl
+  0x7883e0	= ./ranking/timg/tt_obi_top_curve_000.tpl
+  0x79b9e0	= ./ranking/timg/tt_obi_top_left_000.tpl
+  0x79c4a0	= ./ranking/timg/tt_pattern_chek_32x32_alpha.tpl
+  0x79cce0	= ./ranking/timg/tt_pattern_chek_alpha_nasi_32x32.tpl
+  0x79d120	= ./ranking/timg/tt_pattern_chek_bokashi_32x32.tpl
+  0x79d960	= ./ranking/timg/tt_ranking_flag.tpl
+  0x79f9a0	= ./ranking/timg/tt_remocon_han_body_mini3.tpl
+  0x7a0660	= ./ranking/timg/tt_window_vol3sono2.tpl
+  0x7a07a0	= ./ranking/timg/tt_yajirushi_type1.tpl
+
+#------------------------------------------------------------------------------
+
