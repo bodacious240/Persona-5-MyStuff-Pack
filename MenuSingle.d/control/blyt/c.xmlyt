@@ -1,0 +1,1565 @@
+<?xml version="1.0" encoding="utf-8"?>
+		<xmlyt version="2.1.12BETA" brlyt_version="000a">
+			<tag type="lyt1">
+				<drawnFromMiddle>01</drawnFromMiddle>
+				<size>
+					<width>608.000000</width>
+					<height>456.000000</height>
+				</size>
+			</tag>
+			<tag type="txl1">
+				<entries>
+					<name>ht_squareWhite_00.tpl</name>
+					<name>tt_mario_64x64.tpl</name>
+					<name>tt_pattern_chek_bokashi_32x32.tpl</name>
+					<name>chip.tpl</name>
+				</entries>
+			</tag>
+			<tag type="fnl1">
+				<entries>
+					<name>tt_kart_font_rodan_ntlg_pro_b.brfnt</name>
+				</entries>
+			</tag>
+			<tag type="mat1">
+				<entries name="mii_name">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="255" g="255" b="255" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="line_t_00">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="255" g="255" b="255" a="30" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="tt_pattern_chek_bokashi_32x32.tpl">
+						<wrap_s>GX_REPEAT</wrap_s>
+						<wrap_t>GX_REPEAT</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>7.0571427345</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="line_t">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="255" g="255" b="255" a="30" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="tt_pattern_chek_bokashi_32x32.tpl">
+						<wrap_s>GX_REPEAT</wrap_s>
+						<wrap_t>GX_REPEAT</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>7.0571427345</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="black_parts_t">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="151" g="151" b="151" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="bou_t">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="136" g="136" b="136" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="shadow_t">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="0" g="0" b="0" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="black_parts_b_r">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="0" g="0" b="255" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+					<BlendMode>
+                        <type>GX_BM_BLEND</type>
+                        <src_fact>GX_BL_INVDSTCLR</src_fact>
+                        <dst_fact>GX_BL_SRCCLR</dst_fact>
+                        <op>GX_LO_AND</op>
+                    </BlendMode>
+				</entries>
+				<entries name="black_parts_b_l">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="0" g="0" b="255" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="bou_t_00">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="157" g="157" b="157" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="chara_icon_sha">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="0" g="0" b="0" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="tt_mario_64x64.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="chara_icon">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="255" g="255" b="255" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="tt_mario_64x64.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="black_parts_r_r">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="220" g="0" b="0" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+					<BlendMode>
+                        <type>GX_BM_BLEND</type>
+                        <src_fact>GX_BL_INVDSTCLR</src_fact>
+                        <dst_fact>GX_BL_SRCCLR</dst_fact>
+                        <op>GX_LO_AND</op>
+                    </BlendMode>
+				</entries>
+				<entries name="black_parts_r_l">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="220" g="0" b="0" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="gold_parts">
+					<colors>
+						<forecolor r="149" g="86" b="0" a="0" />
+						<backcolor r="255" g="234" b="103" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="tt_pattern_chek_bokashi_32x32.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="black_base">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="0" g="0" b="0" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="piikapika">
+					<colors>
+						<forecolor r="255" g="255" b="0" a="0" />
+						<backcolor r="255" g="255" b="0" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="ht_squareWhite_00.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+				<entries name="chip">
+					<colors>
+						<forecolor r="0" g="0" b="0" a="0" />
+						<backcolor r="255" g="255" b="255" a="255" />
+						<colorReg3 r="255" g="255" b="255" a="255" />
+						<tev_k1 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k2 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k3 r="ff" g="ff" b="ff" a="ff" />
+						<tev_k4 r="ff" g="ff" b="ff" a="ff" />
+					</colors>
+					<texture name="chip.tpl">
+						<wrap_s>GX_CLAMP</wrap_s>
+						<wrap_t>GX_CLAMP</wrap_t>
+					</texture>
+					<TextureSRT>
+						<XTrans>0.0000000000</XTrans>
+						<YTrans>0.0000000000</YTrans>
+						<Rotate>0.0000000000</Rotate>
+						<XScale>1.0000000000</XScale>
+						<YScale>1.0000000000</YScale>
+					</TextureSRT>
+					<CoordGen>
+						<tgen_type>GX_TG_MTX2x4</tgen_type>
+						<tgen_src>GX_TG_TEX0</tgen_src>
+						<MatrixSource>GX_TEXMTX0</MatrixSource>
+						<padding>00</padding>
+					</CoordGen>
+					<MaterialColor>
+						<red>ff</red>
+						<green>ff</green>
+						<blue>ff</blue>
+						<alpha>ff</alpha>
+					</MaterialColor>
+				</entries>
+			</tag>
+			<tag type="pan1" name="RootPane" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>608.000000</width>
+					<height>456.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pan1" name="mii_name_null" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>01</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>30.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pan1" name="null_all" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-0.0000000000000000000000000</x>
+					<y>-0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>30.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pic1" name="chip" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>248.000000</width>
+					<height>40.000000</height>
+				</size>
+				<material name="chip" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pae1" />
+			<tag type="pan1" name="blue_null" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>30.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pic1" name="black_parts_b_r" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>248.000000</width>
+					<height>40.000000</height>
+				</size>
+				<material name="black_parts_b_r" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="black_parts_b_l" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-47.0000000000000000000000000</x>
+					<y>38.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>0.000000</width>
+					<height>0.000000</height>
+				</size>
+				<material name="black_parts_b_l" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pae1" />
+			<tag type="pan1" name="red_null" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>30.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pic1" name="black_parts_r_r" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>248.000000</width>
+					<height>40.000000</height>
+				</size>
+				<material name="black_parts_r_r" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="black_parts_r_l" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Left" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-168.3300018310546875000000000</x>
+					<y>38.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>0.000000</width>
+					<height>0.000000</height>
+				</size>
+				<material name="black_parts_r_l" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pae1" />
+			<tag type="pan1" name="Null_00" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>105.5000000000000000000000000</x>
+					<y>2.5000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>30.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="txt1" name="mii_name" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-8.0000000000000000000000000</x>
+					<y>2.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>150.000000</width>
+					<height>35.000000</height>
+				</size>
+				<length>0008-0008</length>
+				<material name="mii_name" />
+				<font index="0">
+					<xsize>30.100000</xsize>
+					<ysize>35.700001</ysize>
+					<charsize>0.000000</charsize>
+					<linesize>1.000000</linesize>
+					<alignment x="Center" y="Center" />
+					<whatAmI>00</whatAmI>
+				</font>
+				<topcolor r="ff" g="ff" b="ff" a="ff" />
+				<bottomcolor r="ff" g="ff" b="ff" a="ff" />
+				<text>30de30ea30aa0000</text>
+			</tag>
+			<tag type="pan1" name="chara_icon_null" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>01</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-101.0000000000000000000000000</x>
+					<y>1.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>40.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pic1" name="chara_icon_sha" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-0.4694519937038421630859375</x>
+					<y>1.0916060209274291992187500</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>35.000000</width>
+					<height>35.000000</height>
+				</size>
+				<material name="chara_icon_sha" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="chara_icon" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-5.4694519042968750000000000</x>
+					<y>1.0916060209274291992187500</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>35.000000</width>
+					<height>35.000000</height>
+				</size>
+				<material name="chara_icon" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pae1" />
+			<tag type="pae1" />
+			<tag type="pan1" name="N_null" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>2400.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>0.000000</width>
+					<height>0.000000</height>
+				</size>
+			</tag>
+			<tag type="pas1" />
+			<tag type="pic1" name="piikapika" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>00</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>1.3300000429153442382812500</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>232.000000</width>
+					<height>32.669998</height>
+				</size>
+				<material name="piikapika" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="line_t_00" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Left" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>-1.0000000000000000000000000</x>
+					<y>-0.2500000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>113.000000</width>
+					<height>30.000000</height>
+				</size>
+				<material name="line_t_00" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="0.100000" t="0.000000" />
+						<coordBL s="0.000000" t="7.000000" />
+						<coordBR s="0.100000" t="7.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="shadow_t" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Top" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>1.0000000000000000000000000</x>
+					<y>-18.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>228.000000</width>
+					<height>9.000000</height>
+				</size>
+				<material name="shadow_t" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="00" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="bou_t_00" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>-16.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>230.000000</width>
+					<height>2.000000</height>
+				</size>
+				<material name="bou_t_00" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="00" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="bou_t" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>18.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>230.000000</width>
+					<height>2.000000</height>
+				</size>
+				<material name="bou_t" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="00" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="00" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="line_t" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Right" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>-0.2500000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>113.000000</width>
+					<height>30.000000</height>
+				</size>
+				<material name="line_t" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.100000" t="0.000000" />
+						<coordTR s="0.000000" t="0.000000" />
+						<coordBL s="0.100000" t="7.000000" />
+						<coordBR s="0.000000" t="7.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pan1" name="obi_top" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>30.000000</width>
+					<height>40.000000</height>
+				</size>
+			</tag>
+			<tag type="pic1" name="black_parts_t" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>230.000000</width>
+					<height>33.000000</height>
+				</size>
+				<material name="black_parts_t" />
+				<colors>
+					<vtxColorTL r="00" g="00" b="00" a="ff" />
+					<vtxColorTR r="00" g="00" b="00" a="ff" />
+					<vtxColorBL r="6b" g="6b" b="6b" a="ff" />
+					<vtxColorBR r="6b" g="6b" b="6b" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="gold_parts" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>235.000000</width>
+					<height>37.000000</height>
+				</size>
+				<material name="gold_parts" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pic1" name="black_base" userdata="">
+				<visible>01</visible>
+				<WidescreenAffected>00</WidescreenAffected>
+				<flag>00</flag>
+				<origin x="Center" y="Center" />
+				<alpha>ff</alpha>
+				<padding>00</padding>
+				<translate>
+					<x>0.0000000000000000000000000</x>
+					<y>0.0000000000000000000000000</y>
+					<z>0.0000000000000000000000000</z>
+				</translate>
+				<rotate>
+					<x>0.00000000000000000000</x>
+					<y>0.00000000000000000000</y>
+					<z>0.00000000000000000000</z>
+				</rotate>
+				<scale>
+					<x>1.0000000000</x>
+					<y>1.0000000000</y>
+				</scale>
+				<size>
+					<width>239.000000</width>
+					<height>41.000000</height>
+				</size>
+				<material name="black_base" />
+				<colors>
+					<vtxColorTL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorTR r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBL r="ff" g="ff" b="ff" a="ff" />
+					<vtxColorBR r="ff" g="ff" b="ff" a="ff" />
+				</colors>
+				<coordinates>
+					<set>
+						<coordTL s="0.000000" t="0.000000" />
+						<coordTR s="1.000000" t="0.000000" />
+						<coordBL s="0.000000" t="1.000000" />
+						<coordBR s="1.000000" t="1.000000" />
+					</set>
+				</coordinates>
+			</tag>
+			<tag type="pae1" />
+			<tag type="pae1" />
+			<tag type="grp1" name="RootGroup" />
+			<tag type="grs1" />
+			<tag type="grp1" name="gold_parts">
+				<subs>
+					<sub>gold_parts</sub>
+					<sub>black_base</sub>
+				</subs>
+			</tag>
+			<tag type="grp1" name="gold_loop">
+				<subs>
+					<sub>gold_parts</sub>
+				</subs>
+			</tag>
+			<tag type="grp1" name="text_icon_flash">
+				<subs>
+					<sub>point_2</sub>
+					<sub>pts_2</sub>
+					<sub>chara_icon</sub>
+					<sub>mii_name</sub>
+					<sub>piikapika</sub>
+					<sub>mii_name_null</sub>
+				</subs>
+			</tag>
+			<tag type="gre1" />
+		</xmlyt>
