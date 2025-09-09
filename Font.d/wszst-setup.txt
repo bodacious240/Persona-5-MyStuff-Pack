@@ -27,7 +27,7 @@ have-pt-dir = 1
 
 # The minimum and maximum file data positions:
 min-data-offset = 0x0
-max-data-offset = 0x3099e8
+max-data-offset = 0x3099c8
 
 # The calculated alignment of all files:
 data-align = 0x20
@@ -174,7 +174,7 @@ LEX		= ./course.lex
   0x2814e0	= ./mario_font_number_blue.brfnt
   0x2995e0	= ./mario_font_number_red.brfnt
   0x2b16e0	= ./tt_kart_extension_font.brfnt
-  0x2f1880	= ./tt_kart_font_rodan_ntlg_pro_b.brfnt
+  0x2f1860	= ./tt_kart_font_rodan_ntlg_pro_b.brfnt
 
 #------------------------------------------------------------------------------
 
