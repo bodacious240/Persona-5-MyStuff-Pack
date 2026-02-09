@@ -1,0 +1,354 @@
+
+###############################################################################
+#
+# wszst settings:
+# ---------------
+#
+# This is the settings file for wszst (tool of "Wiimms SZS Tools"). It
+# was created by the EXTRACT command and is needed by the CREATE command
+# to rebuild the original source archive with or without modifications.
+# You can edit it, if you know what you do.
+#
+###############################################################################
+
+# The first part contains some general settings:
+
+# The internal archive format (U8, WU8, BRRES, BREFF, BREFT, LTA or LFL):
+archive-format = U8
+
+# The file format (YAZ0, YAZ1 or BZ for a compressed archive, other ignored):
+file-format = YAZ0
+
+# An archive format related version number (-1: unknown or not relevant)
+version = -1
+
+# For U8+WU8 archives: Is there a special '.' base directory:
+have-pt-dir = 1
+
+# The minimum and maximum file data positions:
+min-data-offset = 0x0
+max-data-offset = 0x291358
+
+# The calculated alignment of all files:
+data-align = 0x20
+
+###############################################################################
+#
+# Some general rules for the next sections:
+#   All paths are relative to the current base directory (directory that
+#   contains the file wszst-setup.txt). Prefix at least paths that starts
+#   not with a letter, digit, point, star or underscore with "./".
+#
+#------------------------------------------------------------------------------
+
+[include-pattern]
+
+# All files and directories start with a . are hidden (unix like) and excluded
+# automatically. But filenames in one of the include sections are included
+# independent of this point. Also the include sections takes precedence over
+# the exclude sections.
+
+# This section expects file patterns with wildcards.
+
+#------------------------------------------------------------------------------
+
+[include]
+
+# This second include section accpepts only complete file names and none of
+# characters have any special meaning.
+
+
+#------------------------------------------------------------------------------
+
+[exclude-pattern]
+
+# Files and directories in this section are ignored by the CREATE command.
+# The include sections takes precedence over the exclude sections.
+
+# This section expects file patterns with wildcards.
+# Here we exclude all original, backup and temp files:
+
+*.orig
+*.bak
+*.tmp
+*.temp
+
+# Exclude all *.d directories. To enable it, remove "# " at the beginning.
+# *.d
+
+# Exclude all PNG files. The intention is to allow the creation of new PNG
+# images and mipmap files without any need to edit this setup file. All
+# extracted PNG files are automatically listed in the [exclude] section.
+# So the exclusion of all PNG is not really needed, but may help. The second
+# (disabled) line is an alternative to exclude all mipmap PNG files.
+
+*.png
+# *.mm#.png
+
+#------------------------------------------------------------------------------
+
+[exclude]
+
+# Files and directories in this section are ignored by the CREATE command.
+# This second exclude section accepts only complete file names and none of
+# characters have any special meaning.
+
+./Effect/RKRace.breff.d
+./Effect/RKRace.breft.d
+./balloon.brres.d
+./banana.brres.d
+./banana_s.brres.d
+./big_kinoko.brres.d
+./bomb.brres.d
+./bombCore.brres.d
+./course.kcl.d
+./course.kcl.flag
+./course.kcl.mtl
+./course.kcl.obj
+./course.kmp.d
+./course.kmp.txt
+./course.lex.txt
+./driver.brres.d
+./gesso.brres.d
+./icon_mii.brres.d
+./itemBoxNiseRtpa.brres.d
+./item_killer.brres.d
+./item_light.brres.d
+./jugem_battle.brres.d
+./jugem_flag.brres.d
+./jugem_lamp.brres.d
+./jugem_reverse.brres.d
+./jugemu.brres.d
+./jugemu_lap.brres.d
+./jugemu_lapf.brres.d
+./jugemu_signal.brres.d
+./kart_killer.brres.d
+./kinoko.brres.d
+./kinoko_p.brres.d
+./koura_green.brres.d
+./koura_red.brres.d
+./koura_s.brres.d
+./kumo.brres.d
+./kumo_s.brres.d
+./lensflare.brres.d
+./pow_bloc.brres.d
+./pow_bloc_plane.brres.d
+./rod.brres.d
+./star.brres.d
+./thunder.brres.d
+./tico.brres.d
+./togezo_koura.brres.d
+./wszst-setup.txt
+
+#------------------------------------------------------------------------------
+
+[encode]
+
+# Encode (and overwrite without notice) the listed files before adding them
+# to the new archive. The source is searched under the same filename with the
+# correct source extension added or, if this failed, a replaced extension.
+#   Example: For "message.bmg" search files "message.bmg.txt" or "message.txt"
+# The source file itself is set on the exclude list and will not stored into
+# the new archive.
+#
+# The syntax of this file section is a little bit different as the other file
+# sections. Each line begins with a comma separated list of keywords followed
+# by an equal sign.
+#   Syntax:  COMMA_SEPARATED_FORMAT_LIST = relative_filename
+#   Example: BREFT,IA8,3 = ./files/rk_steam
+# The first keyword is the file format. The following keywords describe sub
+# formats. An additonal integer is a file type specific information:
+#  -> For image files it is the number of images (main image + mipmaps).
+#     A value of 0 means: Use the tools default (see option --n-mipmaps).
+#
+# A file is only encoded if the destination does not exist or if the source
+# is younger than the destination. Encoding can be controlled by options
+# --no-encode, --encode-img and --encode-all (short: --noenc --eimg --eall).
+
+KCL		= ./course.kcl
+KMP		= ./course.kmp
+LEX		= ./course.lex
+
+#------------------------------------------------------------------------------
+
+[create]
+
+# Create (and overwrite without notice) the listed files before adding them to
+# the new archive. The source directory is searched under the same filename
+# with an appended ".d" or, if this fails, with an extension replaced by ".d".
+# If a source directory does not exist, the job is ignored silently.
+#   Example: For "my.brres" search directories "my.brres.d" or "my.d"
+# The source directory itself is set on the exclude list and will not stored
+# into the new archive. Creating can be controlled by the options:
+#   --no-recurse  : Do not create archives recursively.
+#   --no-encode   : Do not encode files before creating an archive.
+#   --encode-img  : Encode all image files (TEX,TPL,BREFT/sub), overrides --no-encode.
+#   --encode-all  : Encode all files and ignore timestamps.
+#   --pt-dir      : Set `point directory' mode.
+#   --u8          : Create an U8 archive.
+#   --brres       : Create an BRRES archive.
+#   --breff       : Create an BREFF archive.
+#   --breft       : Create an BREFT archive.
+#   --no-compress : Create an uncompressed file (U8 instead of SZS).
+#   ...
+
+./Effect/RKRace.breff
+./Effect/RKRace.breft
+./balloon.brres
+./banana.brres
+./banana_s.brres
+./big_kinoko.brres
+./bomb.brres
+./bombCore.brres
+./driver.brres
+./gesso.brres
+./icon_mii.brres
+./itemBoxNiseRtpa.brres
+./item_killer.brres
+./item_light.brres
+./jugem_battle.brres
+./jugem_flag.brres
+./jugem_lamp.brres
+./jugem_reverse.brres
+./jugemu.brres
+./jugemu_lap.brres
+./jugemu_lapf.brres
+./jugemu_signal.brres
+./kart_killer.brres
+./kinoko.brres
+./kinoko_p.brres
+./koura_green.brres
+./koura_red.brres
+./koura_s.brres
+./kumo.brres
+./kumo_s.brres
+./lensflare.brres
+./pow_bloc.brres
+./pow_bloc_plane.brres
+./rod.brres
+./star.brres
+./thunder.brres
+./tico.brres
+./togezo_koura.brres
+
+#------------------------------------------------------------------------------
+
+[order]
+
+# This list contains all extracted files in the order of the original archive.
+# If creating archives (but neither U8 nor LTA) this list will be used to sort
+# the found files. For archives with directory support (all except PACK) it is
+# important, that the directories are listed before the files that resides in
+# the directories.
+#
+# The value before the equal sign is the file offset in the original archive
+# and is ignored for sorting.
+
+		= ./
+     0xb20	= ./balloon.brres
+    0x3320	= ./banana.brres
+    0x6520	= ./banana_s.brres
+    0x7420	= ./battle_camera.bcp
+    0x7560	= ./big_kinoko.brres
+    0xb360	= ./bikePartsDispParam.bin
+    0xbfe0	= ./bomb.brres
+   0x13de0	= ./bombCore.brres
+   0x22f60	= ./driver.brres
+   0x236e0	= ./driverDispParam.bin
+   0x23a00	= ./DriverIKParam.bin
+   0x2fe00	= ./driverParam.bin
+   0x327e0	= ./GeoHitTableItem.bin
+   0x35560	= ./GeoHitTableItemObj.bin
+   0x382e0	= ./GeoHitTableKart.bin
+   0x39540	= ./GeoHitTableKartObj.bin
+   0x3a7a0	= ./gesso.brres
+   0x49220	= ./icon_mii.brres
+   0x4b420	= ./itemBoxNiseRtpa.brres
+   0x5bb20	= ./ItemSlot.bin
+   0x5c240	= ./item_killer.brres
+   0x62c40	= ./item_light.brres
+   0x645c0	= ./jugemu.brres
+   0x7e6c0	= ./jugemu_lap.brres
+   0x94d40	= ./jugemu_lapf.brres
+   0x9a5c0	= ./jugemu_signal.brres
+   0xa77c0	= ./jugem_battle.brres
+   0xac8c0	= ./jugem_flag.brres
+   0xafec0	= ./jugem_lamp.brres
+   0xb5940	= ./jugem_reverse.brres
+   0xba240	= ./kartAIActionParam.bin
+   0xba6c0	= ./kartAISpdParam.bin
+   0xbba40	= ./kartCameraParam.bin
+   0xbbc80	= ./kartDriverDispParam.bin
+   0xd36a0	= ./kartParam.bin
+   0xd6e60	= ./kartPartsDispParam.bin
+   0xd8620	= ./kart_killer.brres
+   0xef020	= ./kinoko.brres
+   0xf1320	= ./kinoko_p.brres
+   0xf5a20	= ./koura_green.brres
+   0xf8120	= ./koura_red.brres
+   0xfa820	= ./koura_s.brres
+   0xfb7a0	= ./kumo.brres
+  0x125ea0	= ./kumo_s.brres
+  0x126fa0	= ./lensflare.brres
+  0x12c1a0	= ./miiDispParam.bin
+  0x12c360	= ./minigame.kmg
+  0x12ca80	= ./mission_camera.bcp
+  0x12cbc0	= ./ObjFlow.bin
+  0x1360e0	= ./pow_bloc.brres
+  0x138ee0	= ./pow_bloc_plane.brres
+  0x13e1e0	= ./race_camera.bcp
+  0x13e320	= ./ranktimeGP.krt
+  0x13e440	= ./rod.brres
+  0x142440	= ./star.brres
+  0x1447c0	= ./start_camera.bcp
+  0x144900	= ./thunder.brres
+  0x148700	= ./tico.brres
+  0x14b600	= ./togezo_koura.brres
+  0x153680	= ./vibration.krm
+		= ./bsp/
+  0x1540a0	= ./bsp/la_bike.bsp
+  0x154300	= ./bsp/la_kart.bsp
+  0x154560	= ./bsp/lb_bike.bsp
+  0x1547c0	= ./bsp/lb_kart.bsp
+  0x154a20	= ./bsp/lc_bike.bsp
+  0x154c80	= ./bsp/lc_kart.bsp
+  0x154ee0	= ./bsp/ldf_bike.bsp
+  0x155140	= ./bsp/ldf_kart.bsp
+  0x1553a0	= ./bsp/ld_bike.bsp
+  0x155600	= ./bsp/ld_kart.bsp
+  0x155860	= ./bsp/le_bike.bsp
+  0x155ac0	= ./bsp/le_kart.bsp
+  0x155d20	= ./bsp/ma_bike.bsp
+  0x155f80	= ./bsp/ma_kart.bsp
+  0x1561e0	= ./bsp/mb_bike.bsp
+  0x156440	= ./bsp/mb_kart.bsp
+  0x1566a0	= ./bsp/mc_bike.bsp
+  0x156900	= ./bsp/mc_kart.bsp
+  0x156b60	= ./bsp/mdf_bike.bsp
+  0x156dc0	= ./bsp/mdf_kart.bsp
+  0x157020	= ./bsp/md_bike.bsp
+  0x157280	= ./bsp/md_kart.bsp
+  0x1574e0	= ./bsp/me_bike.bsp
+  0x157740	= ./bsp/me_kart.bsp
+  0x1579a0	= ./bsp/sa_bike.bsp
+  0x157c00	= ./bsp/sa_kart.bsp
+  0x157e60	= ./bsp/sb_bike.bsp
+  0x1580c0	= ./bsp/sb_kart.bsp
+  0x158320	= ./bsp/sc_bike.bsp
+  0x158580	= ./bsp/sc_kart.bsp
+  0x1587e0	= ./bsp/sdf_bike.bsp
+  0x158a40	= ./bsp/sdf_kart.bsp
+  0x158ca0	= ./bsp/sd_bike.bsp
+  0x158f00	= ./bsp/sd_kart.bsp
+  0x159160	= ./bsp/se_bike.bsp
+  0x1593c0	= ./bsp/se_kart.bsp
+		= ./Effect/
+  0x159620	= ./Effect/RKRace.breff
+  0x21b780	= ./Effect/RKRace.breft
+		= ./lightset/
+  0x290b00	= ./lightset/default.blight
+  0x2910c0	= ./lightset/default.blmap
+		= ./Model/
+
+#------------------------------------------------------------------------------
+
